@@ -40,7 +40,7 @@ class Poe:
             hasCough="", hasSoreThroat="", hasFatigue="", hasBreathingDifficulty="",
             hasDiarrhoea="", vomits="", hasBloodInCoughOrStool="",
             hasAbdominalPain="", hasSkinRash="", bleedsFromBodyParts="",
-            beenToEbolaAffectedCountry="", ed="", d_id=""
+            beenToEbolaAffectedCountry="",  yellowFeverVaccinationCert="", ed="", d_id=""
         )
 
         allow_edit = False
@@ -86,6 +86,7 @@ class Poe:
                     'hasSkinRash':params.hasSkinRash,
                     'bleedsFromBodyParts':params.bleedsFromBodyParts,
                     'beenToEbolaAffectedCountry':params.beenToEbolaAffectedCountry,
+                    'yellowFeverVaccinationCert': params.yellowFeverVaccinationCert,
                 }
                 r = db.query(
                     "INSERT INTO entries (fields) VALUES ($fields) RETURNING id",
