@@ -1,0 +1,190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-07-28 03:43+0300\n"
+"PO-Revision-Date: 2021-07-28 22:23+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh\n"
+"X-Generator: Poedit 3.0\n"
+
+#: views/poe2.html:44
+msgid "Name of Traveller"
+msgstr "姓名"
+
+#: views/poe2.html:51 views/poe2.html:53
+msgid "Nationality"
+msgstr "国籍"
+
+#: views/poe2.html:54
+msgid "Select Nationality"
+msgstr "国籍"
+
+#: views/poe2.html:64
+msgid "Port of Entry"
+msgstr "入境港"
+
+#: views/poe2.html:74
+msgid "Date of Arrival"
+msgstr "抵达日期"
+
+#: views/poe2.html:88
+msgid "Age (years)"
+msgstr "年龄（岁)"
+
+#: views/poe2.html:90
+msgid "Select Age"
+msgstr "年龄（岁)"
+
+#: views/poe2.html:101
+msgid "Sex"
+msgstr "性别"
+
+#: views/poe2.html:103
+msgid "Select Gender"
+msgstr "选择性别"
+
+#: views/poe2.html:104
+msgid "Male"
+msgstr "男性"
+
+#: views/poe2.html:105
+msgid "Female"
+msgstr "女性"
+
+#: views/poe2.html:106
+msgid "Other"
+msgstr "其他"
+
+#: views/poe2.html:114
+msgid "Passport Number"
+msgstr "护照号"
+
+#: views/poe2.html:124
+msgid "Airport of embarkment"
+msgstr "登机机场"
+
+#: views/poe2.html:131
+msgid "Country of embarkment"
+msgstr "登机国家"
+
+#: views/poe2.html:133 views/poe2.html:134
+msgid "Select Country of embarkment"
+msgstr "登机国家"
+
+#: views/poe2.html:144
+msgid "Flight / Vehicle Reg Number"
+msgstr "航班号"
+
+#: views/poe2.html:154
+msgid "Name of countries visited in the last 14 days"
+msgstr "最近14天去过的国家"
+
+#: views/poe2.html:172
+msgid "Physical address while in Uganda"
+msgstr "在乌干达期间的实际地址/（酒店/街道/城区/地区）"
+
+#: views/poe2.html:179
+msgid "Planned duration of stay while in Uganda"
+msgstr "计划在乌干达停留的时间"
+
+#: views/poe2.html:189
+msgid "Your contact phone number while in Uganda"
+msgstr "在乌干达期间的联系电话"
+
+#: views/poe2.html:196
+msgid "Contact/ next of kin telephone number"
+msgstr "联系人/近亲电话号码"
+
+#: views/poe2.html:205
+msgid "Have you been to CHINA in the past two weeks?"
+msgstr "过去两周，您是否去过中国?"
+
+#: views/poe2.html:208 views/poe2.html:225 views/poe2.html:265
+#: views/poe2.html:280 views/poe2.html:295 views/poe2.html:310
+#: views/poe2.html:325 views/poe2.html:340 views/poe2.html:355
+#: views/poe2.html:370 views/poe2.html:385 views/poe2.html:400
+#: views/poe2.html:415 views/poe2.html:430 views/poe2.html:451
+msgid "Yes"
+msgstr "是"
+
+#: views/poe2.html:212 views/poe2.html:229 views/poe2.html:271
+#: views/poe2.html:286 views/poe2.html:301 views/poe2.html:316
+#: views/poe2.html:331 views/poe2.html:346 views/poe2.html:361
+#: views/poe2.html:376 views/poe2.html:391 views/poe2.html:406
+#: views/poe2.html:421 views/poe2.html:436 views/poe2.html:455
+msgid "No"
+msgstr "否"
+
+#: views/poe2.html:222
+msgid "Have you been to any countries affected by Corona virus past two weeks?"
+msgstr "过去两周您是否去过任何受新冠病毒影响的国家？"
+
+#: views/poe2.html:239
+msgid "If yes, list the countries:"
+msgstr "如果回答是，请列出过去两周去过的国家名称:"
+
+#: views/poe2.html:250
+msgid "Do you have any of the following signs and symptoms?"
+msgstr "您是否有以下任何症状和体征？"
+
+#: views/poe2.html:261
+msgid "Fever"
+msgstr "发热"
+
+#: views/poe2.html:276
+msgid "Headache"
+msgstr "头痛"
+
+#: views/poe2.html:291
+msgid "Cough"
+msgstr "咳嗽"
+
+#: views/poe2.html:306
+msgid "Soar throat"
+msgstr "喉咙痛"
+
+#: views/poe2.html:321
+msgid "General body weakness (fatigue)"
+msgstr "全身无力（疲劳）"
+
+#: views/poe2.html:336
+msgid "Difficulty in breathing / shortness of breath"
+msgstr "呼吸困难"
+
+#: views/poe2.html:351
+msgid "Diarrhoea"
+msgstr "腹泻"
+
+#: views/poe2.html:366
+msgid "Vomiting"
+msgstr "呕吐"
+
+#: views/poe2.html:381
+msgid "Blood in cough or stool or vomitus"
+msgstr "咳血或大便或呕吐物中有血"
+
+#: views/poe2.html:396
+msgid "Abdominal pain"
+msgstr "腹痛"
+
+#: views/poe2.html:411
+msgid "Skin rash"
+msgstr "皮疹"
+
+#: views/poe2.html:426
+msgid "Bleeding from body parts (nose, mouth, red eyes)"
+msgstr "身体部位出血"
+
+#: views/poe2.html:448
+msgid "In the last 21 days have you been/ traveled in a country or in contact with a person suffering from Ebola?"
+msgstr "在过去 21 天内，您是否去过/旅行过某个国家或与埃博拉患者有过接触?"

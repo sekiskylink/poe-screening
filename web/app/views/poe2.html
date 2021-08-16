@@ -1,0 +1,589 @@
+{% extends "layout.html" %}
+{% from 'layout.html' import navbar, myscripts, topnavbar  %}
+
+{% block title %}POE.::.Test{% endblock%}
+{% block stylesheets %}
+<!-- daterange picker -->
+<link rel="stylesheet" href="/static/plugins/daterangepicker/daterangepicker.css">
+<!-- iCheck for checkboxes and radio inputs -->
+<link rel="stylesheet" href="/static/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+<!-- Tempusdominus Bootstrap 4 -->
+<link rel="stylesheet" href="/static/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+
+<!-- Select2 -->
+<link rel="stylesheet" href="/static/plugins/select2/css/select2.min.css">
+<link rel="stylesheet" href="/static/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+
+{% endblock%}
+
+
+{% block topnav %}
+{% call topnavbar() %}
+{% endcall %}
+{% endblock %}
+
+{% block nav %}
+{% call navbar() %}
+
+{% endcall %}
+{% endblock %}
+
+{% block content %}
+<br/>
+<div class="card card-info">
+    <div class="card-header">
+        <h3 class="card-title">Registration Information</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <form method="POST" action="" id="poeForm">
+            <div class="row">
+                <div class="col-sm-3">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>1. {{ _("Name of Traveller") }}</label>
+                        <input type="text" class="form-control" placeholder="Name ..." name="name" data-msg="Please provide a name" required>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>2. {{ _("Nationality") }}</label>
+                        <Select class="form-control select2" name="nationality"  data-dropdown-css-class="select2-purple" 
+                            data-placeholder={{ _("Nationality") }}>
+                            <option value="">{{ _("Select Nationality") }}</option>
+                            {% for n in countries_1 %}
+                            <option value={{n.name}}>{{n.name}}</option>
+                            {% endfor %}
+                        </Select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>3. {{ _("Port of Entry") }}</label>
+                        <input type="text" class="form-control" placeholder="Port of Entry ..." name="portOfEntry">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>4. {{ _("Date of Arrival") }}</label>
+                        <div class="input-group date" id="arrivaldate" data-target-input="nearest">
+                            <input type="text" name="dateOfArrival" class="form-control datetimepicker-input" data-target="#arrivaldate" 
+                                                                                         data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                            <div class="input-group-append" data-target="#arrivaldate" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>5. {{ _("Age (years)") }}</label>
+                        <select class="form-control select2" name="age">
+                        <option value="">{{ _("Select Age") }}</option>
+                        {% for a in range(1, 99) %}
+                        <option value={{a}}>{{ a }}</option>
+                        {% endfor%}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>6. {{ _("Gender") }}</label>
+                        <Select name="gender" class="form-control" placeholder="Gender...">
+                            <option value="">{{ _("Select Gender")}}</option>
+                            <option value="Male">{{ _("Male")}}</option>
+                            <option value="Female">{{ _("Female")}}</option>
+                            <option value="Other">{{ _("Other")}}</option>
+                        </Select>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>7. {{ _("Passport Number") }}</label>
+                        <input type="text" class="form-control" placeholder="Passport No..." name="passportNumber">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>8. {{ _("Airport of embarkment")}}</label>
+                        <select name="embarkmentAirport" class="form-control select2" data-dropdown-css-class="select2-purple"
+                                data-placeholder={{ _("Select Airport of embarkment") }} style="width: 100%;">
+                            <option value="">{{ _("Select Airport of embarkment") }}</option>
+                            {% for airport in airports %}
+                            <option value={{airport.name}}>{{airport.iata_code + " - " + airport.name + " - " + airport.country_code }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>9. {{ _("Country of embarkment") }}</label>
+                            <select name="embarkmentCountry" class="form-control select2" data-dropdown-css-class="select2-purple"
+                                    data-placeholder={{ _("Select Country of embarkment") }} style="width: 100%;" required>
+                            <option value="">{{ _("Select Country of embarkment") }}</option>
+                            {% for n in countries_2 %}
+                            <option value={{n.name}}>{{n.name}}</option>
+                            {% endfor %}
+                            </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>10. {{ _("Flight / Vehicle Reg Number") }}</label>
+                        <input type="text" class="form-control" placeholder="Flight No./Vehicle No..." name="flightOrVesselNumber">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>11. {{ _("Name of countries visited in the last 14 days") }} </label>
+                        <div class="select2-purple">
+                        <select name="countriesVisited" class="select2" multiple="multiple" data-dropdown-css-class="select2-purple" 
+                            data-placeholder="Select Countries" style="width: 100%;" data-msg="Please state countries visited in the last 14 days" required>
+                            {% for n in countries_3 %}
+                            <option>{{n.name}}</option>
+                            {% endfor %}
+                        </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>12. {{ _("Physical address while in Uganda") }}</label>
+                        <input type="text" name="ugPhysicalAddress" class="form-control" placeholder="Physical address while in Uganda ...">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>13. {{ _("Planned duration of stay while in Uganda")}}</label>
+                        <input type="text" class="form-control" placeholder="Duration of stay ..." name="durationOfStay">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>14. {{ _("Your contact phone number while in Uganda") }} </label>
+                        <input type="text" class="form-control" placeholder="Phone number ..." name="ugPhoneNumber" 
+                        pattern="^(\+25[465]|0)(3[19]|41|7[015789])[0-9]{7}$" data-msg="Please provide valid phone number">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>15. {{ _("Contact/ next of kin telephone number") }}</label>
+                        <input type="text" class="form-control" placeholder="Next of kin ..." name="nextOfKin">
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>16. {{ _("Have you been to CHINA in the past two weeks?") }}</label>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="tochina" name="toChina"/>
+                            <label for="tochina">{{ _("Yes") }}</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="tochina1" name="toChina"/>
+                            <label for="tochina1">{{ _("No") }}</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>17. {{ _("Have you been to any countries affected by Corona virus in the past two weeks?") }}</label>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="been" name="beento"/>
+                            <label for="been">{{ _("Yes") }}</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="been1" name="beento"/>
+                            <label for="been1">{{ _("No") }}</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>16. {{ _("If yes, list the countries:") }}</label>
+                        <div class="select2-purple">
+                        <select name="affectedCountriesVisited" class="select2" multiple="multiple" data-dropdown-css-class="select2-purple" 
+                            data-placeholder="Affected countries you've been to" style="width: 100%;" >
+                            {% for n in countries_4 %}
+                            <option>{{n.name}}</option>
+                            {% endfor %}
+                        </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            -->
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>16. {{ _("Do you have any of the following signs and symptoms?") }}</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div row>
+                <div class="col-sm-6">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>{{ _("Fever") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="fever" name="hasFever" value="yes"/>
+                                        <label for="fever">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="fever1" name="hasFever" value="no"/>
+                                        <label for="fever1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Headache") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="headache1" name="hasHeadache" value="yes">
+                                        <label for="headache1">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="headache" name="hasHeadache" value="no">
+                                        <label for="headache">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Cough") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="cough" name="hasCough" value="yes">
+                                        <label for="cough">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="cough1" name="hasCough" value="no">
+                                        <label for="cough1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Sore throat") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="sore" name="hasSoreThroat" value="yes">
+                                        <label for="sore">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="sore1" name="hasSoreThroat" value="no">
+                                        <label for="sore1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("General body weakness (fatigue)") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="weak" name="hasFatigue" value="yes">
+                                        <label for="weak">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="weak1" name="hasFatigue" value="no">
+                                        <label for="weak1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Difficulty in breathing / shortness of breath") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="short" name="hasBreathingDifficulty" value="yes">
+                                        <label for="short">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="short1" name="hasBreathingDifficulty" value="no">
+                                        <label for="short1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Diarrhoea") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="diarrhoea" name="hasDiarrhoea" value="yes">
+                                        <label for="diarrhoea">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="diarrhoea1" name="hasDiarrhoea" value="no">
+                                        <label for="diarrhoea1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Vomiting") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="vomiting" name="vomits" value="yes">
+                                        <label for="vomiting">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="vomiting1" name="vomits" value="no">
+                                        <label for="vomiting1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Blood in cough or stool or vomitus") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="blood" name="hasBloodInCoughOrStool" value="yes">
+                                        <label for="blood">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="blood1" name="hasBloodInCoughOrStool" value="no">
+                                        <label for="blood1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Abdominal pain") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="abdominal" name="hasAbdominalPain" value="yes">
+                                        <label for="abdominal">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="abdominal1" name="hasAbdominalPain" value="no">
+                                        <label for="abdominal1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Skin rash") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="skin" name="hasSkinRash" value="yes">
+                                        <label for="skin">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="skin1" name="hasSkinRash" value="no">
+                                        <label for="skin1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Bleeding from body parts (nose, mouth, red eyes)") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="bleeding" name="bleedsFromBodyParts" value="yes">
+                                        <label for="bleeding">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="bleeding1" name="bleedsFromBodyParts" value="no">
+                                        <label for="bleeding1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>17. {{ _("In the last 21 days have you been/ traveled in a country or in contact with a person suffering from Ebola?") }}  </label>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="ebola" name="beenToEbolaAffectedCountry" value="yes"/>
+                            <label for="ebola">{{ _("Yes") }}</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="ebola1" name="beenToEbolaAffectedCountry" value="no"/>
+                            <label for="ebola1">{{ _("No") }}</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="covidVaccinationCert">18. {{ _("Upload COVID-19 Vaccination Certificate") }}</label>
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="covidVaccinationCert" name="covidVaccinationCert"/>
+                                <label for="covidVaccinationCert" class="custom-file-label">{{_("COVID-19 Vaccination Certificate")}}</label>
+                            </div>
+                            <!--
+                            <div class="input-group-append">
+                                <span class="input-group-text">Upload</span>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="yellowFeverVaccinationCert">19. {{ _("Upload Yellow Fever Vaccination Certificate") }}</label>
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="yellowFeverVaccinationCert" name="yellowFeverVaccinationCert"/>
+                                <label for="yellowFeverVaccinationCert" class="custom-file-label">{{_("Yellow Fever Vaccination Certificate")}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+{% call myscripts() %}
+<!-- InputMask -->
+<script src="/static/plugins/moment/moment.min.js"></script>
+<script src="/static/plugins/inputmask/jquery.inputmask.min.js"></script>
+<!-- date-range-picker -->
+<script src="/static/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="/static/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Select2 -->
+<script src="/static/plugins/select2/js/select2.full.min.js"></script>
+<!-- jquery-validation -->
+<script src="/static/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="/static/plugins/jquery-validation/additional-methods.min.js"></script>
+<script>
+    $(function() {
+        //Date picker
+        $('#arrivaldate').datetimepicker({
+            format: 'YYYY-MM-DD'
+        });
+        //Initialize Select2 Elements
+        $('.select2').select2()
+
+        //Initialize Select2 Elements
+        $('.select2bs4').select2({
+            theme: 'bootstrap4'
+        })
+        /*
+        $.validator.setDefaults({
+            submitHandler: function () {
+            alert( "Form successfully submitted!" );
+            }
+            // form.submit();
+        });
+        */
+        $('#poeForm').validate({
+            rules: {
+                
+                nationality: {
+                    required: true,
+                },
+                arrivalDate: {
+                    required: true
+                }
+            },
+            messages: {
+                
+                nationality: {
+                    required: "Please provide your nationality"
+                },
+                arrivalDate:{
+                    required: "Arrival date is required"
+                },
+                embarkmentCountry: {
+                    required: "embarkment country is required"
+                }
+            },
+            errorElement: 'span',
+            errorPlacement: function (error, element) {
+              error.addClass('invalid-feedback');
+              element.closest('.form-group').append(error);
+            },
+            highlight: function (element, errorClass, validClass) {
+              $(element).addClass('is-invalid');
+            },
+            unhighlight: function (element, errorClass, validClass) {
+              $(element).removeClass('is-invalid');
+            }
+            //
+        });
+    });
+</script>
+{% endcall %}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% from 'layout.html' import navbar, myscripts, topnavbar  %}
+
+{% block title %}POE.::.Test{% endblock%}
+
+{% block topnav %}
+    {% call topnavbar() %}
+    {% endcall %}
+{% endblock %}
+
+{% block nav %}
+    {% call navbar() %}
+
+    {% endcall %}
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+{% block scripts %}
+    {% call myscripts() %}
+    {% endcall %}
+{% endblock %}

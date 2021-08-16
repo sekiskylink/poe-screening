@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+{% from 'layout.html' import navbar, myscripts, topnavbar  %}
+
+{% block title %}POE.::.QR Code{% endblock%}
+
+{% block topnav %}
+    {% call topnavbar() %}
+    {% endcall %}
+{% endblock %}
+
+{% block nav %}
+    {% call navbar() %}
+
+    {% endcall %}
+{% endblock %}
+
+{% block content %}
+    <br/>
+    <input type="hidden" id="text" value="sekiwere"/>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-warning">
+                    <div class="card-header">
+                        <h3 class="card-title">Registration QR Code</h3>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div id="qrcode">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {% call myscripts() %}
+    <script type="text/javascript" src="/static/plugins/davidshimjs-qrcodejs/qrcode.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                width : 150,
+                height : 150
+            });
+
+            function makeCode () {
+                    var elText = document.getElementById("text");
+
+                    if (!elText.value) {
+                            alert("Input a text");
+                            elText.focus();
+                            return;
+                    }
+
+                    qrcode.makeCode(elText.value);
+            }
+            makeCode();
+
+            $("#text").
+                on("blur", function () {
+                        makeCode();
+                }).
+                on("keydown", function (e) {
+                        if (e.keyCode == 13) {
+                                makeCode();
+                        }
+                });
+        });
+    </script>
+    {% endcall %}
+{% endblock %}

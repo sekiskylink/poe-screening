@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-07-01 14:46+0300\n"
+"PO-Revision-Date: 2021-07-28 22:24+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"X-Generator: Poedit 3.0\n"
+
+#: views/poe2.html:40
+msgid "Name of Traveller"
+msgstr "Nom du voyageur"
+
+#: views/poe2.html:47
+msgid "Nationality"
+msgstr "Nationalité"
+
+#: views/poe2.html:54
+msgid "Port of Entry"
+msgstr "Pointe d ‘entrée"
+
+#: views/poe2.html:64
+msgid "Date of Arrival"
+msgstr "Date d'arrivée"
+
+#: views/poe2.html:78
+msgid "Age (years)"
+msgstr "Age en années"
+
+#: views/poe2.html:86
+msgid "Sex"
+msgstr "Le genre"
+
+#: views/poe2.html:94
+msgid "Passport Number"
+msgstr "Numéro de Passeport"
+
+#: views/poe2.html:104
+msgid "Airport of embarkment"
+msgstr "L'aéroport d'origine"
+
+#: views/poe2.html:111
+msgid "Country of embarkment"
+msgstr "Pays  d'origin"
+
+#: views/poe2.html:118
+msgid "Flight / Vehicle Reg Number"
+msgstr "Numéro de vol/numéro d’immatriculation du véhicule"
+
+#: views/poe2.html:128
+msgid "Name of countries visited in the last 14 days"
+msgstr "Pays visités depuis les dernières vingt et un jours"
+
+#: views/poe2.html:139
+msgid "Physical address while in Uganda"
+msgstr "Addresse en Ouganda"
+
+#: views/poe2.html:146
+msgid "Planned duration of stay while in Uganda"
+msgstr "La durée de séjour en Ouganda"
+
+#: views/poe2.html:156
+msgid "Your contact phone number while in Uganda"
+msgstr "Votre numéro de téléphone de contact en Ouganda"
+
+#: views/poe2.html:163
+msgid "Contact/ next of kin telephone number"
+msgstr "Numéro de téléphone en Ouganda"
+
+#: views/poe2.html:172
+msgid "Have you been to CHINA in the past two weeks?"
+msgstr "Êtes-vous allé en CHINE au cours des deux dernières semaines?"
+
+#: views/poe2.html:175 views/poe2.html:192 views/poe2.html:232
+#: views/poe2.html:247 views/poe2.html:262 views/poe2.html:277
+#: views/poe2.html:292 views/poe2.html:307 views/poe2.html:322
+#: views/poe2.html:337 views/poe2.html:352 views/poe2.html:367
+#: views/poe2.html:382 views/poe2.html:397 views/poe2.html:418
+msgid "Yes"
+msgstr "Oui"
+
+#: views/poe2.html:179 views/poe2.html:196 views/poe2.html:238
+#: views/poe2.html:253 views/poe2.html:268 views/poe2.html:283
+#: views/poe2.html:298 views/poe2.html:313 views/poe2.html:328
+#: views/poe2.html:343 views/poe2.html:358 views/poe2.html:373
+#: views/poe2.html:388 views/poe2.html:403 views/poe2.html:422
+msgid "No"
+msgstr "Non"
+
+#: views/poe2.html:206
+msgid "If yes, list the countries:"
+msgstr "Si oui, listez les pays:"
+
+#: views/poe2.html:217
+msgid "Do you have any of the following signs and symptoms?"
+msgstr "Avez-vous des signes et symptômes suivantes?"
+
+#: views/poe2.html:228
+msgid "Fever"
+msgstr "Fièvre"
+
+#: views/poe2.html:243
+msgid "Headache"
+msgstr "Cephalée"
+
+#: views/poe2.html:258
+msgid "Cough"
+msgstr "Toux"
+
+#: views/poe2.html:273
+msgid "Soar throat"
+msgstr "Mal de gorge"
+
+#: views/poe2.html:288
+msgid "General body weakness (fatigue)"
+msgstr "Faibless"
+
+#: views/poe2.html:303
+msgid "Difficulty in breathing / shortness of breath"
+msgstr "Difficulté à respirer / essoufflement"
+
+#: views/poe2.html:318
+msgid "Diarrhoea"
+msgstr "Diarrhée"
+
+#: views/poe2.html:333
+msgid "Vomiting"
+msgstr "Vomissements"
+
+#: views/poe2.html:348
+msgid "Blood in cough or stool or vomitus"
+msgstr "Toux sanglante, selles sanglantes, vomissement de sang"
+
+#: views/poe2.html:363
+msgid "Abdominal pain"
+msgstr "Douleurs gastriques"
+
+#: views/poe2.html:378
+msgid "Skin rash"
+msgstr "Démangeaison de la peau"
+
+#: views/poe2.html:393
+msgid "Bleeding from body parts (nose, mouth, red eyes)"
+msgstr "Saignements (nez, bouche, rougeur des yeux, etc)"
+
+#: views/poe2.html:415
+msgid "In the last 21 days have you been/ traveled in a country or in contact with a person suffering from Ebola?"
+msgstr "Au cours des 21 derniers jours avez-vous été/voyagé dans un pays ou en contact avec une personne atteinte d'Ebola ?"

@@ -1,0 +1,11 @@
+Jinja2
+psycopg2
+phonenumbers
+requests
+simplejson
+celery==4.3.0
+redis
+qrcode
+pyqrcode
+pypng
+pillow

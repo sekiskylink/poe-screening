@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-07-28 03:43+0300\n"
+"PO-Revision-Date: 2021-07-28 22:08+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sw\n"
+"X-Generator: Poedit 3.0\n"
+
+#: views/poe2.html:44
+msgid "Name of Traveller"
+msgstr "Jina la msafiri"
+
+#: views/poe2.html:51 views/poe2.html:53
+msgid "Nationality"
+msgstr "Utaifa"
+
+#: views/poe2.html:54
+msgid "Select Nationality"
+msgstr "Chagua Utaifa"
+
+#: views/poe2.html:64
+msgid "Port of Entry"
+msgstr "Bandari ya Kuingia"
+
+#: views/poe2.html:74
+msgid "Date of Arrival"
+msgstr "Tarehe ya Kuwasili"
+
+#: views/poe2.html:88
+msgid "Age (years)"
+msgstr "Umri (miaka)"
+
+#: views/poe2.html:90
+msgid "Select Age"
+msgstr "Chagua Umri"
+
+#: views/poe2.html:101
+msgid "Sex"
+msgstr "Jinsia"
+
+#: views/poe2.html:103
+msgid "Select Gender"
+msgstr "Chagua Jinsia"
+
+#: views/poe2.html:104
+msgid "Male"
+msgstr "Mwanaume"
+
+#: views/poe2.html:105
+msgid "Female"
+msgstr "Mwanamke"
+
+#: views/poe2.html:106
+msgid "Other"
+msgstr "Nyingine"
+
+#: views/poe2.html:114
+msgid "Passport Number"
+msgstr "Nambari ya Pasipoti"
+
+#: views/poe2.html:124
+msgid "Airport of embarkment"
+msgstr "Uwanja wa ndege wa kupanda"
+
+#: views/poe2.html:131
+msgid "Country of embarkment"
+msgstr "Nchi ya kupanda"
+
+#: views/poe2.html:133 views/poe2.html:134
+msgid "Select Country of embarkment"
+msgstr "Chagua nchi ya kupanda"
+
+#: views/poe2.html:144
+msgid "Flight / Vehicle Reg Number"
+msgstr "Nambari ya Ndege / Gari"
+
+#: views/poe2.html:154
+msgid "Name of countries visited in the last 14 days"
+msgstr "Jina la nchi zilizotembelewa katika siku 14 zilizopita"
+
+#: views/poe2.html:172
+msgid "Physical address while in Uganda"
+msgstr "Anwani ya mahali wakati uko nchini Uganda"
+
+#: views/poe2.html:179
+msgid "Planned duration of stay while in Uganda"
+msgstr "Muda uliopangwa wa kukaa ukiwa Uganda"
+
+#: views/poe2.html:189
+msgid "Your contact phone number while in Uganda"
+msgstr "Nambari yako ya simu ya mawasiliano ukiwa Uganda"
+
+#: views/poe2.html:196
+msgid "Contact/ next of kin telephone number"
+msgstr "Nambari ya simu ya mawasiliano"
+
+#: views/poe2.html:205
+msgid "Have you been to CHINA in the past two weeks?"
+msgstr "Umewahi kwenda CHINA katika wiki mbili zilizopita?"
+
+#: views/poe2.html:208 views/poe2.html:225 views/poe2.html:265
+#: views/poe2.html:280 views/poe2.html:295 views/poe2.html:310
+#: views/poe2.html:325 views/poe2.html:340 views/poe2.html:355
+#: views/poe2.html:370 views/poe2.html:385 views/poe2.html:400
+#: views/poe2.html:415 views/poe2.html:430 views/poe2.html:451
+msgid "Yes"
+msgstr "Ndio"
+
+#: views/poe2.html:212 views/poe2.html:229 views/poe2.html:271
+#: views/poe2.html:286 views/poe2.html:301 views/poe2.html:316
+#: views/poe2.html:331 views/poe2.html:346 views/poe2.html:361
+#: views/poe2.html:376 views/poe2.html:391 views/poe2.html:406
+#: views/poe2.html:421 views/poe2.html:436 views/poe2.html:455
+msgid "No"
+msgstr "Hapana"
+
+#: views/poe2.html:239
+msgid "If yes, list the countries:"
+msgstr "Ikiwa ndio ,orodhesha nchi:"
+
+#: views/poe2.html:250
+msgid "Do you have any of the following signs and symptoms?"
+msgstr "Je! Una dalili na dalili zifuatazo?"
+
+#: views/poe2.html:261
+msgid "Fever"
+msgstr "Homa"
+
+#: views/poe2.html:276
+msgid "Headache"
+msgstr "Maumivu ya kichwa"
+
+#: views/poe2.html:291
+msgid "Cough"
+msgstr "Kikohozi"
+
+#: views/poe2.html:306
+msgid "Soar throat"
+msgstr "Koo"
+
+#: views/poe2.html:321
+msgid "General body weakness (fatigue)"
+msgstr "Udhaifu wa mwili kwa ujumla (uchovu)"
+
+#: views/poe2.html:336
+msgid "Difficulty in breathing / shortness of breath"
+msgstr "Ugumu wa kupumua / kupumua kwa pumzi"
+
+#: views/poe2.html:351
+msgid "Diarrhoea"
+msgstr "Kuhara"
+
+#: views/poe2.html:366
+msgid "Vomiting"
+msgstr "Kutapika"
+
+#: views/poe2.html:381
+msgid "Blood in cough or stool or vomitus"
+msgstr "Damu katika kikohozi au kinyesi au matapishi"
+
+#: views/poe2.html:396
+msgid "Abdominal pain"
+msgstr "Maumivu ya tumbo"
+
+#: views/poe2.html:411
+msgid "Skin rash"
+msgstr "Upele wa ngozi"
+
+#: views/poe2.html:426
+msgid "Bleeding from body parts (nose, mouth, red eyes)"
+msgstr "Damu kutoka sehemu za mwili (pua, mdomo, macho mekundu)"
+
+#: views/poe2.html:448
+msgid "In the last 21 days have you been/ traveled in a country or in contact with a person suffering from Ebola?"
+msgstr "Katika siku 21 zilizopita umewahi / kusafiri katika nchi au unawasiliana na mtu anayeugua Ebola?"

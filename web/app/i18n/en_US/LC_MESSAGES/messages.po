@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2021-07-28 03:19+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: views/poe2.html:44
+msgid "Name of Traveller"
+msgstr ""
+
+#: views/poe2.html:51 views/poe2.html:53
+msgid "Nationality"
+msgstr ""
+
+#: views/poe2.html:54
+msgid "Select Nationality"
+msgstr ""
+
+#: views/poe2.html:64
+msgid "Port of Entry"
+msgstr ""
+
+#: views/poe2.html:74
+msgid "Date of Arrival"
+msgstr ""
+
+#: views/poe2.html:88
+msgid "Age (years)"
+msgstr ""
+
+#: views/poe2.html:90
+msgid "Select Age"
+msgstr ""
+
+#: views/poe2.html:101
+msgid "Sex"
+msgstr ""
+
+#: views/poe2.html:103
+msgid "Select Gender"
+msgstr ""
+
+#: views/poe2.html:104
+msgid "Male"
+msgstr ""
+
+#: views/poe2.html:105
+msgid "Female"
+msgstr ""
+
+#: views/poe2.html:106
+msgid "Other"
+msgstr ""
+
+#: views/poe2.html:114
+msgid "Passport No."
+msgstr ""
+
+#: views/poe2.html:124
+msgid "Airport of embarkment"
+msgstr ""
+
+#: views/poe2.html:131
+msgid "Country of embarkment"
+msgstr ""
+
+#: views/poe2.html:133 views/poe2.html:134
+msgid "Select Country of embarkment"
+msgstr ""
+
+#: views/poe2.html:144
+msgid "Flight Number/Vehicle Registration Number"
+msgstr ""
+
+#: views/poe2.html:154
+msgid "Name of countries visited in the last 14 days"
+msgstr ""
+
+#: views/poe2.html:172
+msgid "Physical address while in Uganda"
+msgstr ""
+
+#: views/poe2.html:179
+msgid "Planned duration of stay while in Uganda"
+msgstr ""
+
+#: views/poe2.html:189
+msgid "Your contact phone number while in Uganda"
+msgstr ""
+
+#: views/poe2.html:196
+msgid "Contact/ next of kin telephone number"
+msgstr ""
+
+#: views/poe2.html:205
+msgid "Have you been to CHINA in the past two weeks?"
+msgstr ""
+
+#: views/poe2.html:208 views/poe2.html:225 views/poe2.html:265
+#: views/poe2.html:280 views/poe2.html:295 views/poe2.html:310
+#: views/poe2.html:325 views/poe2.html:340 views/poe2.html:355
+#: views/poe2.html:370 views/poe2.html:385 views/poe2.html:400
+#: views/poe2.html:415 views/poe2.html:430 views/poe2.html:451
+msgid "Yes"
+msgstr ""
+
+#: views/poe2.html:212 views/poe2.html:229 views/poe2.html:271
+#: views/poe2.html:286 views/poe2.html:301 views/poe2.html:316
+#: views/poe2.html:331 views/poe2.html:346 views/poe2.html:361
+#: views/poe2.html:376 views/poe2.html:391 views/poe2.html:406
+#: views/poe2.html:421 views/poe2.html:436 views/poe2.html:455
+msgid "No"
+msgstr ""
+
+#: views/poe2.html:222
+msgid "Have you been to any countryies affected by Corona virus past two weeks?"
+msgstr ""
+#: views/poe2.html:239
+msgid "If yes, list the countries:"
+msgstr ""
+
+#: views/poe2.html:250
+msgid "Do you have any of the following signs and symptoms?"
+msgstr ""
+
+#: views/poe2.html:261
+msgid "Fever"
+msgstr ""
+
+#: views/poe2.html:276
+msgid "Headache"
+msgstr ""
+
+#: views/poe2.html:291
+msgid "Cough"
+msgstr ""
+
+#: views/poe2.html:306
+msgid "Soar throat"
+msgstr ""
+
+#: views/poe2.html:321
+msgid "General body weakness (fatigue)"
+msgstr ""
+
+#: views/poe2.html:336
+msgid "Difficulty in breathing / shortness of breath"
+msgstr ""
+
+#: views/poe2.html:351
+msgid "Diarrhoea"
+msgstr ""
+
+#: views/poe2.html:366
+msgid "Vomiting"
+msgstr ""
+
+#: views/poe2.html:381
+msgid "Blood in cough or stool or vomitus"
+msgstr ""
+
+#: views/poe2.html:396
+msgid "Abdominal pain"
+msgstr ""
+
+#: views/poe2.html:411
+msgid "Skin rash"
+msgstr ""
+
+#: views/poe2.html:426
+msgid "Bleeding from body parts (nose, mouth, red eyes)"
+msgstr ""
+
+#: views/poe2.html:448
+msgid "In the last 21 days have you been/ traveled in a country or in contact with a person suffering from Ebola?"
+msgstr ""
+

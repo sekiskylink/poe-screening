@@ -1,0 +1,474 @@
+{% extends "layout.html" %}
+{% from 'layout.html' import navbar, myscripts, topnavbar  %}
+
+{% block title %}POE.::.Test{% endblock%}
+{% block stylesheets %}
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="/static/plugins/daterangepicker/daterangepicker.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="/static/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="/static/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    
+{% endblock%}
+
+
+{% block topnav %}
+    {% call topnavbar() %}
+    {% endcall %}
+{% endblock %}
+
+{% block nav %}
+    {% call navbar() %}
+
+    {% endcall %}
+{% endblock %}
+
+{% block content %}
+    <br/>
+    <div class="card card-info">
+        <div class="card-header">
+            <h3 class="card-title">Registration Information</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <form method="POST" action="">
+                <div class="row">
+                    <div class="col-sm-3">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>1. Name of Traveller</label>
+                        <input type="text" class="form-control" placeholder="Name ..." name="name">
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>2. Nationality</label>
+                        <input type="text" class="form-control" placeholder="Nationality ..." name="nationality">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>3. Port of Entry</label>
+                        <input type="text" class="form-control" placeholder="Port of Entry ..." name="poe">
+                      </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-3">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>4. Date of Arrival</label>
+                        <div class="input-group date" id="arrivaldate" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#arrivaldate" placeholder="YYYY-MM-DD"/>
+                            <div class="input-group-append" data-target="#arrivaldate" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>5. Age (years)</label>
+                        <input type="text" class="form-control" placeholder="Age..." name="age">
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>6. Sex</label>
+                        <input type="text" class="form-control" placeholder="Sex ..." name="sex">
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>7. Passport No.</label>
+                        <input type="text" class="form-control" placeholder="Passport No..." name="passport_no">
+                      </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>8. Airport of embarkment</label>
+                        <input type="text" class="form-control" placeholder="Airport of embarkment ..." name="embarkment_airport">
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>9. Country of embarkment</label>
+                        <input type="text" class="form-control" placeholder="Country of Embarkment ..." name="embarkment_country">
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>10. Flight Number/Vehicle Reg No.</label>
+                        <input type="text" class="form-control" placeholder="Flight No./Vehicle No..." name="vessle_no">
+                      </div>
+                    </div>
+                </div>
+
+                 <div class="row">
+                    <div class="col-sm-12">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>11. Name of countries visited in the last 14 days </label>
+                        <input type="text" class="form-control" placeholder="Countries Visited ..." name="countries_visited">
+                      </div>
+                    </div>
+                    
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>12. Physical address while in Uganda</label>
+                        <input type="text" class="form-control" placeholder="Physical address while in Uganda ...">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>13. Planned duration of stay while in Uganda</label>
+                        <input type="text" class="form-control" placeholder="Duration of stay ..." name="planned_duration">
+                      </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>13. Your contact phone number while in Uganda </label>
+                        <input type="text" class="form-control" placeholder="Phone number ..." name="contact">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>14. Contact/ next of kin telephone number</label>
+                        <input type="text" class="form-control" placeholder="Next of kin ..." name="next_of_kin">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>15. Have you been to CHINA in the past two weeks?</label>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="tochina" name="toChina"/>
+                            <label for="tochina">Yes</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="tochina1" name="toChina"/>
+                            <label for="tochina1">No</label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>16. Have you been to any country(ies) affected by Corona virus past two weeks?</label>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="been" name="beento"/>
+                            <label for="been">Yes</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="been1" name="beento"/>
+                            <label for="been1">No</label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>17. If yes, list the countries:</label>
+                        <input type="text" class="form-control" placeholder="Affected countries you've been to ..." name="affected_countries">
+                      </div>
+                    </div>
+                    
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>Do you have any of the following signs and symptoms?:</label>
+                      </div>
+                    </div>
+                    
+                </div>
+
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Yes</th>
+                                <th>No</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>19.</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="fever" name="fever" value="yes"/>
+                                        <label for="fever"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="fever1" name="fever" value="no"/>
+                                        <label for="fever1"></label>
+                                    </div>
+                                </td>
+                                <td>Fever</td>
+                            </tr>
+                            <tr>
+                                <td>20.</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="headache1" name="headache" value="yes">
+                                        <label for="headache1"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="headache" name="headache" value="no">
+                                        <label for="headache"></label>
+                                    </div>
+                                </td>
+                                <td>Headache</td>
+                            </tr>
+                            <tr>
+                                <td>21.</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="cough" name="cough" value="yes">
+                                        <label for="cough"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="cough1" name="cough" value="no">
+                                        <label for="cough1"></label>
+                                    </div>
+                                </td>
+                                <td>Cough</td>
+                            </tr>
+                            <tr>
+                                <td>22.</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="soar" name="soar" value="yes">
+                                        <label for=""></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="soar1" name="soar" value="no">
+                                        <label for="soar1"></label>
+                                    </div>
+                                </td>
+                                <td>Soar throat</td>
+                            </tr>
+                            <tr>
+                                <td>23.</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="weak" name="weakness" value="yes">
+                                        <label for="weak"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="weak1" name="weakness" value="no">
+                                        <label for="weak1"></label>
+                                    </div>
+                                </td>
+                                <td>General body weakness (fatigue)</td>
+                            </tr>
+                            <tr>
+                                <td>24.</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="short" name="shortness" value="yes">
+                                        <label for="short"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="short1" name="shortness" value="no">
+                                        <label for="short1"></label>
+                                    </div>
+                                </td>
+                                <td>Difficulty in breathing / shortness of breath</td>
+                            </tr>
+                            <tr>
+                                <td>25.</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="diarrhoea" name="diarrhoea" value="yes">
+                                        <label for="diarrhoea"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="diarrhoea1" name="diarrhoea" value="no">
+                                        <label for="diarrhoea1"></label>
+                                    </div>
+                                </td>
+                                <td>Diarrhoea</td>
+                            </tr>
+                            <tr>
+                                <td>26.</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="vomiting" name="vomiting" value="yes">
+                                        <label for="vomiting"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="vomiting1" name="vomiting" value="no">
+                                        <label for="vomiting1"></label>
+                                    </div>
+                                </td>
+                                <td>Vomiting</td>
+                            </tr>
+                            <tr>
+                                <td>27.</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="blood" name="blood" value="yes">
+                                        <label for="blood"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="blood1" name="blood" value="no">
+                                        <label for="blood1"></label>
+                                    </div>
+                                </td>
+                                <td>Blood in cough or stool or vomitus</td>
+                            </tr>
+                            <tr>
+                                <td>28.</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="abdominal" name="abdominal" value="yes">
+                                        <label for="abdominal"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="abdominal1" name="abdominal" value="no">
+                                        <label for="abdominal1"></label>
+                                    </div>
+                                </td>
+                                <td>Abdominal pain</td>
+                            </tr>
+                            <tr>
+                                <td>29.</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="skin" name="skin" value="yes">
+                                        <label for="skin"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="skin1" name="skin" value="no">
+                                        <label for="skin1"></label>
+                                    </div>
+                                </td>
+                                <td>skin rash</td>
+                            </tr>
+                            <tr>
+                                <td>30.</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="bleeding" name="bleeding" value="yes">
+                                        <label for="bleeding"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="bleeding1" name="bleeding" value="no">
+                                        <label for="bleeding1"></label>
+                                    </div>
+                                </td>
+                                <td>Bleeding from body parts (nose, mouth, red eyes)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>31. In the last 21 days have you been/ travelled in a country or in contact with a person suffering from Ebola?  </label>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="ebola" name="ebola" value="yes"/>
+                            <label for="ebola">Yes</label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="ebola1" name="ebola" value="no"/>
+                            <label for="ebola1">No</label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                </div>
+
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {% call myscripts() %}
+    <!-- InputMask -->
+    <script src="/static/plugins/moment/moment.min.js"></script>
+    <script src="/static/plugins/inputmask/jquery.inputmask.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="/static/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="/static/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script>
+        $(function() {
+            //Date picker
+            $('#arrivaldate').datetimepicker({
+                format: 'YYYY-MM-DD'
+            });
+        });
+    </script>
+    {% endcall %}
+{% endblock %}
