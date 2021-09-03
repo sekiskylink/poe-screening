@@ -10,7 +10,9 @@ from app.tools.utils import auth_user, audit_log
 
 
 class Verify:
-    def GET(self):
+    def GET(self, verification_code):
+        # params = web.input()
+        # db.query("SELECT fields FROM entries WHERE id = $id")
         l = locals()
         del l['self']
         return render.test(**l)
