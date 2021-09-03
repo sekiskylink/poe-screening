@@ -62,7 +62,14 @@
                     <!-- text input -->
                     <div class="form-group">
                         <label>3. {{ _("Port of Entry") }}</label>
-                        <input type="text" class="form-control" placeholder="Port of Entry ..." name="portOfEntry">
+                        <!--<input type="text" class="form-control" placeholder="Port of Entry ..." name="portOfEntry">-->
+                        <Select class="form-control select2" name="portOfEntry"  data-dropdown-css-class="select2-purple" 
+                            data-placeholder={{ _("Port of Entry") }} data-msg="Please specify port of entry" required>
+                            <option value="">{{ _("Select Port of Entry") }}</option>
+                            {% for p in ports %}
+                            <option value={{p.dhis2_code}}>{{p.name}}</option>
+                            {% endfor %}
+                        </Select>
                     </div>
                 </div>
             </div>

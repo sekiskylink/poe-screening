@@ -19,6 +19,39 @@ CREATE TABLE airports (
 CREATE INDEX airports_idx_iata_code ON airports(iata_code);
 CREATE INDEX airports_idx_name ON airports(name);
 
+-- port are the ports of entry
+CREATE TABLE ports (
+    id SERIAL PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL DEFAULT '',
+    dhis2_code TEXT NOT NULL,
+    dhis2_path TEXT NOT NULL DEFAULT '',
+    dhis2_parent TEXT NOT NULL DEFAULT '',
+    created TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX ports_idx_name ON ports(name);
+CREATE INDEX ports_idx_code ON ports(dhis2_code);
+
+-- just to cache orgunits in DHIS2
+CREATE TABLE orgunits(
+    id SERIAL PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL DEFAULT '',
+    dhis2_code TEXT NOT NULL,
+    dhis2_level INTEGER NOT NULL,
+    dhis2_parent TEXT NOT NULL,
+    dhis2_path TEXT NOT NULL,
+    created TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX orgunits_idx_name ON orgunits(name);
+CREATE INDEX orgunits_idx_code ON orgunits(dhis2_code);
+CREATE INDEX orgunits_idx_level ON orgunits(dhis2_level);
+CREATE INDEX orgunits_idx_parent ON orgunits(dhis2_parent);
+
+
+
 CREATE TABLE entries (
     id BIGSERIAL PRIMARY KEY NOT NULL,
     fields JSONB NOT NULL DEFAULT '{}'::JSONB,

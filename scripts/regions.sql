@@ -1,0 +1,15 @@
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('Acholi', 'SUvODYOcaVf', 2, 'akV6429SUqu', '/akV6429SUqu/SUvODYOcaVf');
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('Ankole', 'F1o6qBSx783', 2, 'akV6429SUqu', '/akV6429SUqu/F1o6qBSx783');
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('Bugisu', 'Dt6qdenPX1E', 2, 'akV6429SUqu', '/akV6429SUqu/Dt6qdenPX1E');
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('Bukedi', 'QBPg7KKCeoA', 2, 'akV6429SUqu', '/akV6429SUqu/QBPg7KKCeoA');
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('Bunyoro', 'yx0ieyZNF0l', 2, 'akV6429SUqu', '/akV6429SUqu/yx0ieyZNF0l');
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('Busoga', 'Wd1lV9Qdj4o', 2, 'akV6429SUqu', '/akV6429SUqu/Wd1lV9Qdj4o');
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('Kampala', 'GIpyzaSuEgM', 2, 'akV6429SUqu', '/akV6429SUqu/GIpyzaSuEgM');
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('Karamoja', 'jdlbNUwJiKX', 2, 'akV6429SUqu', '/akV6429SUqu/jdlbNUwJiKX');
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('Kigezi', 'G0rlphd2tcD', 2, 'akV6429SUqu', '/akV6429SUqu/G0rlphd2tcD');
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('Lango', 'DWPnYhoqza0', 2, 'akV6429SUqu', '/akV6429SUqu/DWPnYhoqza0');
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('North Central', 'Dl9WvtvDs5V', 2, 'akV6429SUqu', '/akV6429SUqu/Dl9WvtvDs5V');
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('South Central', 'IEU0FjDAhBP', 2, 'akV6429SUqu', '/akV6429SUqu/IEU0FjDAhBP');
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('Teso', 'r0GhWtmPHDj', 2, 'akV6429SUqu', '/akV6429SUqu/r0GhWtmPHDj');
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('Tooro', 'JZhJ50nOirX', 2, 'akV6429SUqu', '/akV6429SUqu/JZhJ50nOirX');
+INSERT INTO orgunits (name,dhis2_code, dhis2_level, dhis2_parent, dhis2_path) VALUES('West Nile', 'BD3XaQ7cQAp', 2, 'akV6429SUqu', '/akV6429SUqu/BD3XaQ7cQAp');

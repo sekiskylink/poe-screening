@@ -24,6 +24,7 @@ class Poe:
         countries_3 = db.query("SELECT id, name FROM countries")
         countries_4 = db.query("SELECT id, name FROM countries")
 
+        ports = db.query("SELECT id, name, dhis2_code FROM ports")
         airports = db.query("SELECT id, name, country_code, iata_code FROM airports")
         l = locals()
         del l['self']
@@ -88,11 +89,13 @@ class Poe:
                     'beenToEbolaAffectedCountry':params.beenToEbolaAffectedCountry,
                     'yellowFeverVaccinationCert': params.yellowFeverVaccinationCert,
                 }
-                r = db.query(
+                res = db.query(
                     "INSERT INTO entries (fields) VALUES ($fields) RETURNING id",
                     {'fields': psycopg2.extras.Json(fields, dumps=simplejson.dumps)}
                 )
-                if r:
+                if res:
+                    r = res[0]
+                    saved_record = "%s" % r.id
                     print("Record saved")
         l = locals()
         del l['self']
