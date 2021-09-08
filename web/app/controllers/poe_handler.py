@@ -19,10 +19,10 @@ class Poe:
         lang = params.get('lang', 'en_US')
         ses.lang = lang
         put_session(ses)
-        countries_1 = db.query("SELECT id, name FROM countries")
-        countries_2 = db.query("SELECT id, name FROM countries")
-        countries_3 = db.query("SELECT id, name FROM countries")
-        countries_4 = db.query("SELECT id, name FROM countries")
+        countries_1 = db.query("SELECT id, name, alpha_2_code FROM countries")
+        countries_2 = db.query("SELECT id, name, alpha_2_code FROM countries")
+        countries_3 = db.query("SELECT id, name, alpha_2_code FROM countries")
+        countries_4 = db.query("SELECT id, name, alpha_2_code FROM countries")
 
         ports = db.query("SELECT id, name, dhis2_code FROM ports")
         airports = db.query("SELECT id, name, country_code, iata_code FROM airports")
