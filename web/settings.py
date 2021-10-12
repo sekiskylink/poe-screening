@@ -35,29 +35,41 @@ config = {
 
 # DHIS 2 Tracker Program Settings
 DHIS2_TRACKER_PROGRAM_CONF = {
-        'program': 'nBWFG3fYC8N',
-        'trackedEntityType': 'KWN8FUfvO5G', # Person
+        'program': 'wgriE6kg4JM',
+        'trackedEntityType': 'MCPQUTHX1Ze', # Person
         'attributes': {
-            'name': 'v38k0KDP9mE',
-            'formId': 'yRfqBeCakkf',
-            'printTravelPass': 'u2rh74FGZeN',
-            'SystemId': 'n1XopDm7mCV',
-            'gender': 'pRpGsL1IVfG',  # Gender aka Sex
-            'nationality': 'xyqt7jx4hFT',
-            'dateOfBirth': 'SpsFJYxJ5W8',
-            'dateOfArival': 'uMGXozzQaOi',
-            'PassportNumber': 'AuhPUybQMOf', # Can be NIN
-            'flightOrVesselNumber': 'K1SjKeVnzHc',
-            'seatNumber': 'tokcH3iFDCZ',
-            'ugPhoneNumber': 'hb86PiUnfPN',
-            'freeFromSymptoms': 'pIQpL7Ie1ow',
-            'embarkmentCountry': 'c8uVQ8EIwES',
-            'ugPhysicalAddress': 'pa2k9W1c6zC',
+            'arrivalOrDeparture': 'vbR9HyvLXWd',
+            'name': 'sB1IHYu2xQT',
+            'sex': 'FZzQbW8AWVd',  # Gender aka Sex
+            'nationality': 'XvETY1aTxuB',
+            'email': 'BJ6XIkuzk3J',
+            'dateOfBirth': 'g4LJbkM0R24',
+            'age': 'UezutfURtQG',
+            # 'dateOfArival': '',
+            'dateOfDeparture': 'szXspz3z0RA',
+            'ugPhysicalAddress': 'ooK7aSiAaGq',
+            'passportNumber': 'oUqWGeHjj5C', # Can be NIN
+            'passportExpiryDate': 'rsFsoleZSHA',
+            'flightOrVesselNumber': 'h6aZFN4DLcR',
+            'seatNumber': 'XX8NZilra7b',
+            'ugPhoneNumber': 'E7u9XdW24SP',
+            'nextOfKin': 'j6sEr8EcULP',
+            'countryOfResidence': 'hBcoBCZBWFb',
+            'countryOfDeparture': 'cW0UPEANS5t',
+            'travellingTo': 'pxcXhmjJeMv',
+            'modeOfTransport': 'rBXloP7CJ9M',
+            'purposeOfTrip': 'QIGSvZYCi4g',
+            'freeFromSymptoms': 'EWWNozu6TVd',
+            'dateOfLastCovidVaccination': 'hG66PSsqVkf',
+            'beenCovidVaccinated': 'WypSLyCzzlH',
+            'yellowFeverCardNumber': 'MbGcWAhHOPc',
+            # 'embarkmentCountry': '',
+            'ugPhysicalAddress': 'ooK7aSiAaGq',
             'durationOfStay': 'VpsljpwkXcD',
         },
         'stages': {
             'travelLocator': {
-                'uid': 'r7k02JBxge6',
+                'uid': 'Fogca7wvYMQ',
                 'dataelements': {
                     'timeAtCheckPoint': 'aN2fgA52IrU',
                     'nameOfCheckPoint': 'hcdSE7aTbQT',

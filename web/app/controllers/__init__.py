@@ -38,6 +38,23 @@ allTranslations = web.storage()
 SESSION = ''
 APP = None
 
+rs = db.query("SELECT id, name, alpha_2_code FROM countries")
+ourCountries = []
+for c in rs:
+    ourCountries.append({'id': c['id'], 'name': c['name'], 'alpha_2_code': c['alpha_2_code']})
+
+
+ports = db.query("SELECT id, name, dhis2_code FROM ports")
+ourPorts = []
+for p in ports:
+    ourPorts.append({'id': p['id'], 'name': p['name'], 'dhis2_code': p['dhis2_code']})
+
+airports = db.query("SELECT id, name, country_code, iata_code FROM airports")
+ourAirPorts = []
+for a in airports:
+    ourAirPorts.append({
+        'id': a['id'], 'name': a['name'], 'country_code': a['country_code'],
+        'iata_code': a['iata_code']})
 
 def put_app(app):
     global APP
@@ -194,6 +211,9 @@ def require_login(f):
 render._lookup.globals.update(
     ses=get_session(), permissions=Permissions,
     year=datetime.datetime.now().strftime('%Y'),
+    countries=ourCountries,
+    ports=ourPorts,
+    airports=ourAirPorts,
     _=custom_gettext,
 )
 render._lookup.filters.update(myFilters)
