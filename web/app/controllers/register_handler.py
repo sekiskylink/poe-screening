@@ -23,12 +23,12 @@ class Registration:
 
     def POST(self):
         params = web.input(
-            name="", nationality="", portOfEntry="", dateOfArrival="", dateOfDeparture,
+            name="", nationality="", portOfEntry="", dateOfArrival="", dateOfDeparture="",
             age="", sex="", dateOfBirth="", passportNumber="", embarkmentAirport="",
             embarkmentCountry="", countryOfResidence="", countryOfDeparture="",
-            flightOrVesselNumber="", seatNumber,modeOfTransport="", purposeOfTrip="",
+            flightOrVesselNumber="", seatNumber="", modeOfTransport="", purposeOfTrip="",
             ugPhysicalAddress="", durationOfStay="", PhoneNumber="", travellingTo="",
-            purposeOfTrip="", disembarkmentAirport="", nextOfKin="", hasSymptoms="",
+            disembarkmentAirport="", nextOfKin="", hasSymptoms="",
             beenCovidVaccinated="", dateOfLastCovidVaccination="", yellowFeverCardNumber="",
             hasNegativePCRTest="", dateOfYellowFeverVaccination="", ed="", d_id=""
         )
