@@ -4,6 +4,8 @@
 """
 
 import web
+import simplejson
+import psycopg2.extras
 from . import render
 from . import csrf_protected, db, get_session, put_session
 from app.tools.utils import auth_user, audit_log
@@ -70,7 +72,7 @@ class Registration:
                     'ugPhysicalAddress': params.ugPhysicalAddress,
                     'durationOfStay': params.durationOfStay,
                     'purposeOfTrip': params.purposeOfTrip,
-                    'PhoneNumber': params.ugPhoneNumber,
+                    'PhoneNumber': params.PhoneNumber,
                     'nextOfKin': params.nextOfKin,
                     'hasSymptoms': params.hasSymptoms,
                     'beenCovidVaccinated': params.beenCovidVaccinated,
@@ -87,6 +89,7 @@ class Registration:
                     r = res[0]
                     saved_record = "%s" % r.id
                     print("Record saved")
+                    return render.qrcode({'saved_record': saved_record})
         l = locals()
         del l['self']
         return render.registration(**l)
