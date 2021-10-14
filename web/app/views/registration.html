@@ -517,7 +517,7 @@
                                                 <label>{{ _("Passport Expiry Date") }}</label>
                                                 <div class="input-group date" id="passportExpiryDate1" data-target-input="nearest">
                                                     <input type="text" name="passportExpiryDate" class="form-control datetimepicker-input" 
-                                                                 data-target="#passportExpiryDate" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                                                 data-target="#passportExpiryDate1" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
                                                     <div class="input-group-append" data-target="#passportExpiryDate1" data-toggle="datetimepicker">
                                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                     </div>
@@ -819,52 +819,66 @@
 <script src="/static/plugins/jquery-validation/additional-methods.min.js"></script>
 <script>
 $(function() {
+    var tenYearsFromNow = new Date(new Date().setFullYear(new Date().getFullYear() + 10))
+    var oneYearFromNow = new Date(new Date().setFullYear(new Date().getFullYear() + 1))
     //Date picker
     $('#arrivaldate').datetimepicker({
-    format: 'YYYY-MM-DD'
+        format: 'YYYY-MM-DD'
     });
     $('#dateOfBirth').datetimepicker({
-    format: 'YYYY-MM-DD'
+        format: 'YYYY-MM-DD',
+        'maxDate': new Date()
     });
     $('#passportExpiryDate').datetimepicker({
-    format: 'YYYY-MM-DD'
+        format: 'YYYY-MM-DD',
+        minDate: '0',
+        maxDate: tenYearsFromNow
     });
     $('#dateOfArrival').datetimepicker({
-    format: 'YYYY-MM-DD'
+        format: 'YYYY-MM-DD'
     });
     $('#dateOfDeparture').datetimepicker({
-    format: 'YYYY-MM-DD'
+        format: 'YYYY-MM-DD',
+        minDate: '-1970/01/01',
+        maxDate: oneYearFromNow
     });
     $('#dateOfLastCovidVaccination').datetimepicker({
-    format: 'YYYY-MM-DD'
+        format: 'YYYY-MM-DD'
     });
     $('#dateOfYellowFeverVaccination').datetimepicker({
-    format: 'YYYY-MM-DD'
+        format: 'YYYY-MM-DD'
     });
 
     $('#dateOfBirth1').datetimepicker({
-    format: 'YYYY-MM-DD'
+        format: 'YYYY-MM-DD',
+        'maxDate': new Date()
     });
     $('#dateOfDeparture1').datetimepicker({
-    format: 'YYYY-MM-DD'
+        format: 'YYYY-MM-DD',
+        formatDate: 'YYYY-MM-DD',
+        minDate: new Date(),
+        maxDate: oneYearFromNow
     });
     $('#passportExpiryDate1').datetimepicker({
-    format: 'YYYY-MM-DD'
+        timepicker:false,
+        format: 'YYYY-MM-DD',
+        minDate: new Date(),
+        maxDate: tenYearsFromNow
     });
 
     $('#dateOfLastCovidVaccination1').datetimepicker({
-    format: 'YYYY-MM-DD'
+        format: 'YYYY-MM-DD'
     });
 
     $('#dateOfYellowFeverVaccination1').datetimepicker({
-    format: 'YYYY-MM-DD'
+        format: 'YYYY-MM-DD'
     });
     //Initialize Select2 Elements
     $('.select2').select2()
 
     //Initialize Select2 Elements
     $('.select2bs4').select2({
-    theme: 'bootstrap4'
+        theme: 'bootstrap4'
     })
     /*
     $.validator.setDefaults({
@@ -907,25 +921,25 @@ $(function() {
                 required: "Nationality is required"
             },
             dateOfArrival:{
-                required: "Arrival date is required"
+                required: "Arrival Date is required"
             },
             embarkmentCountry: {
-                required: "embarkment country is required"
+                required: "Embarkment Country is required"
             },
             sex: {
                 required: "Sex is required"
             },
             passportNumber: {
-                required: "passport number is required"
+                required: "Passport Number is required"
             },
             arrivalDate: {
-                required: "Arrival date is required"
+                required: "Arrival Date is required"
             },
             passportExpiryDate: {
-                required: "Passport expiry date is required"
+                required: "Passport Expiry Date is required"
             },
             modeOfTransport: {
-                required: "Mode of transport is required"
+                required: "Mode of Transport is required"
             }
         },
         errorElement: 'span',
@@ -989,31 +1003,31 @@ $(function() {
                 required: "Arrival date is required"
             },
             embarkmentCountry: {
-                required: "embarkment country is required"
+                required: "Embarkment Country is required"
             },
             sex: {
                 required: "Sex is required"
             },
             passportNumber: {
-                required: "passport number is required"
+                required: "Passport Number is required"
             },
             arrivalDate: {
-                required: "Arrival date is required"
+                required: "Arrival Date is required"
             },
             passportExpiryDate: {
-                required: "Passport expiry date is required"
+                required: "Passport Expiry Date is required"
             },
             modeOfTransport: {
-                required: "Mode of transport is required"
+                required: "Mode of Transport is required"
             },
             countryOfDeparture: {
-                required: "Country of departure is required"
+                required: "Country of Departure is required"
             },
             dateOfDeparture: {
-                required: "Date of departure is required"
+                required: "Date of Departure is required"
             },
             travellingTo: {
-                required: "Destination country is required"
+                required: "Destination Country is required"
             }
         },
         errorElement: 'span',
