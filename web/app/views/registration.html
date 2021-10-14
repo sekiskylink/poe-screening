@@ -830,12 +830,16 @@ $(function() {
         'maxDate': new Date()
     });
     $('#passportExpiryDate').datetimepicker({
+        timepicker:false,
         format: 'YYYY-MM-DD',
-        minDate: '0',
+        minDate: new Date(),
         maxDate: tenYearsFromNow
     });
     $('#dateOfArrival').datetimepicker({
-        format: 'YYYY-MM-DD'
+        timepicker:false,
+        format: 'YYYY-MM-DD',
+        minDate: '-1970/01/01',
+        maxDate: oneYearFromNow
     });
     $('#dateOfDeparture').datetimepicker({
         format: 'YYYY-MM-DD',
@@ -843,10 +847,14 @@ $(function() {
         maxDate: oneYearFromNow
     });
     $('#dateOfLastCovidVaccination').datetimepicker({
-        format: 'YYYY-MM-DD'
+        timepicker:false,
+        format: 'YYYY-MM-DD',
+        maxDate: new Date()
     });
     $('#dateOfYellowFeverVaccination').datetimepicker({
-        format: 'YYYY-MM-DD'
+        timepicker:false,
+        format: 'YYYY-MM-DD',
+        maxDate: new Date()
     });
 
     $('#dateOfBirth1').datetimepicker({
@@ -867,11 +875,13 @@ $(function() {
     });
 
     $('#dateOfLastCovidVaccination1').datetimepicker({
-        format: 'YYYY-MM-DD'
+        format: 'YYYY-MM-DD',
+        maxDate: new Date()
     });
 
     $('#dateOfYellowFeverVaccination1').datetimepicker({
-        format: 'YYYY-MM-DD'
+        format: 'YYYY-MM-DD',
+        maxDate: new Date()
     });
     //Initialize Select2 Elements
     $('.select2').select2()
