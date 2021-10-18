@@ -79,19 +79,19 @@
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label>{{ _("Name of Traveller") }}</label>
-                                                <input type="text" class="form-control" placeholder="Name ..." name="name" 
-                                                                                                               data-msg={{_("Name of Traveller is required")}} required>
+                                                <input type="text" class="form-control" placeholder="Name ..." name="name"
+                                                    data-msg={{_("Name of Traveller is required")}} required>
                                             </div>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label>{{ _("Nationality") }}</label>
-                                                <Select class="form-control select2" name="nationality"  data-dropdown-css-class="select2-purple" 
+                                                <Select class="form-control select2" name="nationality"  data-dropdown-css-class="select2-purple"
                                                     data-placeholder={{ _("Nationality") }} data-msg="Nationality is required" required>
                                                     <option value="">{{ _("Select Nationality") }}</option>
-                                                                   {% for n in countries %}
-                                                                   <option value={{n.alpha_2_code}}>{{n.name}}</option>
-                                                                   {% endfor %}
+                                                    {% for n in countries %}
+                                                        <option value={{n.alpha_2_code}}>{{n.name}}</option>
+                                                    {% endfor %}
                                                 </Select>
                                             </div>
                                         </div>
@@ -101,19 +101,19 @@
                                                 <label>{{ _("Age (years)") }}</label>
                                                 <select class="form-control" name="age">
                                                     <option value="">{{ _("Select Age") }}</option>
-                                                                   {% for a in range(1, 99) %}
-                                                                   <option value={{a}}>{{ a }}</option>
-                                                                   {% endfor%}
+                                                        {% for a in range(1, 99) %}
+                                                            <option value={{a}}>{{ a }}</option>
+                                                        {% endfor%}
                                                 </select>
                                             </div>
-                                        </div> 
+                                        </div>
 
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label>{{ _("Date of Birth") }}</label>
                                                 <div class="input-group date" id="dateOfBirth" data-target-input="nearest">
-                                                    <input type="text" name="dateOfBirth" class="form-control datetimepicker-input" data-target="#dateOfBirth" 
-                                                                 data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                                    <input type="text" name="dateOfBirth" class="form-control datetimepicker-input" data-target="#dateOfBirth"
+                                                        data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
                                                     <div class="input-group-append" data-target="#dateOfBirth" data-toggle="datetimepicker">
                                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                     </div>
@@ -153,17 +153,14 @@
                                             <div class="form-group">
                                                 <label>{{ _("Passport Expiry Date") }}</label>
                                                 <div class="input-group date" id="passportExpiryDate" data-target-input="nearest">
-                                                    <input type="text" name="passportExpiryDate" class="form-control datetimepicker-input" 
-                                                                 data-target="#passportExpiryDate" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                                    <input type="text" name="passportExpiryDate" class="form-control datetimepicker-input"
+                                                        data-target="#passportExpiryDate" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
                                                     <div class="input-group-append" data-target="#passportExpiryDate" data-toggle="datetimepicker">
                                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
-
-
 
 
                                     </div>
@@ -173,8 +170,8 @@
                                             <div class="form-group">
                                                 <label>{{ _("Arrival Date") }}</label>
                                                 <div class="input-group date" id="dateOfArrival" data-target-input="nearest">
-                                                    <input type="text" name="dateOfArrival" class="form-control datetimepicker-input" 
-                                                                 data-target="#dateOfArrival" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                                    <input type="text" name="dateOfArrival" class="form-control datetimepicker-input"
+                                                        data-target="#dateOfArrival" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
                                                     <div class="input-group-append" data-target="#dateOfArrival" data-toggle="datetimepicker">
                                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                     </div>
@@ -186,11 +183,11 @@
                                             <div class="form-group">
                                                 <label>{{ _("Country of Embarkment") }}</label>
                                                 <select name="embarkmentCountry" class="form-control select2" data-dropdown-css-class="select2-purple"
-                                                              data-placeholder={{ _("Country of Embarkment") }} style="width: 100%;" required>
+                                                    data-placeholder={{ _("Country of Embarkment") }} style="width: 100%;" required>
                                                     <option value="">{{ _("Country") }}</option>
-                                                                   {% for n in countries %}
-                                                                   <option value={{n.alpha_2_code}}>{{n.name}}</option>
-                                                                   {% endfor %}
+                                                        {% for n in countries %}
+                                                            <option value={{n.alpha_2_code}}>{{n.name}}</option>
+                                                        {% endfor %}
                                                 </select>
                                             </div>
                                         </div>
@@ -198,9 +195,9 @@
                                             <div class="form-group">
                                                 <label>{{ _("Country of Residence") }}</label>
                                                 <select name="countryOfResidence" class="form-control select2" data-dropdown-css-class="select2-purple"
-                                                              data-placeholder={{ _("Country of Residence") }} style="width: 100%;" required>
+                                                    data-placeholder={{ _("Country of Residence") }} style="width: 100%;" required>
                                                     <option value="">{{ _("Country of Residence") }}</option>
-                                                    {% for n in countries %}
+                                                        {% for n in countries %}
                                                     <option value={{n.alpha_2_code}}>{{n.name}}</option>
                                                     {% endfor %}
                                                 </select>
@@ -210,12 +207,12 @@
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label>{{ _("Port of Arrival") }}</label>
-                                                <Select class="form-control select2" name="portOfEntry"  data-dropdown-css-class="select2-purple" 
-                                                               data-placeholder={{ _("Port of Entry") }} data-msg={{ _("Please specify port of entry") }} required>
+                                                <Select class="form-control select2" name="portOfEntry"  data-dropdown-css-class="select2-purple"
+                                                    data-placeholder={{ _("Port of Entry") }} data-msg={{ _("Please specify port of entry") }} required>
                                                     <option value="">{{ _("Select Port of Entry") }}</option>
-                                                                   {% for p in ports %}
-                                                                   <option value={{p.dhis2_code}}>{{p.name}}</option>
-                                                                   {% endfor %}
+                                                        {% for p in ports %}
+                                                            <option value={{p.dhis2_code}}>{{p.name}}</option>
+                                                        {% endfor %}
                                                 </Select>
                                             </div>
                                         </div>
@@ -226,11 +223,11 @@
                                             <div class="form-group">
                                                 <label>{{ _("Airport of Disembarkment")}}</label>
                                                 <select name="disembarkmentAirport" class="form-control select2" data-dropdown-css-class="select2-purple"
-                                                              data-placeholder={{ _("Select Airport of departure") }} style="width: 100%;">
+                                                    data-placeholder={{ _("Select Airport of departure") }} style="width: 100%;">
                                                     <option value="">{{ _("Select Airport of departure") }}</option>
-                                                                   {% for airport in airports %}
-                                                                   <option value={{airport.name}}>{{airport.iata_code + " - " + airport.name + " - " + airport.country_code }}</option>
-                                                                                                                         {% endfor %}
+                                                    {% for airport in airports %}
+                                                        option value={{airport.name}}>{{airport.iata_code + " - " + airport.name + " - " + airport.country_code }}</option>
+                                                    {% endfor %}
                                                 </select>
                                             </div>
                                         </div>
@@ -260,8 +257,10 @@
                                                 <label>{{ _("Mode of Transport") }}</label>
                                                 <Select name="modeOfTransport" class="form-control" placeholder="Mode of Transport...">
                                                     <option value="">{{ _("Select Mode of Transport")}}</option>
-                                                    <option value="By Air">{{ _("By Air")}}</option>
-                                                    <option value="by Road">{{ _("By Road")}}</option>
+                                                    <option value="Air">{{ _("By Air")}}</option>
+                                                    <option value="Road">{{ _("By Road")}}</option>
+                                                    <option value="Water">{{ _("By Water")}}</option>
+                                                    <option value="Rail">{{ _("By Rail")}}</option>
                                                 </Select>
                                             </div>
                                         </div>
@@ -274,7 +273,7 @@
                                                     <option value="Holiday">{{ _("Holiday")}}</option>
                                                     <option value="Business">{{ _("Business")}}</option>
                                                     <option value="Official or Diplomatic">{{ _("Official or Diplomatic")}}</option>
-                                                    <option value="Visiting Friends or Relatives">{{ _("Visiting Friends or Relatives")}}</option>
+                                                    <option value="Visiting friends or Relatives">{{ _("Visiting Friends or Relatives")}}</option>
                                                     <option value="Transit">{{ _("Transit")}}</option>
                                                     <option value="Conference">{{ _("Conference")}}</option>
                                                     <option value="Employment">{{ _("Employment")}}</option>
@@ -297,8 +296,8 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Your contact phone number while in Uganda") }} </label>
-                                                <input type="text" class="form-control" placeholder="Phone number ..." name="phoneNumber" 
-                                                             pattern="^(\+25[465]|0)(3[19]|41|7[015789])[0-9]{7}$" data-msg="Please provide valid phone number">
+                                                <input type="text" class="form-control" placeholder="Phone number ..." name="phoneNumber"
+                                                    pattern="^(\+25[465]|0)(3[19]|41|7[015789])[0-9]{7}$" data-msg="Please provide valid phone number">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -310,6 +309,7 @@
                                     </div>
 
                                     <br/>
+                                    <h4>COVID-19</h4>
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
@@ -327,7 +327,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>{{ _("Are you vaccinated for COVID-19?") }}  </label>
+                                                <label>{{ _("Have you been fully vaccinated?") }}  </label>
                                                 <div class="icheck-primary d-inline">
                                                     <input type="radio" id="covidvv" name="beenCovidVaccinated" value="yes"/>
                                                     <label for="covidvv">{{ _("Yes") }}</label>
@@ -342,8 +342,8 @@
                                             <div class="form-group">
                                                 <label> {{ _("Date of last Vaccination") }}</label>
                                                 <div class="input-group date" id="dateOfLastCovidVaccination" data-target-input="nearest">
-                                                    <input type="text" name="dateOfLastCovidVaccination" class="form-control datetimepicker-input" 
-                                                                 data-target="#dateOfLastCovidVaccination" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                                    <input type="text" name="dateOfLastCovidVaccination" class="form-control datetimepicker-input"
+                                                        data-target="#dateOfLastCovidVaccination" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
                                                     <div class="input-group-append" data-target="#dateOfLastCovidVaccination" data-toggle="datetimepicker">
                                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                     </div>
@@ -353,15 +353,14 @@
 
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label for="covidVaccinationCert">18. {{ _("Upload COVID-19 Vaccination Certificate") }}</label>
+                                                <label for="covidVaccinationCert">{{ _("Upload COVID-19 Vaccination Certificate") }}</label>
                                                 <div class="input-group">
                                                     <div class="custom-file">
                                                         <input type="file" class="custom-file-input" id="covidVaccinationCert" name="covidVaccinationCert"/>
                                                         <label for="covidVaccinationCert" class="custom-file-label">{{_("COVID-19 Vaccination Certificate")}}</label>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -370,17 +369,33 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>{{ _("Do you have proof of a Negative PCR Test done 96 hours prior to your departure from your port of embarkment?") }}  </label>
+                                                <label>{{ _("Do you have proof of a Negative PCR Test done 72 hours prior to your departure from your port of embarkment?") }}  </label>
                                                 <div class="icheck-primary d-inline">
-                                                    <input type="radio" id="covidvv" name="hasNegativePCRTest" value="yes"/>
-                                                    <label for="covidvv">{{ _("Yes") }}</label>
+                                                    <input type="radio" id="pcr3" name="hasNegativePCRTest" value="yes"/>
+                                                    <label for="pcr3">{{ _("Yes") }}</label>
                                                 </div>
                                                 <div class="icheck-primary d-inline">
-                                                    <input type="radio" id="covidvv1" name="hasNegativePCRTest" value="no"/>
-                                                    <label for="covidvv1">{{ _("No") }}</label>
+                                                    <input type="radio" id="pcr4" name="hasNegativePCRTest" value="no"/>
+                                                    <label for="pcr4">{{ _("No") }}</label>
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label> {{ _("PCR Tested Date") }}</label>
+                                                <div class="input-group date" id="pcrTestedDate" data-target-input="nearest">
+                                                    <input type="text" name="pcrTestedDate" class="form-control datetimepicker-input"
+                                                        data-target="#pcrTestedDate" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                                    <div class="input-group-append" data-target="#pcrTestedDate" data-toggle="datetimepicker">
+                                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label for="pcrTestCopy">{{ _("PCR Test Result Copy") }}</label>
@@ -394,6 +409,7 @@
                                         </div>
                                     </div>
                                     <br/>
+                                    <h4>Yellow Fever</h4>
 
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -407,20 +423,20 @@
                                             <div class="form-group">
                                                 <label> {{ _("Date of Yellow Fever Vaccination") }}</label>
                                                 <div class="input-group date" id="dateOfYellowFeverVaccination" data-target-input="nearest">
-                                                    <input type="text" name="dateOfYellowFeverVaccination" class="form-control datetimepicker-input" 
-                                                                 data-target="#dateOfYellowFeverVaccination" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                                    <input type="text" name="dateOfYellowFeverVaccination" class="form-control datetimepicker-input"
+                                                        data-target="#dateOfYellowFeverVaccination" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
                                                     <div class="input-group-append" data-target="#dateOfYellowFeverVaccination" data-toggle="datetimepicker">
                                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div>
 
                                     <div class="card-footer">
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
-                                </form> 
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -430,9 +446,7 @@
                     <div class="card card-success">
                         <div class="card-header">
                             <h4 class="card-title w-100">
-                                <a class="d-block w-100" data-toggle="collapse" href="#collapseThree">
-                                          Departure 
-                                </a>
+                                <a class="d-block w-100" data-toggle="collapse" href="#collapseThree">Departure</a>
                             </h4>
                         </div>
                         <div id="collapseThree" class="collapse" data-parent="#accordion">
@@ -449,7 +463,7 @@
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label>{{ _("Nationality") }}</label>
-                                                <Select class="form-control select2" name="nationality"  data-dropdown-css-class="select2-purple" 
+                                                <Select class="form-control select2" name="nationality"  data-dropdown-css-class="select2-purple"
                                                     data-placeholder={{ _("Nationality") }}>
                                                     <option value="">{{ _("Select Nationality") }}</option>
                                                     {% for n in countries %}
@@ -464,19 +478,19 @@
                                                 <label>{{ _("Age (years)") }}</label>
                                                 <select class="form-control" name="age">
                                                     <option value="">{{ _("Select Age") }}</option>
-                                                                   {% for a in range(1, 99) %}
-                                                                   <option value={{a}}>{{ a }}</option>
-                                                                   {% endfor%}
+                                                    {% for a in range(1, 99) %}
+                                                        <option value={{a}}>{{ a }}</option>
+                                                    {% endfor%}
                                                 </select>
                                             </div>
-                                        </div> 
+                                        </div>
 
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label>{{ _("Date of Birth") }}</label>
                                                 <div class="input-group date" id="dateOfBirth1" data-target-input="nearest">
-                                                    <input type="text" name="dateOfBirth" class="form-control datetimepicker-input" data-target="#dateOfBirth1" 
-                                                                 data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                                    <input type="text" name="dateOfBirth" class="form-control datetimepicker-input" data-target="#dateOfBirth1"
+                                                        data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
                                                     <div class="input-group-append" data-target="#dateOfBirth1" data-toggle="datetimepicker">
                                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                     </div>
@@ -516,18 +530,14 @@
                                             <div class="form-group">
                                                 <label>{{ _("Passport Expiry Date") }}</label>
                                                 <div class="input-group date" id="passportExpiryDate1" data-target-input="nearest">
-                                                    <input type="text" name="passportExpiryDate" class="form-control datetimepicker-input" 
-                                                                 data-target="#passportExpiryDate1" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                                    <input type="text" name="passportExpiryDate" class="form-control datetimepicker-input"
+                                                        data-target="#passportExpiryDate1" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
                                                     <div class="input-group-append" data-target="#passportExpiryDate1" data-toggle="datetimepicker">
                                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
-
-
-
 
                                     </div>
 
@@ -536,8 +546,8 @@
                                             <div class="form-group">
                                                 <label>{{ _("Date of Departure") }}</label>
                                                 <div class="input-group date" id="dateOfDeparture1" data-target-input="nearest">
-                                                    <input type="text" name="dateOfDeparture" class="form-control datetimepicker-input" 
-                                                                 data-target="#dateOfDeparture1" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                                    <input type="text" name="dateOfDeparture" class="form-control datetimepicker-input"
+                                                        data-target="#dateOfDeparture1" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
                                                     <div class="input-group-append" data-target="#dateOfDeparture1" data-toggle="datetimepicker">
                                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                     </div>
@@ -549,11 +559,11 @@
                                             <div class="form-group">
                                                 <label>{{ _("Country of Departure") }}</label>
                                                 <select name="countryOfDeparture" class="form-control select2" data-dropdown-css-class="select2-purple"
-                                                              data-placeholder={{ _("Country of Departure") }} style="width: 100%;" required>
+                                                    data-placeholder={{ _("Country of Departure") }} style="width: 100%;" required>
                                                     <option value="">{{ _("Country") }}</option>
-                                                                   {% for n in countries %}
-                                                                   <option value={{n.alpha_2_code}}>{{n.name}}</option>
-                                                                   {% endfor %}
+                                                    {% for n in countries %}
+                                                        <option value={{n.alpha_2_code}}>{{n.name}}</option>
+                                                    {% endfor %}
                                                 </select>
                                             </div>
                                         </div>
@@ -561,11 +571,11 @@
                                             <div class="form-group">
                                                 <label>{{ _("Country of Residence") }}</label>
                                                 <select name="countryOfDeparture" class="form-control select2" data-dropdown-css-class="select2-purple"
-                                                              data-placeholder={{ _("Country of Residence") }} style="width: 100%;" required>
+                                                    data-placeholder={{ _("Country of Residence") }} style="width: 100%;" required>
                                                     <option value="">{{ _("Country of Residence") }}</option>
-                                                                   {% for n in countries %}
-                                                                   <option value={{n.alpha_2_code}}>{{n.name}}</option>
-                                                                   {% endfor %}
+                                                    {% for n in countries %}
+                                                        <option value={{n.alpha_2_code}}>{{n.name}}</option>
+                                                    {% endfor %}
                                                 </select>
                                             </div>
                                         </div>
@@ -573,12 +583,12 @@
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label>{{ _("Port of Departure") }}</label>
-                                                <Select class="form-control select2" name="portOfEntry"  data-dropdown-css-class="select2-purple" 
-                                                               data-placeholder={{ _("Port of Entry") }} data-msg="Please specify port of entry" required>
+                                                <Select class="form-control select2" name="portOfEntry"  data-dropdown-css-class="select2-purple"
+                                                    data-placeholder={{ _("Port of Entry") }} data-msg="Port of Entry is required" required>
                                                     <option value="">{{ _("Select Port of Entry") }}</option>
-                                                                   {% for p in ports %}
-                                                                   <option value={{p.dhis2_code}}>{{p.name}}</option>
-                                                                   {% endfor %}
+                                                    {% for p in ports %}
+                                                        <option value={{p.dhis2_code}}>{{p.name}}</option>
+                                                    {% endfor %}
                                                 </Select>
                                             </div>
                                         </div>
@@ -589,11 +599,11 @@
                                             <div class="form-group">
                                                 <label>{{ _("Airport of departure")}}</label>
                                                 <select name="embarkmentAirport" class="form-control select2" data-dropdown-css-class="select2-purple"
-                                                              data-placeholder={{ _("Select Airport of departure") }} style="width: 100%;">
+                                                    data-placeholder={{ _("Select Airport of departure") }} style="width: 100%;">
                                                     <option value="">{{ _("Select Airport of departure") }}</option>
-                                                                   {% for airport in airports %}
-                                                                   <option value={{airport.name}}>{{airport.iata_code + " - " + airport.name + " - " + airport.country_code }}</option>
-                                                                                                                         {% endfor %}
+                                                        {% for airport in airports %}
+                                                            <option value={{airport.name}}>{{airport.iata_code + " - " + airport.name + " - " + airport.country_code }}</option>
+                                                        {% endfor %}
                                                 </select>
                                             </div>
                                         </div>
@@ -601,11 +611,11 @@
                                             <div class="form-group">
                                                 <label>{{ _("Travelling To") }}</label>
                                                 <select name="travellingTo" class="form-control select2" data-dropdown-css-class="select2-purple"
-                                                              data-placeholder={{ _("Country") }} style="width: 100%;" required>
+                                                    data-placeholder={{ _("Country") }} style="width: 100%;" required>
                                                     <option value="">{{ _("Country") }}</option>
-                                                                   {% for n in countries %}
-                                                                   <option value={{n.alpha_2_code}}>{{n.name}}</option>
-                                                                   {% endfor %}
+                                                    {% for n in countries %}
+                                                    <option value={{n.alpha_2_code}}>{{n.name}}</option>
+                                                    {% endfor %}
                                                 </select>
                                             </div>
                                         </div>
@@ -628,8 +638,10 @@
                                                 <label>{{ _("Mode of Transport") }}</label>
                                                 <Select name="modeOfTransport" class="form-control" placeholder="Mode of Transport...">
                                                     <option value="">{{ _("Select Mode of Transport")}}</option>
-                                                    <option value="By Air">{{ _("By Air")}}</option>
-                                                    <option value="by Road">{{ _("By Road")}}</option>
+                                                    <option value="Air">{{ _("By Air")}}</option>
+                                                    <option value="Road">{{ _("By Road")}}</option>
+                                                    <option value="Water">{{ _("By Water")}}</option>
+                                                    <option value="Rail">{{ _("By Rail")}}</option>
                                                 </Select>
                                             </div>
                                         </div>
@@ -642,7 +654,7 @@
                                                     <option value="Holiday">{{ _("Holiday")}}</option>
                                                     <option value="Business">{{ _("Business")}}</option>
                                                     <option value="Official or Diplomatic">{{ _("Official or Diplomatic")}}</option>
-                                                    <option value="Visiting Friends or Relatives">{{ _("Visiting Friends or Relatives")}}</option>
+                                                    <option value="Visiting friends or Relatives">{{ _("Visiting Friends or Relatives")}}</option>
                                                     <option value="Transit">{{ _("Transit")}}</option>
                                                     <option value="Conference">{{ _("Conference")}}</option>
                                                     <option value="Employment">{{ _("Employment")}}</option>
@@ -665,8 +677,8 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Your contact phone number while in Uganda") }} </label>
-                                                <input type="text" class="form-control" placeholder="Phone number ..." name="phoneNumber" 
-                                                             pattern="^(\+25[465]|0)(3[19]|41|7[015789])[0-9]{7}$" data-msg="Please provide valid phone number">
+                                                <input type="text" class="form-control" placeholder="Phone number ..." name="phoneNumber"
+                                                    pattern="^(\+25[465]|0)(3[19]|41|7[015789])[0-9]{7}$" data-msg="Please provide valid phone number">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -678,6 +690,8 @@
                                     </div>
 
                                     <br/>
+                                    <h4>COVID-19</h4>
+
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
@@ -695,14 +709,14 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>{{ _("Are you vaccinated for COVID-19?") }}  </label>
+                                                <label>{{ _("Have you been fully vaccinated?") }}  </label>
                                                 <div class="icheck-primary d-inline">
-                                                    <input type="radio" id="covidvv" name="beenCovidVaccinated" value="yes"/>
-                                                    <label for="covidvv">{{ _("Yes") }}</label>
+                                                    <input type="radio" id="covidvv2" name="beenCovidVaccinated" value="yes"/>
+                                                    <label for="covidvv2">{{ _("Yes") }}</label>
                                                 </div>
                                                 <div class="icheck-primary d-inline">
-                                                    <input type="radio" id="covidvv1" name="beenCovidVaccinated" value="no"/>
-                                                    <label for="covidvv1">{{ _("No") }}</label>
+                                                    <input type="radio" id="covidvv3" name="beenCovidVaccinated" value="no"/>
+                                                    <label for="covidvv3">{{ _("No") }}</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -710,8 +724,8 @@
                                             <div class="form-group">
                                                 <label> {{ _("Date of last Vaccination") }}</label>
                                                 <div class="input-group date" id="dateOfLastCovidVaccination1" data-target-input="nearest">
-                                                    <input type="text" name="dateOfLastCovidVaccination" class="form-control datetimepicker-input" 
-                                                                 data-target="#dateOfLastCovidVaccination1" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                                    <input type="text" name="dateOfLastCovidVaccination" class="form-control datetimepicker-input"
+                                                        data-target="#dateOfLastCovidVaccination1" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
                                                     <div class="input-group-append" data-target="#dateOfLastCovidVaccination1" data-toggle="datetimepicker">
                                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                     </div>
@@ -723,11 +737,12 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label for="covidVaccinationCert">18. {{ _("Upload COVID-19 Vaccination Certificate") }}</label>
+                                                <label for="covidVaccinationCert1">{{ _("Upload COVID-19 Vaccination Certificate") }}</label>
                                                 <div class="input-group">
                                                     <div class="custom-file">
-                                                        <input type="file" class="custom-file-input" id="covidVaccinationCert" name="covidVaccinationCert"/>
-                                                        <label for="covidVaccinationCert" class="custom-file-label">{{_("COVID-19 Vaccination Certificate")}}</label>
+                                                        <input type="file" class="custom-file-input" id="covidVaccinationCert1" name="covidVaccinationCert"/>
+                                                        <label for="covidVaccinationCert1" class="custom-file-label">
+                                                            {{_("Choose File")}} .jpg or .png</label>
                                                     </div>
 
                                                 </div>
@@ -738,17 +753,33 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>{{ _("Do you have proof of a Negative PCR Test done 96 hours prior to your departure from your port of embarkment?") }}  </label>
+                                                <label>{{ _("Do you have proof of a Negative PCR Test done 72 hours prior to your departure from your port of embarkment?") }}  </label>
                                                 <div class="icheck-primary d-inline">
-                                                    <input type="radio" id="covidvv" name="hasNegativePCRTest" value="yes"/>
-                                                    <label for="covidvv">{{ _("Yes") }}</label>
+                                                    <input type="radio" id="pcr1" name="hasNegativePCRTest" value="yes"/>
+                                                    <label for="pcr1">{{ _("Yes") }}</label>
                                                 </div>
                                                 <div class="icheck-primary d-inline">
-                                                    <input type="radio" id="covidvv1" name="hasNegativePCRTest" value="no"/>
-                                                    <label for="covidvv1">{{ _("No") }}</label>
+                                                    <input type="radio" id="pcr2" name="hasNegativePCRTest" value="no"/>
+                                                    <label for="pcr2">{{ _("No") }}</label>
                                                 </div>
                                             </div>
                                         </div>
+
+                                       <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label> {{ _("PCR Tested Date") }}</label>
+                                                <div class="input-group date" id="pcrTestedDate1" data-target-input="nearest">
+                                                    <input type="text" name="pcrTestedDate" class="form-control datetimepicker-input"
+                                                        data-target="#pcrTestedDate1" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                                    <div class="input-group-append" data-target="#pcrTestedDate" data-toggle="datetimepicker">
+                                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label for="pcrTestCopy">{{ _("PCR Test Result Copy") }}</label>
@@ -775,8 +806,8 @@
                                             <div class="form-group">
                                                 <label> {{ _("Date of Yellow Fever Vaccination") }}</label>
                                                 <div class="input-group date" id="dateOfYellowFeverVaccination1" data-target-input="nearest">
-                                                    <input type="text" name="dateOfYellowFeverVaccination" class="form-control datetimepicker-input" 
-                                                                 data-target="#dateOfYellowFeverVaccination1" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                                    <input type="text" name="dateOfYellowFeverVaccination" class="form-control datetimepicker-input"
+                                                        data-target="#dateOfYellowFeverVaccination1" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
                                                     <div class="input-group-append" data-target="#dateOfYellowFeverVaccination1" data-toggle="datetimepicker">
                                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                     </div>
@@ -788,7 +819,7 @@
                                     <div class="card-footer">
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
-                                </form> 
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -817,8 +848,12 @@
 <!-- jquery-validation -->
 <script src="/static/plugins/jquery-validation/jquery.validate.min.js"></script>
 <script src="/static/plugins/jquery-validation/additional-methods.min.js"></script>
+
+<script src="/static/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 <script>
 $(function() {
+    bsCustomFileInput.init();
+
     var tenYearsFromNow = new Date(new Date().setFullYear(new Date().getFullYear() + 10))
     var oneYearFromNow = new Date(new Date().setFullYear(new Date().getFullYear() + 1))
     //Date picker
@@ -879,6 +914,16 @@ $(function() {
         maxDate: new Date()
     });
 
+    $('#pcrTestedDate').datetimepicker({
+        format: 'YYYY-MM-DD',
+        maxDate: new Date()
+    });
+
+    $('#pcrTestedDate1').datetimepicker({
+        format: 'YYYY-MM-DD',
+        maxDate: new Date()
+    });
+
     $('#dateOfYellowFeverVaccination1').datetimepicker({
         format: 'YYYY-MM-DD',
         maxDate: new Date()
@@ -923,7 +968,17 @@ $(function() {
             },
             modeOfTransport: {
                 required: true
+            },
+            /*
+            covidVaccinationCert: {
+                fileType: {
+                    types: ["jpg", "png"]
+                }
             }
+            covidVaccinationCert: {
+                required: true
+            }
+            */
         },
         messages: {
 
@@ -1000,7 +1055,12 @@ $(function() {
             },
             travellingTo: {
                 required: true
+            },
+            covidVaccinationCert: {
+                required: true,
+                extension: "jpg|png|jpeg|gif"
             }
+
         },
         messages: {
             name: {
@@ -1038,7 +1098,8 @@ $(function() {
             },
             travellingTo: {
                 required: "Destination Country is required"
-            }
+            },
+
         },
         errorElement: 'span',
         errorPlacement: function (error, element) {

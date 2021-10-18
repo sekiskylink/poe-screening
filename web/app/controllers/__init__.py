@@ -44,7 +44,7 @@ for c in rs:
     ourCountries.append({'id': c['id'], 'name': c['name'], 'alpha_2_code': c['alpha_2_code']})
 
 
-ports = db.query("SELECT id, name, dhis2_code FROM ports")
+ports = db.query("SELECT id, name, dhis2_code FROM ports ORDER BY form_order, name")
 ourPorts = []
 for p in ports:
     ourPorts.append({'id': p['id'], 'name': p['name'], 'dhis2_code': p['dhis2_code']})
