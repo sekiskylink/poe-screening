@@ -35,7 +35,7 @@ config = {
 
 # DHIS 2 Tracker Program Settings
 DHIS2_TRACKER_PROGRAM_CONF = {
-        'program': 'wgriE6kg4JM',
+        'program': 'IMV1L4a09tc',
         'trackedEntityType': 'MCPQUTHX1Ze', # Person
         'attributes': {
             'arrivalOrDeparture': 'vbR9HyvLXWd',
@@ -69,7 +69,7 @@ DHIS2_TRACKER_PROGRAM_CONF = {
         },
         'stages': {
             'travelLocator': {
-                'uid': 'Fogca7wvYMQ',
+                'uid': 'rOSOXE9BGXL',
                 'dataelements': {
                     'timeAtCheckPoint': 'aN2fgA52IrU',
                     'nameOfCheckPoint': 'hcdSE7aTbQT',

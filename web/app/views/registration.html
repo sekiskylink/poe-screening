@@ -76,14 +76,14 @@
                                 <form method="POST" enctype="multipart/form-data" action="" id="arrivalForm">
                                     <input type="hidden" name="arrivalOrDeparture" value="Arrival"/>
                                     <div class="row">
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Name of Traveller") }}</label>
                                                 <input type="text" class="form-control" placeholder="Name ..." name="name"
                                                     data-msg={{_("Name of Traveller is required")}} required>
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Nationality") }}</label>
                                                 <Select class="form-control select2" name="nationality"  data-dropdown-css-class="select2-purple"
@@ -95,8 +95,9 @@
                                                 </Select>
                                             </div>
                                         </div>
-
-                                        <div class="col-sm-3">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Age (years)") }}</label>
                                                 <select class="form-control" name="age">
@@ -108,7 +109,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Date of Birth") }}</label>
                                                 <div class="input-group date" id="dateOfBirth" data-target-input="nearest">
@@ -124,7 +125,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Sex") }}</label>
                                                 <Select name="sex" class="form-control" placeholder="Sex..." required>
@@ -135,21 +136,23 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Email") }}</label>
                                                 <input type="text" class="form-control" placeholder="Email" name="email">
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <div class="col-sm-3">
+                                    <div class="row">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Passport Number") }}</label>
                                                 <input type="text" class="form-control" placeholder="Passport No..." name="passportNumber">
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Passport Expiry Date") }}</label>
                                                 <div class="input-group date" id="passportExpiryDate" data-target-input="nearest">
@@ -162,11 +165,10 @@
                                             </div>
                                         </div>
 
-
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Arrival Date") }}</label>
                                                 <div class="input-group date" id="dateOfArrival" data-target-input="nearest">
@@ -179,7 +181,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Country of Embarkment") }}</label>
                                                 <select name="embarkmentCountry" class="form-control select2" data-dropdown-css-class="select2-purple"
@@ -191,7 +193,10 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Country of Residence") }}</label>
                                                 <select name="countryOfResidence" class="form-control select2" data-dropdown-css-class="select2-purple"
@@ -204,7 +209,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Port of Arrival") }}</label>
                                                 <Select class="form-control select2" name="portOfEntry"  data-dropdown-css-class="select2-purple"
@@ -219,7 +224,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Airport of Disembarkment")}}</label>
                                                 <select name="disembarkmentAirport" class="form-control select2" data-dropdown-css-class="select2-purple"
@@ -232,19 +237,22 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Flight / Vehicle Number") }}</label>
                                                 <input type="text" class="form-control" placeholder="Flight No./Vehicle No..." name="flightOrVesselNumber">
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Seat Number") }}</label>
                                                 <input type="text" class="form-control" placeholder="Seat Number..." name="seatNumber">
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Duration of stay") }}</label>
                                                 <input type="text" class="form-control" placeholder="Duration of stay (in days)" name="durationOfStay">
@@ -396,7 +404,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label for="pcrTestCopy">{{ _("PCR Test Result Copy") }}</label>
                                                 <div class="input-group">
@@ -454,13 +462,13 @@
                                 <form method="POST" enctype="multipart/form-data" action="" id="poeForm">
                                     <input type="hidden" name="arrivalOrDeparture" value="Departure"/>
                                     <div class="row">
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Name of Traveller") }}</label>
                                                 <input type="text" class="form-control" placeholder="Name ..." name="name"  required>
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Nationality") }}</label>
                                                 <Select class="form-control select2" name="nationality"  data-dropdown-css-class="select2-purple"
@@ -472,8 +480,10 @@
                                                 </Select>
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <div class="col-sm-3">
+                                    <div class="row">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Age (years)") }}</label>
                                                 <select class="form-control" name="age">
@@ -485,7 +495,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Date of Birth") }}</label>
                                                 <div class="input-group date" id="dateOfBirth1" data-target-input="nearest">
@@ -501,7 +511,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Sex") }}</label>
                                                 <Select name="sex" class="form-control" placeholder="Sex...">
@@ -512,21 +522,23 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Email") }}</label>
                                                 <input type="text" class="form-control" placeholder="Email" name="email">
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <div class="col-sm-3">
+                                    <div class="row">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Passport Number") }}</label>
                                                 <input type="text" class="form-control" placeholder="Passport No..." name="passportNumber">
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Passport Expiry Date") }}</label>
                                                 <div class="input-group date" id="passportExpiryDate1" data-target-input="nearest">
@@ -542,7 +554,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Date of Departure") }}</label>
                                                 <div class="input-group date" id="dateOfDeparture1" data-target-input="nearest">
@@ -555,7 +567,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Country of Departure") }}</label>
                                                 <select name="countryOfDeparture" class="form-control select2" data-dropdown-css-class="select2-purple"
@@ -567,7 +579,10 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Country of Residence") }}</label>
                                                 <select name="countryOfDeparture" class="form-control select2" data-dropdown-css-class="select2-purple"
@@ -580,7 +595,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Port of Departure") }}</label>
                                                 <Select class="form-control select2" name="portOfEntry"  data-dropdown-css-class="select2-purple"
@@ -595,7 +610,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Airport of departure")}}</label>
                                                 <select name="embarkmentAirport" class="form-control select2" data-dropdown-css-class="select2-purple"
@@ -607,7 +622,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Travelling To") }}</label>
                                                 <select name="travellingTo" class="form-control select2" data-dropdown-css-class="select2-purple"
@@ -619,13 +634,15 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Flight / Vehicle Number") }}</label>
                                                 <input type="text" class="form-control" placeholder="Flight No./Vehicle No..." name="flightOrVesselNumber">
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Seat Number") }}</label>
                                                 <input type="text" class="form-control" placeholder="Seat Number..." name="seatNumber">
@@ -735,7 +752,7 @@
 
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label for="covidVaccinationCert1">{{ _("Upload COVID-19 Vaccination Certificate") }}</label>
                                                 <div class="input-group">
@@ -780,7 +797,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label for="pcrTestCopy">{{ _("PCR Test Result Copy") }}</label>
                                                 <div class="input-group">
@@ -1057,7 +1074,6 @@ $(function() {
                 required: true
             },
             covidVaccinationCert: {
-                required: true,
                 extension: "jpg|png|jpeg|gif"
             }
 
@@ -1099,6 +1115,9 @@ $(function() {
             travellingTo: {
                 required: "Destination Country is required"
             },
+            covidVaccinationCert: {
+                extension: "File extension not allowed! Try (jpg, png, or pdf)"
+            }
 
         },
         errorElement: 'span',
