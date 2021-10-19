@@ -81,7 +81,7 @@
                         <label>4. {{ _("Date of Arrival") }}</label>
                         <div class="input-group date" id="arrivaldate" data-target-input="nearest">
                             <input type="text" name="dateOfArrival" class="form-control datetimepicker-input" data-target="#arrivaldate" 
-                                                                                         data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
                             <div class="input-group-append" data-target="#arrivaldate" data-toggle="datetimepicker">
                                 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                             </div>
@@ -94,10 +94,10 @@
                     <div class="form-group">
                         <label>5. {{ _("Age (years)") }}</label>
                         <select class="form-control select2" name="age">
-                        <option value="">{{ _("Select Age") }}</option>
-                        {% for a in range(1, 99) %}
-                        <option value={{a}}>{{ a }}</option>
-                        {% endfor%}
+                            <option value="">{{ _("Select Age") }}</option>
+                            {% for a in range(1, 99) %}
+                            <option value={{a}}>{{ a }}</option>
+                            {% endfor%}
                         </select>
                     </div>
                 </div>
@@ -129,8 +129,8 @@
                     <!-- text input -->
                     <div class="form-group">
                         <label>8. {{ _("Airport of embarkment")}}</label>
-                        <select name="embarkmentAirport" class="form-control select2" data-dropdown-css-class="select2-purple"
-                                data-placeholder={{ _("Select Airport of embarkment") }} style="width: 100%;">
+                        <select name="embarkmentAirport" class="form-control select2" data-dropdown-css-class="select2-purple" 
+                            data-placeholder={{ _("Select Airport of embarkment") }} style="width: 100%;">
                             <option value="">{{ _("Select Airport of embarkment") }}</option>
                             {% for airport in airports %}
                             <option value={{airport.name}}>{{airport.iata_code + " - " + airport.name + " - " + airport.country_code }}</option>
@@ -142,13 +142,13 @@
                     <!-- text input -->
                     <div class="form-group">
                         <label>9. {{ _("Country of embarkment") }}</label>
-                            <select name="embarkmentCountry" class="form-control select2" data-dropdown-css-class="select2-purple"
-                                    data-placeholder={{ _("Select Country of embarkment") }} style="width: 100%;" required>
+                        <select name="embarkmentCountry" class="form-control select2" data-dropdown-css-class="select2-purple"
+                            data-placeholder={{ _("Select Country of embarkment") }} style="width: 100%;" required>
                             <option value="">{{ _("Select Country of embarkment") }}</option>
                             {% for n in countries_2 %}
                             <option value={{n.alpha_2_code}}>{{n.name}}</option>
                             {% endfor %}
-                            </select>
+                        </select>
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -166,12 +166,12 @@
                     <div class="form-group">
                         <label>11. {{ _("Name of countries visited in the last 14 days") }} </label>
                         <div class="select2-purple">
-                        <select name="countriesVisited" class="select2" multiple="multiple" data-dropdown-css-class="select2-purple" 
-                            data-placeholder="Select Countries" style="width: 100%;" data-msg="Please state countries visited in the last 14 days" required>
-                            {% for n in countries_3 %}
-                            <option>{{n.name}}</option>
-                            {% endfor %}
-                        </select>
+                            <select name="countriesVisited" class="select2" multiple="multiple" data-dropdown-css-class="select2-purple" 
+                                data-placeholder="Select Countries" style="width: 100%;" data-msg="Please state countries visited in the last 14 days" required>
+                                {% for n in countries_3 %}
+                                <option>{{n.name}}</option>
+                                {% endfor %}
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -192,16 +192,16 @@
                         <label>13. {{ _("Planned duration of stay while in Uganda")}}</label>
                         <!--<input type="text" class="form-control" placeholder="Duration of stay ..." name="durationOfStay">-->
                         <select class="form-control select2" name="durationOfStay">
-                        <option value="">{{ _("Duration of stay ...") }}</option>
-                        <option value="30">1 Month</option>
-                        <option value="60">2 Months</option>
-                        <option value="90">3 Months</option>
-                        <option value="180">6 Months</option>
-                        <option value="365">1 Year</option>
-                        <option value="1">1 Day</option>
-                        {% for a in range(2, 365) %}
-                        <option value={{a}}>{{ a }} {{_("Days")}}</option>
-                        {% endfor%}
+                            <option value="">{{ _("Duration of stay ...") }}</option>
+                            <option value="30">1 Month</option>
+                            <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="365">1 Year</option>
+                            <option value="1">1 Day</option>
+                            {% for a in range(2, 365) %}
+                            <option value={{a}}>{{ a }} {{_("Days")}}</option>
+                            {% endfor%}
                         </select>
                     </div>
                 </div>
@@ -213,7 +213,7 @@
                     <div class="form-group">
                         <label>14. {{ _("Your contact phone number while in Uganda") }} </label>
                         <input type="text" class="form-control" placeholder="Phone number ..." name="ugPhoneNumber" 
-                        pattern="^(\+25[465]|0)(3[19]|41|7[015789])[0-9]{7}$" data-msg="Please provide valid phone number">
+                            pattern="^(\+25[465]|0)(3[19]|41|7[015789])[0-9]{7}$" data-msg="Please provide valid phone number">
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -225,54 +225,54 @@
                 </div>
             </div>
             <!--
-            <div class="row">
+                <div class="row">
                 <div class="col-sm-12">
-                    <div class="form-group">
-                        <label>16. {{ _("Have you been to CHINA in the past two weeks?") }}</label>
-                        <div class="icheck-primary d-inline">
-                            <input type="radio" id="tochina" name="toChina"/>
-                            <label for="tochina">{{ _("Yes") }}</label>
-                        </div>
-                        <div class="icheck-primary d-inline">
-                            <input type="radio" id="tochina1" name="toChina"/>
-                            <label for="tochina1">{{ _("No") }}</label>
-                        </div>
-                    </div>
+                <div class="form-group">
+                <label>16. {{ _("Have you been to CHINA in the past two weeks?") }}</label>
+                <div class="icheck-primary d-inline">
+                <input type="radio" id="tochina" name="toChina"/>
+                <label for="tochina">{{ _("Yes") }}</label>
+                </div>
+                <div class="icheck-primary d-inline">
+                <input type="radio" id="tochina1" name="toChina"/>
+                <label for="tochina1">{{ _("No") }}</label>
+                </div>
+                </div>
                 </div>
 
-            </div>
-            <div class="row">
+                </div>
+                <div class="row">
                 <div class="col-sm-12">
-                    <div class="form-group">
-                        <label>17. {{ _("Have you been to any countries affected by Corona virus in the past two weeks?") }}</label>
-                        <div class="icheck-primary d-inline">
-                            <input type="radio" id="been" name="beento"/>
-                            <label for="been">{{ _("Yes") }}</label>
-                        </div>
-                        <div class="icheck-primary d-inline">
-                            <input type="radio" id="been1" name="beento"/>
-                            <label for="been1">{{ _("No") }}</label>
-                        </div>
-                    </div>
+                <div class="form-group">
+                <label>17. {{ _("Have you been to any countries affected by Corona virus in the past two weeks?") }}</label>
+                <div class="icheck-primary d-inline">
+                <input type="radio" id="been" name="beento"/>
+                <label for="been">{{ _("Yes") }}</label>
+                </div>
+                <div class="icheck-primary d-inline">
+                <input type="radio" id="been1" name="beento"/>
+                <label for="been1">{{ _("No") }}</label>
+                </div>
+                </div>
                 </div>
 
-            </div>
-            <div class="row">
+                </div>
+                <div class="row">
                 <div class="col-sm-12">
-                    <div class="form-group">
-                        <label>16. {{ _("If yes, list the countries:") }}</label>
-                        <div class="select2-purple">
-                        <select name="affectedCountriesVisited" class="select2" multiple="multiple" data-dropdown-css-class="select2-purple" 
-                            data-placeholder="Affected countries you've been to" style="width: 100%;" >
-                            {% for n in countries_4 %}
-                            <option>{{n.name}}</option>
-                            {% endfor %}
-                        </select>
-                        </div>
-                    </div>
+                <div class="form-group">
+                <label>16. {{ _("If yes, list the countries:") }}</label>
+                <div class="select2-purple">
+                <select name="affectedCountriesVisited" class="select2" multiple="multiple" data-dropdown-css-class="select2-purple" 
+                data-placeholder="Affected countries you've been to" style="width: 100%;" >
+                {% for n in countries_4 %}
+                <option>{{n.name}}</option>
+                {% endfor %}
+                </select>
+                </div>
+                </div>
                 </div>
 
-            </div>
+                </div>
             -->
 
             <div class="row">
@@ -500,9 +500,9 @@
                                 <label for="covidVaccinationCert" class="custom-file-label">{{_("COVID-19 Vaccination Certificate")}}</label>
                             </div>
                             <!--
-                            <div class="input-group-append">
+                                <div class="input-group-append">
                                 <span class="input-group-text">Upload</span>
-                            </div>
+                                </div>
                             -->
                         </div>
                     </div>
@@ -561,10 +561,10 @@
             }
             // form.submit();
         });
-        */
+         */
         $('#poeForm').validate({
             rules: {
-                
+
                 nationality: {
                     required: true,
                 },
@@ -573,7 +573,7 @@
                 }
             },
             messages: {
-                
+
                 nationality: {
                     required: "Please provide your nationality"
                 },
@@ -586,14 +586,14 @@
             },
             errorElement: 'span',
             errorPlacement: function (error, element) {
-              error.addClass('invalid-feedback');
-              element.closest('.form-group').append(error);
+                error.addClass('invalid-feedback');
+                element.closest('.form-group').append(error);
             },
             highlight: function (element, errorClass, validClass) {
-              $(element).addClass('is-invalid');
+                $(element).addClass('is-invalid');
             },
             unhighlight: function (element, errorClass, validClass) {
-              $(element).removeClass('is-invalid');
+                $(element).removeClass('is-invalid');
             }
             //
         });
