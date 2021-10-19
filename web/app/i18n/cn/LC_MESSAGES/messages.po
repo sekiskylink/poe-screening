@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2021-10-19 11:45+0300\n"
-"PO-Revision-Date: 2021-10-19 14:07+0300\n"
+"PO-Revision-Date: 2021-10-19 14:22+0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,7 +29,7 @@ msgstr "国籍"
 
 #: views/poe2.html:54 views/registration.html:91 views/registration.html:476
 msgid "Select Nationality"
-msgstr "国籍"
+msgstr "选择国籍"
 
 #: views/poe2.html:64 views/poe2.html:67 views/registration.html:216
 #: views/registration.html:602
@@ -174,7 +174,7 @@ msgstr "咳嗽"
 
 #: views/poe2.html:338
 msgid "Sore throat"
-msgstr ""
+msgstr "咽喉痛"
 
 #: views/poe2.html:353
 msgid "General body weakness (fatigue)"
