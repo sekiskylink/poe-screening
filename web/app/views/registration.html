@@ -80,14 +80,14 @@
                                             <div class="form-group">
                                                 <label>{{ _("Name of Traveller") }}</label>
                                                 <input type="text" class="form-control" placeholder="Name ..." name="name"
-                                                    data-msg={{_("Name of Traveller is required")}} required>
+                                                    data-msg="Name of Traveller is required">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Nationality") }}</label>
                                                 <Select class="form-control select2" name="nationality"  data-dropdown-css-class="select2-purple"
-                                                    data-placeholder={{ _("Nationality") }} data-msg="Nationality is required" required>
+                                                    data-placeholder={{ _("Nationality") }} data-msg="Nationality is required">
                                                     <option value="">{{ _("Select Nationality") }}</option>
                                                     {% for n in countries %}
                                                         <option value={{n.alpha_2_code}}>{{n.name}}</option>
@@ -322,10 +322,10 @@
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label>{{ _("Have you had any of the following symptoms (Fever, Cough, Sore Throat & Breathing Difficulty)?") }}</label>
-                                                <Select name="hasSymptoms" class="form-control" placeholder="Has Symptoms?...">
+                                                <Select name="freeFromSymptoms" class="form-control" placeholder="Has Symptoms?...">
                                                     <option value="">Has had Symptoms?</option>
-                                                    <option value="Yes">Yes</option>
-                                                    <option value="No">No</option>
+                                                    <option value="No">Yes</option>
+                                                    <option value="Yes">No</option>
                                                 </Select>
                                             </div>
                                         </div>
@@ -337,11 +337,11 @@
                                             <div class="form-group">
                                                 <label>{{ _("Have you been fully vaccinated?") }}  </label>
                                                 <div class="icheck-primary d-inline">
-                                                    <input type="radio" id="covidvv" name="beenCovidVaccinated" value="yes"/>
+                                                    <input type="radio" id="covidvv" name="beenCovidVaccinated" value="Yes"/>
                                                     <label for="covidvv">{{ _("Yes") }}</label>
                                                 </div>
                                                 <div class="icheck-primary d-inline">
-                                                    <input type="radio" id="covidvv1" name="beenCovidVaccinated" value="no"/>
+                                                    <input type="radio" id="covidvv1" name="beenCovidVaccinated" value="No"/>
                                                     <label for="covidvv1">{{ _("No") }}</label>
                                                 </div>
                                             </div>
@@ -465,7 +465,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Name of Traveller") }}</label>
-                                                <input type="text" class="form-control" placeholder="Name ..." name="name"  required>
+                                                <input type="text" class="form-control" placeholder="Name ..." name="name">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -571,7 +571,7 @@
                                             <div class="form-group">
                                                 <label>{{ _("Country of Departure") }}</label>
                                                 <select name="countryOfDeparture" class="form-control select2" data-dropdown-css-class="select2-purple"
-                                                    data-placeholder={{ _("Country of Departure") }} style="width: 100%;" required>
+                                                    data-placeholder={{ _("Country of Departure") }} style="width: 100%;">
                                                     <option value="">{{ _("Country") }}</option>
                                                     {% for n in countries %}
                                                         <option value={{n.alpha_2_code}}>{{n.name}}</option>
@@ -586,7 +586,7 @@
                                             <div class="form-group">
                                                 <label>{{ _("Country of Residence") }}</label>
                                                 <select name="countryOfResidence" class="form-control select2" data-dropdown-css-class="select2-purple"
-                                                    data-placeholder={{ _("Country of Residence") }} style="width: 100%;" required>
+                                                    data-placeholder={{ _("Country of Residence") }} style="width: 100%;">
                                                     <option value="">{{ _("Country of Residence") }}</option>
                                                     {% for n in countries %}
                                                         <option value={{n.alpha_2_code}}>{{n.name}}</option>
@@ -599,7 +599,7 @@
                                             <div class="form-group">
                                                 <label>{{ _("Port of Departure") }}</label>
                                                 <Select class="form-control select2" name="portOfEntry"  data-dropdown-css-class="select2-purple"
-                                                    data-placeholder={{ _("Port of Entry") }} data-msg="Port of Entry is required" required>
+                                                    data-placeholder={{ _("Port of Entry") }} data-msg="Port of Entry is required">
                                                     <option value="">{{ _("Select Port of Entry") }}</option>
                                                     {% for p in ports %}
                                                         <option value={{p.dhis2_code}}>{{p.name}}</option>
@@ -713,10 +713,10 @@
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label>{{ _("Have you had any of the following symptoms (Fever, Cough, Sore Throat & Breathing Difficulty)?") }}</label>
-                                                <Select name="hasSymptoms" class="form-control" placeholder="Has Symptoms?...">
+                                                <Select name="freeFromSymptoms" class="form-control" placeholder="Has Symptoms?...">
                                                     <option value="">Has had Symptoms?</option>
-                                                    <option value="Yes">Yes</option>
-                                                    <option value="No">No</option>
+                                                    <option value="No">Yes</option>
+                                                    <option value="Yes">No</option>
                                                 </Select>
                                             </div>
                                         </div>
@@ -728,11 +728,11 @@
                                             <div class="form-group">
                                                 <label>{{ _("Have you been fully vaccinated?") }}  </label>
                                                 <div class="icheck-primary d-inline">
-                                                    <input type="radio" id="covidvv2" name="beenCovidVaccinated" value="yes"/>
+                                                    <input type="radio" id="covidvv2" name="beenCovidVaccinated" value="Yes"/>
                                                     <label for="covidvv2">{{ _("Yes") }}</label>
                                                 </div>
                                                 <div class="icheck-primary d-inline">
-                                                    <input type="radio" id="covidvv3" name="beenCovidVaccinated" value="no"/>
+                                                    <input type="radio" id="covidvv3" name="beenCovidVaccinated" value="No"/>
                                                     <label for="covidvv3">{{ _("No") }}</label>
                                                 </div>
                                             </div>
@@ -895,6 +895,7 @@ $(function() {
         maxDate: oneYearFromNow
     });
     $('#dateOfDeparture').datetimepicker({
+        timepicker:false,
         format: 'YYYY-MM-DD',
         minDate: '-1970/01/01',
         maxDate: oneYearFromNow
@@ -911,10 +912,12 @@ $(function() {
     });
 
     $('#dateOfBirth1').datetimepicker({
+        timepicker:false,
         format: 'YYYY-MM-DD',
         'maxDate': new Date()
     });
     $('#dateOfDeparture1').datetimepicker({
+        timepicker:false,
         format: 'YYYY-MM-DD',
         formatDate: 'YYYY-MM-DD',
         minDate: new Date(),

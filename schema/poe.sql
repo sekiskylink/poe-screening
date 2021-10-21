@@ -92,7 +92,7 @@ CREATE VIEW entries_view AS SELECT
     fields->>'travellingTo' AS travellingTo,
     fields->>'freeFromSymptoms' AS freeFromSymptoms,
     fields->>'hasNegativePCRTest' AS hasNegativePCRTest,
-    fields->>'pcrTestedDate1' AS pcrTestedDate,
+    fields->>'pcrTestedDate' AS pcrTestedDate,
     fields->>'dateOfLastCovidVaccination' AS dateOfLastCovidVaccination,
     fields->>'yellowFeverCardNumber' AS yellowFeverCardNumber,
     fields->>'dateOfYellowFeverVaccination' AS dateOfYellowFeverVaccination,
