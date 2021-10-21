@@ -84,8 +84,8 @@ DHIS2_TRACKER_PROGRAM_CONF = {
 
 DHIS2_USERNAME = 'admin'
 DHIS2_PASSWORD = 'district'
-DHIS2_TEI_ENDPOINT = 'http://localhost:8080/api/trackedEntityInstances'
-DHIS2_EVENTS_ENDPOINT = 'http://localhost:8080/api/events'
+DHIS2_TEI_ENDPOINT = 'https://ugandaeidsr.hispuganda.org/api/trackedEntityInstances'
+DHIS2_EVENTS_ENDPOINT = 'https://ugandaeidsr.hispuganda.org//api/events'
 
 try:
     from local_settings import *

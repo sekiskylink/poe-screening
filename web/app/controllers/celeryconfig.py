@@ -13,25 +13,40 @@ config = {
 
 # DHIS 2 Tracker Program Settings
 DHIS2_TRACKER_PROGRAM_CONF = {
-        'program': 'nBWFG3fYC8N',
-        'trackedEntityType': 'KWN8FUfvO5G', # Person
+        'program': 'IMV1L4a09tc',
+        'trackedEntityType': 'MCPQUTHX1Ze', # Person
         'attributes': {
+            'arrivalOrDeparture': 'vbR9HyvLXWd',
             'name': 'sB1IHYu2xQT',
-            'formId': 'PVXhTjVdB92',
-            'printTravelPass': 'Mnx6lj6roDz',
-            'SystemId': 'CLzIR1Ye97b',
-            'gender': 'Rq4qM2wKYFL',  # Gender aka Sex
+            'sex': 'FZzQbW8AWVd',  # Gender aka Sex
             'nationality': 'XvETY1aTxuB',
+            'email': 'BJ6XIkuzk3J',
             'dateOfBirth': 'g4LJbkM0R24',
-            'dateOfArival': 'UJiu0P8GvHt',
-            'PassportNumber': 'oUqWGeHjj5C', # Can be NIN
+            'age': 'UezutfURtQG',
+            # 'dateOfArival': '',
+            'dateOfDeparture': 'szXspz3z0RA',
+            'ugPhysicalAddress': 'ooK7aSiAaGq',
+            'passportNumber': 'oUqWGeHjj5C', # Can be NIN
+            'passportExpiryDate': 'rsFsoleZSHA',
             'flightOrVesselNumber': 'h6aZFN4DLcR',
             'seatNumber': 'XX8NZilra7b',
             'ugPhoneNumber': 'E7u9XdW24SP',
+            'nextOfKin': 'j6sEr8EcULP',
+            'countryOfResidence': 'hBcoBCZBWFb',
+            'countryOfDeparture': 'cW0UPEANS5t',
+            'travellingTo': 'pxcXhmjJeMv',
+            'modeOfTransport': 'rBXloP7CJ9M',
+            'purposeOfTrip': 'QIGSvZYCi4g',
             'freeFromSymptoms': 'EWWNozu6TVd',
-            'embarkmentCountry': 'cW0UPEANS5t',
+            'dateOfLastCovidVaccination': 'hG66PSsqVkf',
+            'beenCovidVaccinated': 'WypSLyCzzlH',
+            'yellowFeverCardNumber': 'MbGcWAhHOPc',
+            # 'embarkmentCountry': '',
             'ugPhysicalAddress': 'ooK7aSiAaGq',
-            'durationOfStay': 'eH7YTWgoHgo',
+            'durationOfStay': 'VpsljpwkXcD',
+            'dateOfYellowFeverVaccination': 'ng1OlE99F97',
+            # 'hasNegativePCRTest': '',
+            'pcrTestedDate': 'HLVG1JirIs7'
         },
         'stages': {
             'travelLocator': {
@@ -47,8 +62,8 @@ DHIS2_TRACKER_PROGRAM_CONF = {
 
 DHIS2_USERNAME = 'admin'
 DHIS2_PASSWORD = 'district'
-DHIS2_TEI_ENDPOINT = 'http://localhost:8080/api/trackedEntityInstances'
-DHIS2_EVENTS_ENDPOINT = 'http://localhost:8080/api/events'
+DHIS2_TEI_ENDPOINT = 'https://ugandaeidsr.org/api/trackedEntityInstances'
+DHIS2_EVENTS_ENDPOINT = 'https://ugandaeidsr.org/api/events'
 
 try:
     from .local_celeryconfig import *
