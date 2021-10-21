@@ -66,6 +66,9 @@ DHIS2_TRACKER_PROGRAM_CONF = {
             # 'embarkmentCountry': '',
             'ugPhysicalAddress': 'ooK7aSiAaGq',
             'durationOfStay': 'VpsljpwkXcD',
+            'dateOfYellowFeverVaccination': 'ng1OlE99F97',
+            # 'hasNegativePCRTest': '',
+            'pcrTestedDate': 'HLVG1JirIs7'
         },
         'stages': {
             'travelLocator': {

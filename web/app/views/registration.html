@@ -200,7 +200,7 @@
                                             <div class="form-group">
                                                 <label>{{ _("Country of Residence") }}</label>
                                                 <select name="countryOfResidence" class="form-control select2" data-dropdown-css-class="select2-purple"
-                                                    data-placeholder={{ _("Country of Residence") }} style="width: 100%;" required>
+                                                    data-placeholder={{ _("Country of Residence") }} style="width: 100%;">
                                                     <option value="">{{ _("Country of Residence") }}</option>
                                                         {% for n in countries %}
                                                     <option value={{n.alpha_2_code}}>{{n.name}}</option>
@@ -213,7 +213,7 @@
                                             <div class="form-group">
                                                 <label>{{ _("Port of Arrival") }}</label>
                                                 <Select class="form-control select2" name="portOfEntry"  data-dropdown-css-class="select2-purple"
-                                                    data-placeholder={{ _("Port of Entry") }} data-msg={{ _("Please specify port of entry") }} required>
+                                                    data-placeholder={{ _("Port of Entry") }} required>
                                                     <option value="">{{ _("Select Port of Entry") }}</option>
                                                         {% for p in ports %}
                                                             <option value={{p.dhis2_code}}>{{p.name}}</option>
@@ -231,7 +231,7 @@
                                                     data-placeholder={{ _("Select Airport of departure") }} style="width: 100%;">
                                                     <option value="">{{ _("Select Airport of departure") }}</option>
                                                     {% for airport in airports %}
-                                                        option value={{airport.name}}>{{airport.iata_code + " - " + airport.name + " - " + airport.country_code }}</option>
+                                                        <option value={{airport.name}}>{{airport.iata_code + " - " + airport.name + " - " + airport.country_code }}</option>
                                                     {% endfor %}
                                                 </select>
                                             </div>
@@ -367,7 +367,7 @@
                                                 <div class="input-group">
                                                     <div class="custom-file">
                                                         <input type="file" class="custom-file-input" id="covidVaccinationCert" name="covidVaccinationCert"/>
-                                                        <label for="covidVaccinationCert" class="custom-file-label">{{_("COVID-19 Vaccination Certificate")}}</label>
+                                                        <label for="covidVaccinationCert" class="custom-file-label">{{_("Choose File")}}</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -585,7 +585,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Country of Residence") }}</label>
-                                                <select name="countryOfDeparture" class="form-control select2" data-dropdown-css-class="select2-purple"
+                                                <select name="countryOfResidence" class="form-control select2" data-dropdown-css-class="select2-purple"
                                                     data-placeholder={{ _("Country of Residence") }} style="width: 100%;" required>
                                                     <option value="">{{ _("Country of Residence") }}</option>
                                                     {% for n in countries %}
@@ -875,6 +875,7 @@ $(function() {
     var oneYearFromNow = new Date(new Date().setFullYear(new Date().getFullYear() + 1))
     //Date picker
     $('#arrivaldate').datetimepicker({
+        timepicker:false,
         format: 'YYYY-MM-DD'
     });
     $('#dateOfBirth').datetimepicker({
@@ -986,6 +987,9 @@ $(function() {
             modeOfTransport: {
                 required: true
             },
+            portOfEntry: {
+                required: true
+            }
             /*
             covidVaccinationCert: {
                 fileType: {
@@ -998,7 +1002,9 @@ $(function() {
             */
         },
         messages: {
-
+            name: {
+                required: "Name of Traveller is required"
+            },
             nationality: {
                 required: "Nationality is required"
             },
@@ -1010,6 +1016,9 @@ $(function() {
             },
             sex: {
                 required: "Sex is required"
+            },
+            portOfEntry: {
+                required: "Port of Entry is required"
             },
             passportNumber: {
                 required: "Passport Number is required"

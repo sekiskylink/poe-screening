@@ -5,6 +5,7 @@
 
 import web
 import simplejson
+import tempfile
 import psycopg2.extras
 from . import render
 from . import csrf_protected, db, get_session, put_session
@@ -30,9 +31,10 @@ class Registration:
             embarkmentCountry="", countryOfResidence="", countryOfDeparture="",
             flightOrVesselNumber="", seatNumber="", modeOfTransport="", purposeOfTrip="",
             ugPhysicalAddress="", durationOfStay="", PhoneNumber="", travellingTo="",
-            disembarkmentAirport="", nextOfKin="", hasSymptoms="",
+            disembarkmentAirport="", nextOfKin="", freeFromSymptoms="", pcrTestedDate="",
             beenCovidVaccinated="", dateOfLastCovidVaccination="", yellowFeverCardNumber="",
-            hasNegativePCRTest="", dateOfYellowFeverVaccination="", ed="", d_id=""
+            hasNegativePCRTest="", dateOfYellowFeverVaccination="", ed="", d_id="",
+            covidVaccinationCert={}, pcrTestCopy={}
         )
 
         allow_edit = False
@@ -41,12 +43,41 @@ class Registration:
             allow_edit = True
         except:
             pass
+        ALLOWED_CTYPES = ['application/pdf', 'image/png', 'image/jpg', 'image/jpeg']
+        covid_cert_file_name = ""
+        pcr_test_file_name =""
+
+        covid_certificate_fp = params.covidVaccinationCert
+        covid_cert_ctype = getattr(covid_certificate_fp, 'type')
+
+        if covid_cert_ctype in ALLOWED_CTYPES:
+            # proceed and save it
+            suffix = covid_cert_ctype.split("/")[-1:][0]
+            f = tempfile.NamedTemporaryFile(suffix=".{0}".format(suffix), delete=False)
+            f.write(covid_certificate_fp.file.read())
+            covid_cert_file_name = f.name
+            f.close()
+
+        pcr_test_fp = params.pcrTestCopy
+        pcr_test_ctype = getattr(pcr_test_fp, 'type')
+
+        if pcr_test_ctype in ALLOWED_CTYPES:
+            # save it some where on disk
+            surffix = pcr_test_ctype.split("/")[-1:][0]
+            f = tempfile.NamedTemporaryFile(suffix=".{0}".format(suffix), delete=False)
+            f.write(pcr_test_fp.file.read())
+            pcr_test_file_name = f.name
+            f.close()
+
+        print("CERT File: {0}, PCR Test File: {1}".format(covid_cert_file_name, pcr_test_file_name))
 
         with db.transaction():
             if params.ed and allow_edit:
                 pass
             else:
                 # inserting
+                # Do some server side validation
+                #
                 fields = {
                     'arrivalOrDeparture': params.arrivalOrDeparture,
                     'name': params.name,
@@ -72,15 +103,21 @@ class Registration:
                     'ugPhysicalAddress': params.ugPhysicalAddress,
                     'durationOfStay': params.durationOfStay,
                     'purposeOfTrip': params.purposeOfTrip,
-                    'PhoneNumber': params.PhoneNumber,
+                    'phoneNumber': params.phoneNumber,
                     'nextOfKin': params.nextOfKin,
-                    'hasSymptoms': params.hasSymptoms,
+                    'freeFromSymptoms': params.freeFromSymptoms,
                     'beenCovidVaccinated': params.beenCovidVaccinated,
                     'dateOfLastCovidVaccination': params.dateOfLastCovidVaccination,
                     'hasNegativePCRTest': params.hasNegativePCRTest,
+                    'pcrTestedDate': params.pcrTestedDate,
                     'yellowFeverCardNumber': params.yellowFeverCardNumber,
                     'dateOfYellowFeverVaccination': params.dateOfYellowFeverVaccination
                 }
+                if covid_cert_file_name:
+                    fields['covidVaccinationCertFile'] = covid_cert_file_name
+                if pcr_test_file_name:
+                    fields['pcrTestFile'] = pcr_test_file_name
+
                 res = db.query(
                     "INSERT INTO entries (fields) VALUES ($fields) RETURNING id",
                     {'fields': psycopg2.extras.Json(fields, dumps=simplejson.dumps)}
