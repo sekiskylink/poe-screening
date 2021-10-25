@@ -360,7 +360,7 @@
                                         </div>
 
                                     </div>
-                                    <div class="row">
+                                    <div class="row" id="covidCertDiv">
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label for="covidVaccinationCert">{{ _("Upload COVID-19 Vaccination Certificate") }}</label>
@@ -403,7 +403,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row">
+                                    <div class="row" id="pcrfileDiv1">
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label for="pcrTestCopy">{{ _("PCR Test Result Copy") }}</label>
@@ -751,7 +751,7 @@
                                         </div>
 
                                     </div>
-                                    <div class="row">
+                                    <div class="row" id="covidCertDiv1">
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label for="covidVaccinationCert1">{{ _("Upload COVID-19 Vaccination Certificate") }}</label>
@@ -796,7 +796,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row">
+                                    <div class="row" id="pcrfileDiv">
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label for="pcrTestCopy">{{ _("PCR Test Result Copy") }}</label>
@@ -870,6 +870,44 @@
 <script>
 $(function() {
     bsCustomFileInput.init();
+
+    $('#covidCertDiv').hide();
+    $('#covidCertDiv1').hide();
+    $('#pcrfileDiv').hide();
+    $('#pcrfileDiv1').hide();
+
+
+    $('#covidvv').click(function(){
+        $('#covidCertDiv').show()
+    });
+
+    $('#covidvv1').click(function(){
+        $('#covidCertDiv').hide()
+    });
+
+
+    $('#covidvv2').click(function(){
+        $('#covidCertDiv1').show();
+    });
+
+    $('#covidvv3').click(function(){
+        $('#covidCertDiv1').hide();
+    });
+
+    $('#pcr1').click(function(){
+        $('#pcrfileDiv').show()
+    });
+
+    $('#pcr2').click(function(){
+        $('#pcrfileDiv').hide()
+    });
+
+    $('#pcr3').click(function(){
+        $('#pcrfileDiv1').show()
+    });
+    $('#pcr4').click(function(){
+        $('#pcrfileDiv1').hide()
+    })
 
     var tenYearsFromNow = new Date(new Date().setFullYear(new Date().getFullYear() + 10))
     var oneYearFromNow = new Date(new Date().setFullYear(new Date().getFullYear() + 1))
