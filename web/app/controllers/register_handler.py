@@ -22,7 +22,7 @@ class Registration:
 
         l = locals()
         del l['self']
-        return render.registration(**l)
+        return render.registration2(**l)
 
     def POST(self):
         params = web.input(
