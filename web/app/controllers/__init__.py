@@ -6,6 +6,7 @@ controllers of the app.
 
 # from web.contrib.template import render_mako
 import web
+import sys
 import json
 import datetime
 import settings
@@ -13,6 +14,10 @@ import gettext
 import pyqrcode
 from web.contrib.template import render_jinja
 from settings import (absolute, config)
+
+if sys.version_info.major < 3:
+    reload(sys)
+    sys.setdefaultencoding('utf8')
 
 db_host = config['db_host']
 db_name = config['db_name']
