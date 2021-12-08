@@ -40,7 +40,7 @@
     <!-- Main Footer -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-inline-block">
-      <b>Developed by HISP Uganda</b> 3.1.0
+      <b>Developed by HISP Uganda</b>
     </div>
     <strong>POE &copy; 2021 - {{  year }} <a href="http://poe-screenig.hispuganda.org"></a>.</strong>
   </footer>
@@ -95,19 +95,19 @@
         <!-- Language Dropdown Menu -->
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
-              <i class="flag-icon flag-icon-us"></i>
+                <i class="flag-icon flag-icon-us {{ lang }}" id="current_flag"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right p-0">
-              <a href="/register?lang=en_US" class="dropdown-item active">
+              <a href="/register?lang=en_US" class="dropdown-item" id="english_flag">
                 <i class="flag-icon flag-icon-us mr-2"></i> English
               </a>
-              <a href="/register?lang=fr" class="dropdown-item">
-                <i class="flag-icon flag-icon-fr mr-2"></i> French
+              <a href="/register?lang=fr" class="dropdown-item" id="french_flag">
+                <i class="flag-icon flag-icon-fr mr-2" ></i> French
               </a>
-              <a href="/register?lang=cn" class="dropdown-item">
-                <i class="flag-icon flag-icon-cn mr-2"></i> Chinese
+              <a href="/register?lang=cn" class="dropdown-item" id="chinese_flag">
+                <i class="flag-icon flag-icon-cn mr-2" ></i> Chinese
               </a>
-              <a href="/register?lang=tz" class="dropdown-item">
+              <a href="/register?lang=tz" class="dropdown-item" id="swahili_flag">
                 <i class="flag-icon flag-icon-tz mr-2"></i> Swahili
               </a>
             </div>

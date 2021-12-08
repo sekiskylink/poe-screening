@@ -18,7 +18,16 @@ class Registration:
         params = web.input(ed="",d_id="")
         lang = params.get('lang', 'en_US')
         ses.lang = lang
+        # if lang == 'fr':
+        #     update_icon('flag-icon-fr')
+        # elif lang == 'cn':
+        #     update_icon('flag-icon-cn')
+        # elif lang == 'tz':
+        #     update_icon('flag-icon-tz')
+        # else:
+        #     update_icon('flag-icon-us')
         put_session(ses)
+        print("LANGUAGE++++++++", lang)
 
         l = locals()
         del l['self']

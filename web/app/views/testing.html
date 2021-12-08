@@ -1,0 +1,47 @@
+
+{% extends "layout.html" %}
+{% from 'layout.html' import navbar, myscripts, topnavbar  %}
+
+{% block title %}POE.::.Test{% endblock%}
+
+{% block topnav %}
+    {% call topnavbar() %}
+    {% endcall %}
+{% endblock %}
+
+{% block nav %}
+    {% call navbar() %}
+
+    {% endcall %}
+{% endblock %}
+    
+{% block content %}
+    <div class="row">
+        <form method="POST" enctype="multipart/form-data" action="" id="arrivalForm">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="file1">{{ _("Upload COVID-19 Vaccination Certificate") }}</label>
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="file1" name="covidVaccinationCert">
+                                <label for="file1" class="custom-file-label">Choose File</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {% call myscripts() %}
+        <script src="/static/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+        <script>
+        $(function () {
+          bsCustomFileInput.init();
+        });
+        </script>
+    {% endcall %}
+{% endblock %}
