@@ -1,5 +1,5 @@
-{% extends "layout.html" %}
-{% from 'layout.html' import navbar, myscripts, topnavbar  %}
+{% extends "layout2.html" %}
+{% from 'layout2.html' import navbar, myscripts, topnavbar  %}
 
 {% block title %}POE.::.Test{% endblock%}
 
@@ -27,7 +27,52 @@
 
                         <div class="row">
                             <div id="qrcode">
-                                <p>User details shall be submitted to MoH Health System</p>
+                                <p>Traveller details shall be submitted to MoH Health System</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Traveller Details</h3>
+
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr><td>{{ _("Name of Traveller") }}</td><td>{{ fields.name }}</td></tr>
+                                                <tr><td>{{ _("Nationality") }} </td><td> {{ fields.nationality }}</td></tr>
+                                                <tr><td>{{ _("Age(years)") }} </td><td>{{ fields.age }}</td></tr>
+                                                <tr><td>{{ _("Date of Birth") }}</td><td>{{ fields.dateOfBirth }}</td></tr>
+                                                <tr><td>{{ _("Sex") }}</td><td>{{ fields.sex }}</td></tr>
+                                                <tr><td>{{ _("Email") }}</td><td>{{ fields.email }}</td></tr>
+                                                <tr><td>{{ _("Passport Number") }}</td><td>{{ fields.passportNumber }}</td></tr>
+                                                <tr><td>{{ _("Passport Expiry Date") }}</td><td>{{ fields.passportExpiryDate }}</td></tr>
+                                                <tr><td>{{ _("Arival Date") }}</td><td>{{ fields.dateOfArrival }}</td></tr>
+                                                <tr><td>{{ _("Departure Date") }}</td><td>{{ fields.dateOfDeparture }}</td></tr>
+                                                <tr><td>{{ _("Country of Embarkment") }}</td><td>{{ fields.embarkmentCountry }}</td></tr>
+                                                <tr><td>{{ _("Country of Residence") }}</td><td>{{ fields.countryOfResidence }}</td></tr>
+                                                <tr><td>{{ _("Port of Arrival") }}</td><td{{ fields.portOfEntry }}/td></tr>
+                                                <tr><td>{{ _("Port of Departure") }}</td><td>{{ fields.portOfEntry }}</td></tr>
+                                                <tr><td>{{ _("Airport of Disembarkment") }}</td><td>{{ fields.disembarkmentAirport }}</td></tr>
+                                                <tr><td>{{ _("Flight / Vehicle Number") }}</td><td>{{ fields.flightOrVesselNumber }}</td></tr>
+                                                <tr><td>{{ _("Seat Number") }}</td><td>{{ fields.seatNumber }}</td></tr>
+                                                <tr><td>{{ _("Duration of stay") }}</td><td>{{ fields.durationOfStay }}</td></tr>
+                                                <tr><td>{{ _("Mode of Transport") }}</td><td>{{ fields.modeOfTransport }}</td></tr>
+                                                <tr><td>{{ _("Purpose of your Trip") }}</td><td>{{ fields.purposeOfTrip }}</td></tr>
+                                                <tr><td>{{ _("Physical address while in Uganda") }}</td><td>{{ fields.ugPhysicalAddress }}</td></tr>
+                                                <tr><td>{{ _("Your contact phone number while in Uganda") }}</td><td>{{ fields.phoneNumber }}</td></tr>
+                                                <tr><td>{{ _("Contact/ next of kin telephone number") }}</td><td>{{ fields.nextOfKin}}</td></tr>
+                                                <tr><td>{{ _("Has had Symptoms?") }}</td><td>{{ fields.freeFromSymptoms }}</td></tr>
+                                                <tr><td>{{ _("Have you been fully vaccinated?") }}</td><td>{{ fields.beenCovidVaccinated }}</td></tr>
+                                                <tr><td>{{ _("Date of last Vaccination") }}</td><td>{{ fields.dateOfLastCovidVaccination }}</td></tr>
+                                                <tr><td>{{ _("PCR Tested Date") }}</td><td>{{ fields.pcrTestedDate }}</td></tr>
+                                                <tr><td>{{ _("Yellow Fever Card Number") }}</td><td>{{ fields.yellowFeverCardNumber }}</td></tr>
+                                                <tr><td>{{ _("Date of Yellow Fever Vaccination") }}</td><td>{{ fields.dateOfYellowFeverVaccination }}</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
