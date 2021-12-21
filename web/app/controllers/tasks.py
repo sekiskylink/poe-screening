@@ -75,8 +75,7 @@ def compose_tracked_entity_instance_payload(values, orgUnitId):
                 'attribute': programConf['attributes'][k],
                 'value': v
             })
-    # return json.dumps(payload)
-    return payload
+    return json.dumps(payload)
 
 
 def compose_event_payload_list(values, orgUnitId, trackedEntityInstance):
