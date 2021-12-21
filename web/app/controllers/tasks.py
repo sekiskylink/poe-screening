@@ -39,7 +39,7 @@ def post_data_to_dhis2(url, data, params={}, method="POST"):
     if method == "PUT":
         payload = json.loads(data).pop('enrollments')
         response = requests.put(
-            url, data=json.dumps(payload), headers=headers,
+            url, data=payload, headers=headers,
             verify=False, params=params
         )
     elif method == "GET":
@@ -75,7 +75,8 @@ def compose_tracked_entity_instance_payload(values, orgUnitId):
                 'attribute': programConf['attributes'][k],
                 'value': v
             })
-    return json.dumps(payload)
+    # return json.dumps(payload)
+    return payload
 
 
 def compose_event_payload_list(values, orgUnitId, trackedEntityInstance):

@@ -44,7 +44,7 @@ class Verify:
                     url += url_suffix
 
                 try:
-                    resp = post_data_to_dhis2(url, payload.replace("\n", ""), method=method)
+                    resp = post_data_to_dhis2(url, payload, method=method)
                     reference = get_tracked_entity_instance_reference(resp.json())
                     print("+++++++", resp.json())
                     print(">>>>>>>>", reference)
