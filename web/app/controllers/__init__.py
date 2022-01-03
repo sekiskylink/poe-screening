@@ -45,14 +45,18 @@ APP = None
 
 rs = db.query("SELECT id, name, alpha_2_code FROM countries")
 ourCountries = []
+countriesByCode = {}
 for c in rs:
     ourCountries.append({'id': c['id'], 'name': c['name'], 'alpha_2_code': c['alpha_2_code']})
+    countriesByCode[c['alpha_2_code']] = c['name']
 
 
 ports = db.query("SELECT id, name, dhis2_code FROM ports ORDER BY form_order, name")
 ourPorts = []
+portsById = {}
 for p in ports:
     ourPorts.append({'id': p['id'], 'name': p['name'], 'dhis2_code': p['dhis2_code']})
+    portsById[p['dhis2_code']] = p['name']
 
 airports = db.query("SELECT id, name, country_code, iata_code FROM airports")
 ourAirPorts = []
@@ -112,10 +116,24 @@ def renderQrCode(data):
 </div>
 """.format(filename)
 
+
+def formatPort(portId):
+    if portId in portsById:
+        return portsById[portId]
+    return portId
+
+
+def formatCountry(alpha_2_code):
+    if alpha_2_code in countriesByCode:
+        return countriesByCode[alpha_2_code]
+    return alpha_2_code
+
 Permissions = []
 
 myFilters = {
-    "renderQrCode": renderQrCode
+    "renderQrCode": renderQrCode,
+    "formatPort": formatPort,
+    "formatCountry": formatCountry
 }
 
 # Jinja2 Template options

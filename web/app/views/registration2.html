@@ -83,6 +83,33 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
+                                                <label>{{ _("Port of Arrival") }}</label>
+                                                <Select class="form-control select2" name="portOfEntry"  data-dropdown-css-class="select2-purple"
+                                                    data-placeholder={{ _("Port of Entry") }} required>
+                                                    <option value="">{{ _("Select Port of Entry") }}</option>
+                                                        {% for p in ports %}
+                                                            <option value={{p.dhis2_code}}>{{p.name}}</option>
+                                                        {% endfor %}
+                                                </Select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>{{ _("Country of Residence") }}</label>
+                                                <select name="countryOfResidence" class="form-control select2" data-dropdown-css-class="select2-purple"
+                                                    data-placeholder={{ _("Country of Residence") }} style="width: 100%;">
+                                                    <option value="">{{ _("Country of Residence") }}</option>
+                                                        {% for n in countries %}
+                                                    <option value={{n.alpha_2_code}}>{{n.name}}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
                                                 <label>{{ _("Name of Traveller") }}</label>
                                                 <input type="text" class="form-control" placeholder="Name ..." name="name"
                                                     data-msg="Name of Traveller is required">
@@ -196,34 +223,6 @@
                                                             <option value={{n.alpha_2_code}}>{{n.name}}</option>
                                                         {% endfor %}
                                                 </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>{{ _("Country of Residence") }}</label>
-                                                <select name="countryOfResidence" class="form-control select2" data-dropdown-css-class="select2-purple"
-                                                    data-placeholder={{ _("Country of Residence") }} style="width: 100%;">
-                                                    <option value="">{{ _("Country of Residence") }}</option>
-                                                        {% for n in countries %}
-                                                    <option value={{n.alpha_2_code}}>{{n.name}}</option>
-                                                    {% endfor %}
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>{{ _("Port of Arrival") }}</label>
-                                                <Select class="form-control select2" name="portOfEntry"  data-dropdown-css-class="select2-purple"
-                                                    data-placeholder={{ _("Port of Entry") }} required>
-                                                    <option value="">{{ _("Select Port of Entry") }}</option>
-                                                        {% for p in ports %}
-                                                            <option value={{p.dhis2_code}}>{{p.name}}</option>
-                                                        {% endfor %}
-                                                </Select>
                                             </div>
                                         </div>
                                     </div>
@@ -470,6 +469,34 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
+                                                <label>{{ _("Port of Departure") }}</label>
+                                                <Select class="form-control select2" name="portOfEntry"  data-dropdown-css-class="select2-purple"
+                                                    data-placeholder={{ _("Port of Entry") }} data-msg="Port of Entry is required">
+                                                    <option value="">{{ _("Select Port of Entry") }}</option>
+                                                    {% for p in ports %}
+                                                        <option value={{p.dhis2_code}}>{{p.name}}</option>
+                                                    {% endfor %}
+                                                </Select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>{{ _("Country of Residence") }}</label>
+                                                <select name="countryOfResidence" class="form-control select2" data-dropdown-css-class="select2-purple"
+                                                    data-placeholder={{ _("Country of Residence") }} style="width: 100%;">
+                                                    <option value="">{{ _("Country of Residence") }}</option>
+                                                    {% for n in countries %}
+                                                        <option value={{n.alpha_2_code}}>{{n.name}}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
                                                 <label>{{ _("Name of Traveller") }}</label>
                                                 <input type="text" class="form-control" placeholder="Name ..." name="name">
                                             </div>
@@ -583,34 +610,6 @@
                                                         <option value={{n.alpha_2_code}}>{{n.name}}</option>
                                                     {% endfor %}
                                                 </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>{{ _("Country of Residence") }}</label>
-                                                <select name="countryOfResidence" class="form-control select2" data-dropdown-css-class="select2-purple"
-                                                    data-placeholder={{ _("Country of Residence") }} style="width: 100%;">
-                                                    <option value="">{{ _("Country of Residence") }}</option>
-                                                    {% for n in countries %}
-                                                        <option value={{n.alpha_2_code}}>{{n.name}}</option>
-                                                    {% endfor %}
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>{{ _("Port of Departure") }}</label>
-                                                <Select class="form-control select2" name="portOfEntry"  data-dropdown-css-class="select2-purple"
-                                                    data-placeholder={{ _("Port of Entry") }} data-msg="Port of Entry is required">
-                                                    <option value="">{{ _("Select Port of Entry") }}</option>
-                                                    {% for p in ports %}
-                                                        <option value={{p.dhis2_code}}>{{p.name}}</option>
-                                                    {% endfor %}
-                                                </Select>
                                             </div>
                                         </div>
                                     </div>
