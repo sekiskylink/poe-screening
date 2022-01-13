@@ -138,4 +138,4 @@ class Registration:
                     return render.qrcode({'saved_record': saved_record})
         l = locals()
         del l['self']
-        return render.registration(**l)
+        return render.registration2(**l)
