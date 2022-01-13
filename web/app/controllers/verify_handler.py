@@ -17,7 +17,7 @@ from .celeryconfig import DHIS2_TEI_ENDPOINT
 
 class Verify:
     def GET(self, verification_code):
-        # params = web.input()
+        params = web.input()
         ses = get_session()
         lang = params.get('lang', 'en_US')
         ses.lang = lang
