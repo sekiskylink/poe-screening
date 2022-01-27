@@ -129,6 +129,20 @@
                                         </div>
                                     </div>
                                     <div class="row">
+
+										<div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>{{ _("Date of Birth") }}</label>
+                                                <div class="input-group date" id="dateOfBirth" data-target-input="nearest">
+                                                    <input type="text" name="dateOfBirth" class="form-control datetimepicker-input" data-target="#dateOfBirth"
+                                                        data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                                    <div class="input-group-append" data-target="#dateOfBirth" data-toggle="datetimepicker">
+                                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Age (years)") }}</label>
@@ -141,18 +155,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>{{ _("Date of Birth") }}</label>
-                                                <div class="input-group date" id="dateOfBirth" data-target-input="nearest">
-                                                    <input type="text" name="dateOfBirth" class="form-control datetimepicker-input" data-target="#dateOfBirth"
-                                                        data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
-                                                    <div class="input-group-append" data-target="#dateOfBirth" data-toggle="datetimepicker">
-                                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
 
                                     </div>
 
@@ -231,7 +234,8 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Airport of Disembarkment")}}</label>
-                                                <select name="disembarkmentAirport" class="form-control select2" data-dropdown-css-class="select2-purple"
+                                                <select name="disembarkmentAirport" id="disembarkmentAirport" 
+                                                                class="form-control select2" data-dropdown-css-class="select2-purple"
                                                     data-placeholder={{ _("Select Airport of departure") }} style="width: 100%;">
                                                     <option value="">{{ _("Select Airport of departure") }}</option>
                                                     {% for airport in airports %}
@@ -253,7 +257,8 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Seat Number") }}</label>
-                                                <input type="text" class="form-control" placeholder="Seat Number..." name="seatNumber">
+                                                <input type="text" class="form-control" id="seatNumber" 
+                                                    placeholder="Seat Number..." name="seatNumber">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -267,7 +272,8 @@
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label>{{ _("Mode of Transport") }}</label>
-                                                <Select name="modeOfTransport" class="form-control" placeholder="Mode of Transport...">
+                                                <Select name="modeOfTransport" id="modeOfTransport" 
+                                                    class="form-control" placeholder="Mode of Transport...">
                                                     <option value="">{{ _("Select Mode of Transport")}}</option>
                                                     <option value="Air">{{ _("By Air")}}</option>
                                                     <option value="Road">{{ _("By Road")}}</option>
@@ -516,19 +522,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>{{ _("Age (years)") }}</label>
-                                                <select class="form-control" name="age">
-                                                    <option value="">{{ _("Select Age") }}</option>
-                                                    {% for a in range(1, 99) %}
-                                                        <option value={{a}}>{{ a }}</option>
-                                                    {% endfor%}
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
+										<div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Date of Birth") }}</label>
                                                 <div class="input-group date" id="dateOfBirth1" data-target-input="nearest">
@@ -538,6 +532,18 @@
                                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>{{ _("Age (years)") }}</label>
+                                                <select class="form-control" name="age">
+                                                    <option value="">{{ _("Select Age") }}</option>
+                                                    {% for a in range(1, 99) %}
+                                                        <option value={{a}}>{{ a }}</option>
+                                                    {% endfor%}
+                                                </select>
                                             </div>
                                         </div>
 
@@ -618,7 +624,8 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Airport of departure")}}</label>
-                                                <select name="embarkmentAirport" class="form-control select2" data-dropdown-css-class="select2-purple"
+                                                <select name="embarkmentAirport" id="embarkmentAirport" 
+                                                        class="form-control select2" data-dropdown-css-class="select2-purple"
                                                     data-placeholder={{ _("Select Airport of departure") }} style="width: 100%;">
                                                     <option value="">{{ _("Select Airport of departure") }}</option>
                                                         {% for airport in airports %}
@@ -650,7 +657,8 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Seat Number") }}</label>
-                                                <input type="text" class="form-control" placeholder="Seat Number..." name="seatNumber">
+                                                <input type="text" class="form-control" id="seatNumber1" 
+                                                    placeholder="Seat Number..." name="seatNumber">
                                             </div>
                                         </div>
                                     </div>
@@ -658,7 +666,8 @@
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label>{{ _("Mode of Transport") }}</label>
-                                                <Select name="modeOfTransport" class="form-control" placeholder="Mode of Transport...">
+                                                <Select name="modeOfTransport" id="modeOfTransport1" class="form-control" 
+                                                        placeholder="Mode of Transport...">
                                                     <option value="">{{ _("Select Mode of Transport")}}</option>
                                                     <option value="Air">{{ _("By Air")}}</option>
                                                     <option value="Road">{{ _("By Road")}}</option>
@@ -991,6 +1000,34 @@ $(function() {
     $('#dateOfYellowFeverVaccination1').datetimepicker({
         format: 'YYYY-MM-DD',
         maxDate: new Date()
+    });
+
+    $('#disembarkmentAirport').prop( "disabled", true);
+    $('#seatNumber').prop( "disabled", true );
+
+    $('#modeOfTransport').change(function(){
+        var mode = $(this).val();
+        if (mode == 'Air') {
+            $('#disembarkmentAirport').prop( "disabled", false);
+            $('#seatNumber').prop( "disabled", false );
+        } else{
+            $('#disembarkmentAirport').prop( "disabled", true );
+            $('#seatNumber').prop( "disabled", true );
+        }
+    });
+
+    $('#embarkmentAirport').prop("disabled", true);
+    $('#seatNumber1').prop("disabled", true);
+
+    $('#modeOfTransport1').change(function(){
+        var mode = $(this).val();
+        if (mode == 'Air') {
+            $('#embarkmentAirport').removeAttr( "disabled");
+            $('#seatNumber1').removeAttr( "disabled");
+        } else{
+            $('#embarkmentAirport').attr( "disabled", "disabled");
+            $('#seatNumber1').attr( "disabled", "disabled");
+        }
     });
     //Initialize Select2 Elements
     $('.select2').select2()
