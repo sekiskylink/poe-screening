@@ -134,7 +134,8 @@
                                             <div class="form-group">
                                                 <label>{{ _("Date of Birth") }}</label>
                                                 <div class="input-group date" id="dateOfBirth" data-target-input="nearest">
-                                                    <input type="text" name="dateOfBirth" class="form-control datetimepicker-input" data-target="#dateOfBirth"
+                                                    <input type="text" name="dateOfBirth" id="dateOfBirthInput" 
+                                                            class="form-control datetimepicker-input" data-target="#dateOfBirth"
                                                         data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
                                                     <div class="input-group-append" data-target="#dateOfBirth" data-toggle="datetimepicker">
                                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
@@ -146,9 +147,9 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Age (years)") }}</label>
-                                                <select class="form-control" name="age">
+                                                <select class="form-control" name="age" id="age">
                                                     <option value="">{{ _("Select Age") }}</option>
-                                                        {% for a in range(1, 99) %}
+                                                        {% for a in range(0, 99) %}
                                                             <option value={{a}}>{{ a }}</option>
                                                         {% endfor%}
                                                 </select>
@@ -526,7 +527,7 @@
                                             <div class="form-group">
                                                 <label>{{ _("Date of Birth") }}</label>
                                                 <div class="input-group date" id="dateOfBirth1" data-target-input="nearest">
-                                                    <input type="text" name="dateOfBirth" class="form-control datetimepicker-input" data-target="#dateOfBirth1"
+                                                    <input type="text" name="dateOfBirth" id="dateOfBirthInput1" class="form-control datetimepicker-input" data-target="#dateOfBirth1"
                                                         data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
                                                     <div class="input-group-append" data-target="#dateOfBirth1" data-toggle="datetimepicker">
                                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
@@ -538,9 +539,9 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>{{ _("Age (years)") }}</label>
-                                                <select class="form-control" name="age">
+                                                <select class="form-control" name="age" id="age1">
                                                     <option value="">{{ _("Select Age") }}</option>
-                                                    {% for a in range(1, 99) %}
+                                                    {% for a in range(0, 99) %}
                                                         <option value={{a}}>{{ a }}</option>
                                                     {% endfor%}
                                                 </select>
@@ -883,6 +884,18 @@
 <script src="/static/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 <script>
 $(function() {
+
+    function getAge(dateString) {
+        var today = new Date();
+        var birthDate = new Date(dateString);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
+
     bsCustomFileInput.init();
 
     $('#covidCertDiv').hide();
@@ -931,8 +944,12 @@ $(function() {
         format: 'YYYY-MM-DD'
     });
     $('#dateOfBirth').datetimepicker({
+        timepicker: false,
         format: 'YYYY-MM-DD',
-        'maxDate': new Date()
+        maxDate: new Date(),
+        onChangeDateTime: function(dp, i){
+            console.log(i.val())
+        }
     });
     $('#passportExpiryDate').datetimepicker({
         timepicker:false,
@@ -966,7 +983,10 @@ $(function() {
     $('#dateOfBirth1').datetimepicker({
         timepicker:false,
         format: 'YYYY-MM-DD',
-        'maxDate': new Date()
+        maxDate: new Date(),
+        onChangeDateTime: function(dp, $input){
+                console.log($input.val())
+        }
     });
     $('#dateOfDeparture1').datetimepicker({
         timepicker:false,
@@ -1229,6 +1249,19 @@ $(function() {
     $('#french_flag').click(function(){
         $('#current_flag').removeClass('flag-icon-us');
         $('#current_flag').addClass('flag-icon-fr');
+    });
+
+    $('#dateOfBirthInput').on('input', function(){
+        var _date = $(this).val();
+        var _age = getAge(_date);
+        $('#age').val(_age);
+    });
+
+
+    $('#dateOfBirthInput1').on('input', function(){
+        var _date = $(this).val();
+        var _age = getAge(_date);
+        $('#age1').val(_age);
     });
 });
 </script>
