@@ -81,11 +81,12 @@ DHIS2_TRACKER_PROGRAM_CONF = {
 
         },
 }
-
-DHIS2_USERNAME = 'admin'
-DHIS2_PASSWORD = 'district'
-DHIS2_TEI_ENDPOINT = 'https://ugandaeidsr.hispuganda.org/api/trackedEntityInstances'
-DHIS2_EVENTS_ENDPOINT = 'https://ugandaeidsr.hispuganda.org//api/events'
+# override the values in local_settings.py
+#
+# DHIS2_USERNAME = 'admin'
+# DHIS2_PASSWORD = 'district'
+# DHIS2_TEI_ENDPOINT = 'https://ugandaeidsr.hispuganda.org/api/trackedEntityInstances'
+# DHIS2_EVENTS_ENDPOINT = 'https://ugandaeidsr.hispuganda.org//api/events'
 
 try:
     from local_settings import *
