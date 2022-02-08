@@ -1,0 +1,398 @@
+<div class="card card-warning">
+    <div class="card-header">
+        <h4 class="card-title w-100">
+            <a class="d-block w-100" data-toggle="collapse" href="#collapseTwo">
+                {{ _("Arrival") }}
+            </a>
+        </h4>
+    </div>
+    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+            <form method="POST" enctype="multipart/form-data" action="" id="arrivalForm">
+                <input type="hidden" name="arrivalOrDeparture" value="Arrival"/>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Port of Arrival") }}</label>
+                            <select class="form-control select2" name="portOfEntry"  data-dropdown-css-class="select2-purple"
+                                data-placeholder={{ _("Port of Entry") }} required>
+                                <option value="">{{ _("Select Port of Entry") }}</option>
+                                {% for p in ports %}
+                                <option value={{p.dhis2_code}}>{{p.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Country of Residence") }}</label>
+                            <select name="countryOfResidence" class="form-control select2" data-dropdown-css-class="select2-purple"
+                                data-placeholder={{ _("Country of Residence") }} style="width: 100%;">
+                                <option value="">{{ _("Country of Residence") }}</option>
+                                {% for n in countries %}
+                                <option value={{n.alpha_2_code}}>{{n.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Name of Traveller") }}</label>
+                            <input type="text" class="form-control" placeholder="Name ..." name="name"
+                                data-msg="Name of Traveller is required">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Nationality") }}</label>
+                            <select class="form-control select2" name="nationality"  data-dropdown-css-class="select2-purple"
+                                data-placeholder={{ _("Nationality") }} data-msg="Nationality is required">
+                                <option value="">{{ _("Select Nationality") }}</option>
+                                {% for n in countries %}
+                                <option value={{n.alpha_2_code}}>{{n.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Date of Birth") }}</label>
+                            <div class="input-group date" id="dateOfBirth" data-target-input="nearest">
+                                <input type="text" name="dateOfBirth" id="dateOfBirthInput" 
+                                    class="form-control datetimepicker-input" data-target="#dateOfBirth"
+                                    data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                <div class="input-group-append" data-target="#dateOfBirth" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Age (years)") }}</label>
+                            <select class="form-control" name="age" id="age">
+                                <option value="">{{ _("Select Age") }}</option>
+                                {% for a in range(0, 99) %}
+                                <option value={{a}}>{{ a }}</option>
+                                {% endfor%}
+                            </select>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Sex") }}</label>
+                            <Select name="sex" class="form-control" placeholder="Sex..." required>
+                                <option value="">{{ _("Select Sex")}}</option>
+                                <option value="Male">{{ _("Male")}}</option>
+                                <option value="Female">{{ _("Female")}}</option>
+                            </Select>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Email") }}</label>
+                            <input type="text" class="form-control" placeholder="Email" name="email">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Passport Number") }}</label>
+                            <input type="text" class="form-control" placeholder="Passport No..." name="passportNumber">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Passport Expiry Date") }}</label>
+                            <div class="input-group date" id="passportExpiryDate" data-target-input="nearest">
+                                <input type="text" name="passportExpiryDate" class="form-control datetimepicker-input"
+                                    data-target="#passportExpiryDate" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                <div class="input-group-append" data-target="#passportExpiryDate" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Arrival Date") }}</label>
+                            <div class="input-group date" id="dateOfArrival" data-target-input="nearest">
+                                <input type="text" name="dateOfArrival" class="form-control datetimepicker-input"
+                                    data-target="#dateOfArrival" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                <div class="input-group-append" data-target="#dateOfArrival" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Country of Embarkment") }}</label>
+                            <select name="embarkmentCountry" class="form-control select2" data-dropdown-css-class="select2-purple"
+                                data-placeholder={{ _("Country of Embarkment") }} style="width: 100%;" required>
+                                <option value="">{{ _("Country") }}</option>
+                                {% for n in countries %}
+                                <option value={{n.alpha_2_code}}>{{n.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>{{ _("Mode of Transport") }}</label>
+                            <Select name="modeOfTransport" id="modeOfTransport" 
+                                class="form-control" placeholder="Mode of Transport...">
+                                <option value="">{{ _("Select Mode of Transport")}}</option>
+                                <option value="Air">{{ _("By Air")}}</option>
+                                <option value="Road">{{ _("By Road")}}</option>
+                                <option value="Water">{{ _("By Water")}}</option>
+                                <option value="Rail">{{ _("By Rail")}}</option>
+                            </Select>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>{{ _("Purpose of your Trip") }}</label>
+                            <select name="purposeOfTrip" class="form-control" placeholder="Purpose of Trip...">
+                                <option value="">{{ _("Select Purpose of Trip")}}</option>
+                                <option value="Holiday">{{ _("Holiday")}}</option>
+                                <option value="Business">{{ _("Business")}}</option>
+                                <option value="Official or Diplomatic">{{ _("Official or Diplomatic")}}</option>
+                                <option value="Visiting friends and Relatives">{{ _("Visiting Friends or Relatives")}}</option>
+                                <option value="Transit">{{ _("Transit")}}</option>
+                                <option value="Conference">{{ _("Conference")}}</option>
+                                <option value="Employment">{{ _("Employment")}}</option>
+                                <option value="Student">{{ _("Student")}}</option>
+                                <option value="Medical">{{ _("Medical")}}</option>
+                                <option value="Crew">{{ _("Crew")}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Airport of Disembarkment")}}</label>
+                            <select name="disembarkmentAirport" id="disembarkmentAirport" 
+                                class="form-control select2" data-dropdown-css-class="select2-purple"
+                                data-placeholder={{ _("Select Airport of departure") }} style="width: 100%;">
+                                <option value="">{{ _("Select Airport of departure") }}</option>
+                                {% for airport in airports %}
+                                <option value={{airport.name}}>{{airport.iata_code + " - " + airport.name + " - " + airport.country_code }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Flight / Vehicle Number") }}</label>
+                            <input type="text" class="form-control" placeholder="Flight No./Vehicle No..." name="flightOrVesselNumber">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Seat Number") }}</label>
+                            <input type="text" class="form-control" id="seatNumber" 
+                                placeholder="Seat Number..." name="seatNumber">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Duration of stay") }}</label>
+                            <input type="text" class="form-control" placeholder="Duration of stay (in days)" name="durationOfStay">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Physical address while in Uganda") }}</label>
+                            <input type="text" name="ugPhysicalAddress" class="form-control" placeholder="Physical address while in Uganda ...">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Your contact phone number while in Uganda") }} </label>
+                            <input type="text" class="form-control" placeholder="Phone number ..." name="phoneNumber"
+                                data-msg="Please provide valid phone number"
+                                pattern="^(\+?25[465]|0)(3[19]|41|7[015789])[0-9]{7}$" data-msg="Please provide valid phone number">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Contact/ next of kin telephone number") }}</label>
+                            <input type="text" class="form-control" placeholder="Next of kin ..." name="nextOfKin">
+                        </div>
+                    </div>
+                </div>
+
+                <br/>
+                <h4>COVID-19</h4>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>{{ _("Have you had any of the following symptoms (Fever, Cough, Sore Throat & Breathing Difficulty)?") }}</label>
+                            <select name="freeFromSymptoms" class="form-control" placeholder="Has Symptoms?...">
+                                <option value="">Has had Symptoms?</option>
+                                <option value="No">Yes</option>
+                                <option value="Yes">No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Have you been fully vaccinated?") }}  </label>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="covidvv" name="beenCovidVaccinated" value="Yes"/>
+                                <label for="covidvv">{{ _("Yes") }}</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="covidvv1" name="beenCovidVaccinated" value="No"/>
+                                <label for="covidvv1">{{ _("No") }}</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label> {{ _("Date of last Vaccination") }}</label>
+                            <div class="input-group date" id="dateOfLastCovidVaccination" data-target-input="nearest">
+                                <input type="text" name="dateOfLastCovidVaccination" class="form-control datetimepicker-input"
+                                    data-target="#dateOfLastCovidVaccination" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                <div class="input-group-append" data-target="#dateOfLastCovidVaccination" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" id="covidCertDiv">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="covidVaccinationCert">{{ _("Upload COVID-19 Vaccination Certificate") }}</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="covidVaccinationCert" name="covidVaccinationCert"/>
+                                    <label for="covidVaccinationCert" class="custom-file-label">{{_("Choose File")}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Do you have proof of a Negative PCR Test done 72 hours prior to your departure from your port of embarkment?") }}  </label>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="pcr3" name="hasNegativePCRTest" value="yes"/>
+                                <label for="pcr3">{{ _("Yes") }}</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="pcr4" name="hasNegativePCRTest" value="no"/>
+                                <label for="pcr4">{{ _("No") }}</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label> {{ _("PCR Tested Date") }}</label>
+                            <div class="input-group date" id="pcrTestedDate" data-target-input="nearest">
+                                <input type="text" name="pcrTestedDate" class="form-control datetimepicker-input"
+                                    data-target="#pcrTestedDate" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                <div class="input-group-append" data-target="#pcrTestedDate" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="pcrfileDiv1">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="pcrTestCopy">{{ _("PCR Test Result Copy") }}</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="pcrTestCopy" name="pcrTestCopy"/>
+                                    <label for="pcrTestCopy" class="custom-file-label">{{_("PCR Test Result Copy")}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <h4>Yellow Fever</h4>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="yellowFeverCardNumber">{{ _("Yellow Fever Card Number") }}</label>
+                            <input type="text" class="form-control" id="yellowFeverCardNumber" name="yellowFeverCardNumber"/>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label> {{ _("Date of Yellow Fever Vaccination") }}</label>
+                            <div class="input-group date" id="dateOfYellowFeverVaccination" data-target-input="nearest">
+                                <input type="text" name="dateOfYellowFeverVaccination" class="form-control datetimepicker-input"
+                                    data-target="#dateOfYellowFeverVaccination" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                <div class="input-group-append" data-target="#dateOfYellowFeverVaccination" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">{{ _("Submit") }}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

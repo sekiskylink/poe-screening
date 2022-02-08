@@ -5,52 +5,365 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-10-19 11:45+0300\n"
-"PO-Revision-Date: 2021-10-19 14:08+0300\n"
+"POT-Creation-Date: 2022-02-08 13:30+0300\n"
+"PO-Revision-Date: 2022-02-08 14:06+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sw\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: pygettext.py 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: sw_TZ\n"
-"X-Generator: Poedit 3.0\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 3.0.1\n"
 
-#: views/poe2.html:44 views/registration.html:81 views/registration.html:467
-msgid "Name of Traveller"
-msgstr "Jina la msafiri"
+#: views/arrival.html:5 views/registration.html:70
+msgid "Arrival"
+msgstr "Kuwasili"
 
-#: views/poe2.html:51 views/poe2.html:53 views/registration.html:88
-#: views/registration.html:90 views/registration.html:473
-#: views/registration.html:475
-msgid "Nationality"
-msgstr "Utaifa"
+#: views/arrival.html:16 views/registration.html:214 views/test.html:60
+msgid "Port of Arrival"
+msgstr "Bandari ya Kuwasili"
 
-#: views/poe2.html:54 views/registration.html:91 views/registration.html:476
-msgid "Select Nationality"
-msgstr "Chagua Utaifa"
-
-#: views/poe2.html:64 views/poe2.html:67 views/registration.html:216
-#: views/registration.html:602
+#: views/arrival.html:18 views/departure.html:17 views/poe2.html:64
+#: views/poe2.html:67 views/registration.html:216 views/registration.html:602
 msgid "Port of Entry"
 msgstr "Bandari ya Kuingia"
 
-#: views/poe2.html:68 views/registration.html:217 views/registration.html:603
+#: views/arrival.html:19 views/departure.html:18 views/poe2.html:68
+#: views/registration.html:217 views/registration.html:603
 msgid "Select Port of Entry"
 msgstr "Chagua Bandari ya Kuingia"
+
+#: views/arrival.html:28 views/arrival.html:30 views/arrival.html:31
+#: views/departure.html:28 views/departure.html:30 views/departure.html:31
+#: views/registration.html:201 views/registration.html:203
+#: views/registration.html:204 views/registration.html:587
+#: views/registration.html:589 views/registration.html:590 views/test.html:59
+msgid "Country of Residence"
+msgstr "Nchi ya Makazi"
+
+#: views/arrival.html:43 views/departure.html:44 views/poe2.html:44
+#: views/registration.html:81 views/registration.html:467 views/test.html:44
+msgid "Name of Traveller"
+msgstr "Jina la msafiri"
+
+#: views/arrival.html:50 views/arrival.html:52 views/departure.html:50
+#: views/departure.html:52 views/poe2.html:51 views/poe2.html:53
+#: views/registration.html:88 views/registration.html:90
+#: views/registration.html:473 views/registration.html:475 views/test.html:45
+msgid "Nationality"
+msgstr "Utaifa"
+
+#: views/arrival.html:53 views/departure.html:53 views/poe2.html:54
+#: views/registration.html:91 views/registration.html:476
+msgid "Select Nationality"
+msgstr "Chagua Utaifa"
+
+#: views/arrival.html:65 views/departure.html:65 views/registration.html:114
+#: views/registration.html:500 views/test.html:47
+msgid "Date of Birth"
+msgstr "Tarehe ya kuzaliwa"
+
+#: views/arrival.html:79 views/departure.html:78 views/poe2.html:95
+#: views/registration.html:102 views/registration.html:488
+msgid "Age (years)"
+msgstr "Umri (miaka)"
+
+#: views/arrival.html:81 views/departure.html:80 views/poe2.html:97
+#: views/registration.html:104 views/registration.html:490
+msgid "Select Age"
+msgstr "Chagua Umri"
+
+#: views/arrival.html:96 views/departure.html:93 views/registration.html:130
+#: views/registration.html:516 views/test.html:48
+msgid "Sex"
+msgstr "Ngono"
+
+#: views/arrival.html:98 views/departure.html:95 views/registration.html:132
+#: views/registration.html:518
+msgid "Select Sex"
+msgstr "Chagua Ngono"
+
+#: views/arrival.html:99 views/departure.html:96 views/poe2.html:111
+#: views/registration.html:133 views/registration.html:519
+msgid "Male"
+msgstr "Mwanaume"
+
+#: views/arrival.html:100 views/departure.html:97 views/poe2.html:112
+#: views/registration.html:134 views/registration.html:520
+msgid "Female"
+msgstr "Mwanamke"
+
+#: views/arrival.html:107 views/departure.html:104 views/registration.html:141
+#: views/registration.html:527 views/test.html:49
+msgid "Email"
+msgstr "Barua pepe"
+
+#: views/arrival.html:116 views/departure.html:113 views/poe2.html:121
+#: views/registration.html:150 views/registration.html:536 views/test.html:50
+msgid "Passport Number"
+msgstr "Nambari ya Pasipoti"
+
+#: views/arrival.html:123 views/departure.html:120 views/registration.html:157
+#: views/registration.html:543 views/test.html:51
+msgid "Passport Expiry Date"
+msgstr "Tarehe ya Kumalizika kwa Pasipoti"
+
+#: views/arrival.html:139 views/registration.html:173
+msgid "Arrival Date"
+msgstr "Tarehe ya Kuwasili"
+
+#: views/arrival.html:152 views/arrival.html:154 views/registration.html:186
+#: views/registration.html:188 views/test.html:58
+msgid "Country of Embarkment"
+msgstr "Nchi ya Kupanda"
+
+#: views/arrival.html:155 views/departure.html:152 views/departure.html:166
+#: views/departure.html:167 views/registration.html:189
+#: views/registration.html:575 views/registration.html:629
+#: views/registration.html:630
+msgid "Country"
+msgstr "Nchi"
+
+#: views/arrival.html:167 views/departure.html:177 views/registration.html:265
+#: views/registration.html:655 views/test.html:66
+msgid "Mode of Transport"
+msgstr "Njia ya Usafiri"
+
+#: views/arrival.html:170 views/departure.html:180 views/registration.html:267
+#: views/registration.html:657
+msgid "Select Mode of Transport"
+msgstr "Chagua Njia ya Usafiri"
+
+#: views/arrival.html:171 views/departure.html:181 views/registration.html:268
+#: views/registration.html:658
+msgid "By Air"
+msgstr "Na Hewa"
+
+#: views/arrival.html:172 views/departure.html:182 views/registration.html:269
+#: views/registration.html:659
+msgid "By Road"
+msgstr "Kwa Barabara"
+
+#: views/arrival.html:173 views/departure.html:183 views/registration.html:270
+#: views/registration.html:660
+msgid "By Water"
+msgstr "Na Maji"
+
+#: views/arrival.html:174 views/departure.html:184 views/registration.html:271
+#: views/registration.html:661
+msgid "By Rail"
+msgstr "Kwa Reli"
+
+#: views/arrival.html:181 views/departure.html:191 views/registration.html:278
+#: views/registration.html:668 views/test.html:67
+msgid "Purpose of your Trip"
+msgstr "Kusudi la Safari yako"
+
+#: views/arrival.html:183 views/departure.html:193 views/registration.html:280
+#: views/registration.html:670
+msgid "Select Purpose of Trip"
+msgstr "Chagua Kusudi la Safari"
+
+#: views/arrival.html:184 views/departure.html:194 views/registration.html:281
+#: views/registration.html:671
+msgid "Holiday"
+msgstr "Sikukuu"
+
+#: views/arrival.html:185 views/departure.html:195 views/registration.html:282
+#: views/registration.html:672
+msgid "Business"
+msgstr "Biashara"
+
+#: views/arrival.html:186 views/departure.html:196 views/registration.html:283
+#: views/registration.html:673
+msgid "Official or Diplomatic"
+msgstr "Rasmi au Kidiplomasia"
+
+#: views/arrival.html:187 views/departure.html:197 views/registration.html:284
+#: views/registration.html:674
+msgid "Visiting Friends or Relatives"
+msgstr "Kutembelea Marafiki au Jamaa"
+
+#: views/arrival.html:188 views/departure.html:198 views/registration.html:285
+#: views/registration.html:675
+msgid "Transit"
+msgstr "Usafiri"
+
+#: views/arrival.html:189 views/departure.html:199 views/registration.html:286
+#: views/registration.html:676
+msgid "Conference"
+msgstr "Mkutano"
+
+#: views/arrival.html:190 views/departure.html:200 views/registration.html:287
+#: views/registration.html:677
+msgid "Employment"
+msgstr "Ajira"
+
+#: views/arrival.html:191 views/departure.html:201 views/registration.html:288
+#: views/registration.html:678
+msgid "Student"
+msgstr "Mwanafunzi"
+
+#: views/arrival.html:192 views/departure.html:202 views/registration.html:289
+#: views/registration.html:679
+msgid "Medical"
+msgstr "Matibabu"
+
+#: views/arrival.html:193 views/departure.html:203 views/registration.html:290
+#: views/registration.html:680
+msgid "Crew"
+msgstr "Wafanyikazi"
+
+#: views/arrival.html:200 views/registration.html:229 views/test.html:62
+msgid "Airport of Disembarkment"
+msgstr "Uwanja wa ndege wa Kushuka"
+
+#: views/arrival.html:203 views/arrival.html:204 views/departure.html:217
+#: views/departure.html:218 views/registration.html:231
+#: views/registration.html:232 views/registration.html:617
+#: views/registration.html:618
+msgid "Select Airport of departure"
+msgstr "Chagua Uwanja wa Ndege wa kuondoka"
+
+#: views/arrival.html:218 views/departure.html:228 views/registration.html:242
+#: views/registration.html:641 views/test.html:63
+msgid "Flight / Vehicle Number"
+msgstr "Nambari ya Ndege / Gari"
+
+#: views/arrival.html:225 views/departure.html:238 views/registration.html:251
+#: views/registration.html:647 views/test.html:64
+msgid "Seat Number"
+msgstr "Nambari ya Kiti"
+
+#: views/arrival.html:236 views/registration.html:257 views/test.html:65
+msgid "Duration of stay"
+msgstr "Muda wa kukaa"
+
+#: views/arrival.html:243 views/departure.html:246 views/poe2.html:185
+#: views/registration.html:297 views/registration.html:687 views/test.html:68
+msgid "Physical address while in Uganda"
+msgstr "Anwani ya mahali wakati uko nchini Uganda"
+
+#: views/arrival.html:253 views/departure.html:256 views/poe2.html:214
+#: views/registration.html:306 views/registration.html:696 views/test.html:69
+msgid "Your contact phone number while in Uganda"
+msgstr "Nambari yako ya simu ya mawasiliano ukiwa Uganda"
+
+#: views/arrival.html:261 views/departure.html:264 views/poe2.html:222
+#: views/registration.html:313 views/registration.html:703 views/test.html:70
+msgid "Contact/ next of kin telephone number"
+msgstr "Nambari ya simu ya mawasiliano"
+
+#: views/arrival.html:272 views/departure.html:277 views/registration.html:324
+#: views/registration.html:715
+msgid "Have you had any of the following symptoms (Fever, Cough, Sore Throat & Breathing Difficulty)?"
+msgstr "Je! Umewahi kuwa na dalili zifuatazo (Homa, Kikohozi, Koo na Ugumu wa Kupumua)?"
+
+#: views/arrival.html:286 views/departure.html:291 views/registration.html:338
+#: views/registration.html:729 views/test.html:72
+msgid "Have you been fully vaccinated?"
+msgstr "Umepata chanjo kamili?"
+
+#: views/arrival.html:289 views/arrival.html:331 views/departure.html:294
+#: views/departure.html:338 views/poe2.html:234 views/poe2.html:250
+#: views/poe2.html:297 views/poe2.html:312 views/poe2.html:327
+#: views/poe2.html:342 views/poe2.html:357 views/poe2.html:372
+#: views/poe2.html:387 views/poe2.html:402 views/poe2.html:417
+#: views/poe2.html:432 views/poe2.html:447 views/poe2.html:462
+#: views/poe2.html:483 views/registration.html:341 views/registration.html:383
+#: views/registration.html:732 views/registration.html:776
+msgid "Yes"
+msgstr "Ndio"
+
+#: views/arrival.html:293 views/arrival.html:335 views/departure.html:298
+#: views/departure.html:342 views/poe2.html:238 views/poe2.html:254
+#: views/poe2.html:303 views/poe2.html:318 views/poe2.html:333
+#: views/poe2.html:348 views/poe2.html:363 views/poe2.html:378
+#: views/poe2.html:393 views/poe2.html:408 views/poe2.html:423
+#: views/poe2.html:438 views/poe2.html:453 views/poe2.html:468
+#: views/poe2.html:487 views/registration.html:345 views/registration.html:387
+#: views/registration.html:736 views/registration.html:780
+msgid "No"
+msgstr "Hapana"
+
+#: views/arrival.html:299 views/departure.html:304 views/registration.html:351
+#: views/registration.html:742 views/test.html:73
+msgid "Date of last Vaccination"
+msgstr "Tarehe ya Chanjo ya mwisho"
+
+#: views/arrival.html:314 views/departure.html:319 views/poe2.html:496
+#: views/registration.html:366 views/registration.html:757
+#: views/testing.html:24
+msgid "Upload COVID-19 Vaccination Certificate"
+msgstr "Pakia Cheti cha Chanjo ya COVID-19"
+
+#: views/arrival.html:318 views/departure.html:324 views/registration.html:370
+#: views/registration.html:762
+msgid "Choose File"
+msgstr "Chagua faili"
+
+#: views/arrival.html:328 views/departure.html:335 views/registration.html:380
+#: views/registration.html:773
+msgid "Do you have proof of a Negative PCR Test done 72 hours prior to your departure from your port of embarkment?"
+msgstr "Je! Unayo uthibitisho wa Mtihani hasi wa PCR uliofanywa masaa 72 kabla ya kuondoka kutoka bandari yako ya kupanda?"
+
+#: views/arrival.html:342 views/departure.html:349 views/registration.html:394
+#: views/registration.html:787 views/test.html:74
+msgid "PCR Tested Date"
+msgstr "Tarehe Iliyojaribiwa ya PCR"
+
+#: views/arrival.html:357 views/arrival.html:361 views/departure.html:364
+#: views/departure.html:368 views/registration.html:409
+#: views/registration.html:413 views/registration.html:802
+#: views/registration.html:806
+msgid "PCR Test Result Copy"
+msgstr "Nakala ya Matokeo ya Jaribio la PCR"
+
+#: views/arrival.html:373 views/departure.html:379 views/registration.html:425
+#: views/registration.html:817 views/test.html:75
+msgid "Yellow Fever Card Number"
+msgstr "Nambari ya Kadi ya Homa ya Njano"
+
+#: views/arrival.html:380 views/departure.html:386 views/registration.html:432
+#: views/registration.html:824 views/test.html:76
+msgid "Date of Yellow Fever Vaccination"
+msgstr "Tarehe ya Chanjo ya Homa ya manjano"
+
+#: views/arrival.html:393 views/departure.html:399 views/registration.html:445
+#: views/registration.html:837
+msgid "Submit"
+msgstr "Wasilisha"
+
+#: views/departure.html:5 views/registration.html:457
+msgid "Departure"
+msgstr "Kuondoka"
+
+#: views/departure.html:15 views/registration.html:600 views/test.html:61
+msgid "Port of Departure"
+msgstr "Bandari ya Kuondoka"
+
+#: views/departure.html:136 views/registration.html:559
+msgid "Date of Departure"
+msgstr "Tarehe ya Kuondoka"
+
+#: views/departure.html:149 views/departure.html:151
+#: views/registration.html:572 views/registration.html:574
+msgid "Country of Departure"
+msgstr "Nchi ya Kuondoka"
+
+#: views/departure.html:164
+msgid "Country of Destination"
+msgstr "Nchi Unayolenga"
+
+#: views/departure.html:214 views/registration.html:615
+msgid "Airport of departure"
+msgstr "Uwanja wa ndege wa kuondoka"
 
 #: views/poe2.html:81
 msgid "Date of Arrival"
 msgstr "Tarehe ya Kuwasili"
-
-#: views/poe2.html:95 views/registration.html:102 views/registration.html:488
-msgid "Age (years)"
-msgstr "Umri (miaka)"
-
-#: views/poe2.html:97 views/registration.html:104 views/registration.html:490
-msgid "Select Age"
-msgstr "Chagua Umri"
 
 #: views/poe2.html:108
 msgid "Gender"
@@ -60,21 +373,9 @@ msgstr "Chagua Jinsia"
 msgid "Select Gender"
 msgstr "Chagua Jinsia"
 
-#: views/poe2.html:111 views/registration.html:133 views/registration.html:519
-msgid "Male"
-msgstr "Mwanaume"
-
-#: views/poe2.html:112 views/registration.html:134 views/registration.html:520
-msgid "Female"
-msgstr "Mwanamke"
-
 #: views/poe2.html:113
 msgid "Other"
 msgstr "Nyingine"
-
-#: views/poe2.html:121 views/registration.html:150 views/registration.html:536
-msgid "Passport Number"
-msgstr "Nambari ya Pasipoti"
 
 #: views/poe2.html:131
 msgid "Airport of embarkment"
@@ -100,10 +401,6 @@ msgstr "Nambari ya Ndege / Gari"
 msgid "Name of countries visited in the last 14 days"
 msgstr "Jina la nchi zilizotembelewa katika siku 14 zilizopita"
 
-#: views/poe2.html:185 views/registration.html:297 views/registration.html:687
-msgid "Physical address while in Uganda"
-msgstr "Anwani ya mahali wakati uko nchini Uganda"
-
 #: views/poe2.html:192
 msgid "Planned duration of stay while in Uganda"
 msgstr "Muda uliopangwa wa kukaa ukiwa Uganda"
@@ -116,37 +413,9 @@ msgstr "Muda wa kukaa …"
 msgid "Days"
 msgstr "Siku"
 
-#: views/poe2.html:214 views/registration.html:306 views/registration.html:696
-msgid "Your contact phone number while in Uganda"
-msgstr "Nambari yako ya simu ya mawasiliano ukiwa Uganda"
-
-#: views/poe2.html:222 views/registration.html:313 views/registration.html:703
-msgid "Contact/ next of kin telephone number"
-msgstr "Nambari ya simu ya mawasiliano"
-
 #: views/poe2.html:231
 msgid "Have you been to CHINA in the past two weeks?"
 msgstr "Umewahi kwenda CHINA katika wiki mbili zilizopita?"
-
-#: views/poe2.html:234 views/poe2.html:250 views/poe2.html:297
-#: views/poe2.html:312 views/poe2.html:327 views/poe2.html:342
-#: views/poe2.html:357 views/poe2.html:372 views/poe2.html:387
-#: views/poe2.html:402 views/poe2.html:417 views/poe2.html:432
-#: views/poe2.html:447 views/poe2.html:462 views/poe2.html:483
-#: views/registration.html:341 views/registration.html:383
-#: views/registration.html:732 views/registration.html:776
-msgid "Yes"
-msgstr "Ndio"
-
-#: views/poe2.html:238 views/poe2.html:254 views/poe2.html:303
-#: views/poe2.html:318 views/poe2.html:333 views/poe2.html:348
-#: views/poe2.html:363 views/poe2.html:378 views/poe2.html:393
-#: views/poe2.html:408 views/poe2.html:423 views/poe2.html:438
-#: views/poe2.html:453 views/poe2.html:468 views/poe2.html:487
-#: views/registration.html:345 views/registration.html:387
-#: views/registration.html:736 views/registration.html:780
-msgid "No"
-msgstr "Hapana"
 
 #: views/poe2.html:247
 msgid "Have you been to any countries affected by Corona virus in the past two weeks?"
@@ -212,12 +481,7 @@ msgstr "Damu kutoka sehemu za mwili (pua, mdomo, macho mekundu)"
 msgid "In the last 21 days have you been/ traveled in a country or in contact with a person suffering from Ebola?"
 msgstr "Katika siku 21 zilizopita umewahi / kusafiri katika nchi au unawasiliana na mtu anayeugua Ebola?"
 
-#: views/poe2.html:496 views/registration.html:366 views/registration.html:757
-#: views/testing.html:24
-msgid "Upload COVID-19 Vaccination Certificate"
-msgstr "Pakia Cheti cha Chanjo ya COVID-19"
-
-#: views/poe2.html:500 views/registration.html:370
+#: views/poe2.html:500
 msgid "COVID-19 Vaccination Certificate"
 msgstr "Hati ya Chanjo ya COVID-19"
 
@@ -225,219 +489,30 @@ msgstr "Hati ya Chanjo ya COVID-19"
 msgid "Yellow Fever Vaccination Certificate Number"
 msgstr "Nambari ya Cheti cha Chanjo ya Homa ya manjano"
 
-#: views/registration.html:70
-msgid "Arrival"
-msgstr "Kuwasili"
+#: views/registration.html:36 views/registration2.html:30
+msgid "Traveller Health Declaration"
+msgstr "Azimio la Afya ya Msafiri"
 
-#: views/registration.html:83
-msgid "Name of Traveller is required"
-msgstr "Jina la Msafiri linahitajika"
-
-#: views/registration.html:114 views/registration.html:500
-msgid "Date of Birth"
-msgstr "Tarehe ya kuzaliwa"
-
-#: views/registration.html:130 views/registration.html:516
-msgid "Sex"
-msgstr "Ngono"
-
-#: views/registration.html:132 views/registration.html:518
-msgid "Select Sex"
-msgstr "Chagua Ngono"
-
-#: views/registration.html:141 views/registration.html:527
-msgid "Email"
-msgstr "Barua pepe"
-
-#: views/registration.html:157 views/registration.html:543
-msgid "Passport Expiry Date"
-msgstr "Tarehe ya Kumalizika kwa Pasipoti"
-
-#: views/registration.html:173
-msgid "Arrival Date"
-msgstr "Tarehe ya Kuwasili"
-
-#: views/registration.html:186 views/registration.html:188
-msgid "Country of Embarkment"
-msgstr "Nchi ya Kupanda"
-
-#: views/registration.html:189 views/registration.html:575
-#: views/registration.html:629 views/registration.html:630
-msgid "Country"
-msgstr "Nchi"
-
-#: views/registration.html:201 views/registration.html:203
-#: views/registration.html:204 views/registration.html:587
-#: views/registration.html:589 views/registration.html:590
-msgid "Country of Residence"
-msgstr "Nchi ya Makazi"
-
-#: views/registration.html:214
-msgid "Port of Arrival"
-msgstr "Bandari ya Kuwasili"
-
-#: views/registration.html:216
-msgid "Please specify port of entry"
-msgstr "Tafadhali taja bandari ya kuingia"
-
-#: views/registration.html:229
-msgid "Airport of Disembarkment"
-msgstr "Uwanja wa ndege wa Kushuka"
-
-#: views/registration.html:231 views/registration.html:232
-#: views/registration.html:617 views/registration.html:618
-msgid "Select Airport of departure"
-msgstr "Chagua Uwanja wa Ndege wa kuondoka"
-
-#: views/registration.html:242 views/registration.html:641
-msgid "Flight / Vehicle Number"
-msgstr "Nambari ya Ndege / Gari"
-
-#: views/registration.html:251 views/registration.html:647
-msgid "Seat Number"
-msgstr "Nambari ya Kiti"
-
-#: views/registration.html:257
-msgid "Duration of stay"
-msgstr "Muda wa kukaa"
-
-#: views/registration.html:265 views/registration.html:655
-msgid "Mode of Transport"
-msgstr "Njia ya Usafiri"
-
-#: views/registration.html:267 views/registration.html:657
-msgid "Select Mode of Transport"
-msgstr "Chagua Njia ya Usafiri"
-
-#: views/registration.html:268 views/registration.html:658
-msgid "By Air"
-msgstr "Na Hewa"
-
-#: views/registration.html:269 views/registration.html:659
-msgid "By Road"
-msgstr "Kwa Barabara"
-
-#: views/registration.html:270 views/registration.html:660
-msgid "By Water"
-msgstr "Na Maji"
-
-#: views/registration.html:271 views/registration.html:661
-msgid "By Rail"
-msgstr "Kwa Reli"
-
-#: views/registration.html:278 views/registration.html:668
-msgid "Purpose of your Trip"
-msgstr "Kusudi la Safari yako"
-
-#: views/registration.html:280 views/registration.html:670
-msgid "Select Purpose of Trip"
-msgstr "Chagua Kusudi la Safari"
-
-#: views/registration.html:281 views/registration.html:671
-msgid "Holiday"
-msgstr "Sikukuu"
-
-#: views/registration.html:282 views/registration.html:672
-msgid "Business"
-msgstr "Biashara"
-
-#: views/registration.html:283 views/registration.html:673
-msgid "Official or Diplomatic"
-msgstr "Rasmi au Kidiplomasia"
-
-#: views/registration.html:284 views/registration.html:674
-msgid "Visiting Friends or Relatives"
-msgstr "Kutembelea Marafiki au Jamaa"
-
-#: views/registration.html:285 views/registration.html:675
-msgid "Transit"
-msgstr "Usafiri"
-
-#: views/registration.html:286 views/registration.html:676
-msgid "Conference"
-msgstr "Mkutano"
-
-#: views/registration.html:287 views/registration.html:677
-msgid "Employment"
-msgstr "Ajira"
-
-#: views/registration.html:288 views/registration.html:678
-msgid "Student"
-msgstr "Mwanafunzi"
-
-#: views/registration.html:289 views/registration.html:679
-msgid "Medical"
-msgstr "Matibabu"
-
-#: views/registration.html:290 views/registration.html:680
-msgid "Crew"
-msgstr "Wafanyikazi"
-
-#: views/registration.html:324 views/registration.html:715
-msgid "Have you had any of the following symptoms (Fever, Cough, Sore Throat & Breathing Difficulty)?"
-msgstr "Je! Umewahi kuwa na dalili zifuatazo (Homa, Kikohozi, Koo na Ugumu wa Kupumua)?"
-
-#: views/registration.html:338 views/registration.html:729
-msgid "Have you been fully vaccinated?"
-msgstr "Umepata chanjo kamili?"
-
-#: views/registration.html:351 views/registration.html:742
-msgid "Date of last Vaccination"
-msgstr "Tarehe ya Chanjo ya mwisho"
-
-#: views/registration.html:380 views/registration.html:773
-msgid "Do you have proof of a Negative PCR Test done 72 hours prior to your departure from your port of embarkment?"
-msgstr "Je! Unayo uthibitisho wa Mtihani hasi wa PCR uliofanywa masaa 72 kabla ya kuondoka kutoka bandari yako ya kupanda?"
-
-#: views/registration.html:394 views/registration.html:787
-msgid "PCR Tested Date"
-msgstr "Tarehe Iliyojaribiwa ya PCR"
-
-#: views/registration.html:409 views/registration.html:413
-#: views/registration.html:802 views/registration.html:806
-msgid "PCR Test Result Copy"
-msgstr "Nakala ya Matokeo ya Jaribio la PCR"
-
-#: views/registration.html:425 views/registration.html:817
-msgid "Yellow Fever Card Number"
-msgstr "Nambari ya Kadi ya Homa ya Njano"
-
-#: views/registration.html:432 views/registration.html:824
-msgid "Date of Yellow Fever Vaccination"
-msgstr "Tarehe ya Chanjo ya Homa ya manjano"
-
-#: views/registration.html:559
-msgid "Date of Departure"
-msgstr "Tarehe ya Kuondoka"
-
-#: views/registration.html:572 views/registration.html:574
-msgid "Country of Departure"
-msgstr "Nchi ya Kuondoka"
-
-#: views/registration.html:600
-msgid "Port of Departure"
-msgstr "Bandari ya Kuondoka"
-
-#: views/registration.html:615
-msgid "Airport of departure"
-msgstr "Uwanja wa ndege wa kuondoka"
+#: views/registration.html:46 views/travel_advisory.html:5
+msgid "Travel Advisory"
+msgstr "Ushauri wa kusafiri"
 
 #: views/registration.html:627
 msgid "Travelling To"
 msgstr "Kusafiri Kwa"
 
-#: views/registration.html:762
-msgid "Choose File"
-msgstr "Chagua faili"
+#: views/test.html:46
+msgid "Age(years)"
+msgstr "Umri (miaka)"
 
-msgid "Submit"
-msgstr "Wasilisha"
+#: views/test.html:53
+msgid "Arival Date"
+msgstr "Tarehe ya Kuwasili"
 
-msgid "Departure"
-msgstr "Kuondoka"
+#: views/test.html:56
+msgid "Departure Date"
+msgstr "Tarehe ya Kuondoka"
 
-msgid "Travel Advisory"
-msgstr "Ushauri wa kusafiri"
-
-msgid "Traveller Health Declaration"
-msgstr "Azimio la Afya ya Msafiri"
+#: views/test.html:71
+msgid "Has had Symptoms?"
+msgstr "Amekuwa na Dalili?"

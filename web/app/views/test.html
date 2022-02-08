@@ -57,8 +57,13 @@
                                                 {% endif %}
                                                 <tr><td>{{ _("Country of Embarkment") }}</td><td>{{ fields.embarkmentCountry | formatCountry }}</td></tr>
                                                 <tr><td>{{ _("Country of Residence") }}</td><td>{{ fields.countryOfResidence | formatCountry }}</td></tr>
+
+                                                {% if fields.arrivalOrDeparture == 'Arrival' %}
                                                 <tr><td>{{ _("Port of Arrival") }}</td><td>{{ fields.portOfEntry | formatPort }}</td></tr>
+                                                {% else %}
                                                 <tr><td>{{ _("Port of Departure") }}</td><td>{{ fields.portOfEntry | formatPort }}</td></tr>
+                                                {% endif %}
+
                                                 <tr><td>{{ _("Airport of Disembarkment") }}</td><td>{{ fields.disembarkmentAirport }}</td></tr>
                                                 <tr><td>{{ _("Flight / Vehicle Number") }}</td><td>{{ fields.flightOrVesselNumber }}</td></tr>
                                                 <tr><td>{{ _("Seat Number") }}</td><td>{{ fields.seatNumber }}</td></tr>

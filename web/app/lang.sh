@@ -6,3 +6,4 @@ cd i18n/fr/LC_MESSAGES
 ## make the necessary language translations
 ~/Downloads/Python-3.9.5/Tools/i18n/msgfmt.py -o messages.mo messages.po
 
+## You can edit files with poedit

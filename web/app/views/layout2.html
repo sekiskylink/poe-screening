@@ -20,32 +20,32 @@
     {% block stylesheets %} {% endblock %}
 </head>
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
+    <div class="wrapper">
 
-    {% block topnav %}{% endblock %}
-    <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <br/>
+        {% block topnav %}{% endblock %}
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <br/>
 
-    <!-- /.content-header -->
+            <!-- /.content-header -->
 
-    <!-- Main content -->
-    <div class="content">
-        {% block content %}{% endblock %}
+            <!-- Main content -->
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-inline-block">
+              <b>Developed by HISP Uganda</b>
+            </div>
+            <strong>POE &copy; 2021 - {{  year }} <a href="http://poe-screenig.hispuganda.org"></a>.</strong>
+        </footer>
     </div>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-    <!-- Main Footer -->
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Developed by HISP Uganda</b>
-    </div>
-    <strong>POE &copy; 2021 - {{  year }} <a href="http://poe-screenig.hispuganda.org"></a>.</strong>
-  </footer>
-</div>
-<!-- ./wrapper -->
+    <!-- ./wrapper -->
 
     {% block scripts %} {% endblock %}
 </body>
@@ -64,69 +64,69 @@
 
 {% macro topnavbar() -%}
     <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
-    <div class="container" style="margin-left:10px; max-width:100%"> <!-- XXX -->
-    <!--
-      <a href="/" class="navbar-brand">
-        <img src="/static/dist/img/door_32x32.png" alt="POE" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">POE</span>
-      </a>
-    -->
-      <!--
-      <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      -->
+    <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+        <div class="container" style="margin-left:10px; max-width:100%"> <!-- XXX -->
+            <!--
+                <a href="/" class="navbar-brand">
+                <img src="/static/dist/img/door_32x32.png" alt="POE" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">POE</span>
+                </a>
+            -->
+            <!--
+                <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            -->
 
-        <!--
-      <div class="collapse navbar-collapse order-3" id="navbarCollapse">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="index3.html" class="nav-link">Home</a>
-          </li>
+            <!--
+                <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                <a href="index3.html" class="nav-link">Home</a>
+                </li>
 
-        </ul>
-      </div>
-        -->
+                </ul>
+                </div>
+            -->
 
-      <div class="" style="margin-left: 10%">
-        <center>
-        <img src="/static/dist/img/moh3.png" alt="POE" class="" style="opacity: .8">
-        <h4>Ministry of Health Uganda</h4>
-        <h6>Point of Entry Self Registration Form</h6>
-        </center>
-      </div>
-
-      <!-- Right navbar links -->
-      <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-
-        {{ caller() }}
-
-        <!-- Language Dropdown Menu -->
-        <li class="nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#">
-                <i class="flag-icon flag-icon-us {{ lang }}" id="current_flag"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right p-0">
-              <a href="./?lang=en_US" class="dropdown-item" id="english_flag">
-                <i class="flag-icon flag-icon-us mr-2"></i> English
-              </a>
-              <a href="./?lang=fr" class="dropdown-item" id="french_flag">
-                <i class="flag-icon flag-icon-fr mr-2" ></i> French
-              </a>
-              <a href="./?lang=cn" class="dropdown-item" id="chinese_flag">
-                <i class="flag-icon flag-icon-cn mr-2" ></i> Chinese
-              </a>
-              <a href="./?lang=tz" class="dropdown-item" id="swahili_flag">
-                <i class="flag-icon flag-icon-tz mr-2"></i> Swahili
-              </a>
+            <div class="" style="margin-left: 10%">
+                <center>
+                    <img src="/static/dist/img/moh3.png" alt="POE" class="" style="opacity: .8">
+                    <h4>Ministry of Health Uganda</h4>
+                    <h6>Point of Entry Self Registration Form</h6>
+                </center>
             </div>
-        </li>
 
-      </ul>
-    </div>
-  </nav>
-  <!-- /.navbar -->
+            <!-- Right navbar links -->
+            <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+
+                {{ caller() }}
+
+                <!-- Language Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="flag-icon flag-icon-us {{ lang }}" id="current_flag"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right p-0">
+                        <a href="./?lang=en_US" class="dropdown-item" id="english_flag">
+                            <i class="flag-icon flag-icon-us mr-2"></i> English
+                        </a>
+                        <a href="./?lang=fr" class="dropdown-item" id="french_flag">
+                            <i class="flag-icon flag-icon-fr mr-2" ></i> French
+                        </a>
+                        <a href="./?lang=cn" class="dropdown-item" id="chinese_flag">
+                            <i class="flag-icon flag-icon-cn mr-2" ></i> Chinese
+                        </a>
+                        <a href="./?lang=tz" class="dropdown-item" id="swahili_flag">
+                            <i class="flag-icon flag-icon-tz mr-2"></i> Swahili
+                        </a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- /.navbar -->
 {%- endmacro %}
 
 
