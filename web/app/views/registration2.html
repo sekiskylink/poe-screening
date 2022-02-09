@@ -77,8 +77,19 @@
 <script src="/static/plugins/jquery-validation/additional-methods.min.js"></script>
 
 <script src="/static/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+
+<!-- libphonenumber -->
+<script src="/static/plugins/libphonenumber-js@1.9.6/libphonenumber-max.js"></script>
+<!-- inputmask-phones-->
+<script src="/static/plugins/inputmask-phones/js/mask.js"></script>
+<script src="/static/plugins/inputmask-phones/js/mask_list.js"></script>
+
 <script>
 $(function() {
+
+    // $('[data-mask]').inputmask();
+    mask("#phoneNumber");
+    mask("#phoneNumber1");
 
     function getAge(dateString) {
         var today = new Date();
@@ -217,8 +228,8 @@ $(function() {
         maxDate: new Date()
     });
 
-    $('#age').prop( "disabled", true);
-    $('#age1').prop( "disabled", true);
+    // $('#age').prop( "disabled", true);
+    // $('#age1').prop( "disabled", true);
     $('#disembarkmentAirport').prop( "disabled", true);
     $('#seatNumber').prop( "disabled", true );
 
@@ -261,6 +272,18 @@ $(function() {
         // form.submit();
     });
     */
+    $.validator.addMethod("validPhoneNumber", function(value, element){
+            try{
+                const phoneNumber = libphonenumber.parsePhoneNumber(value)
+                if (phoneNumber.isValid()){
+                    return true;
+                }
+            } catch (err){
+                return false;
+            }
+            return false;
+        }, 'Please enter a valid phone number!!');
+
     $('#arrivalForm').validate({
         rules: {
             name: {
@@ -282,7 +305,9 @@ $(function() {
                 required: true
             },
             phoneNumber: {
-                required: true
+                required: true,
+                minlength: 9,
+                validPhoneNumber: true
             },
             modeOfTransport: {
                 required: true
@@ -368,7 +393,9 @@ $(function() {
                 required: true
             },
             phoneNumber: {
-                required: true
+                required: true,
+                validPhoneNumber: true,
+                minlength: 9
             },
             modeOfTransport: {
                 required: true
@@ -452,6 +479,8 @@ $(function() {
         var _date = $(this).val();
         var _age = getAge(_date);
         $('#age').val(_age);
+        var $option = $('#age').children('option[value="'+ _age +'"]');
+        $option.attr('selected', true);
     });
 
 
@@ -459,6 +488,8 @@ $(function() {
         var _date = $(this).val();
         var _age = getAge(_date);
         $('#age1').val(_age);
+        var $option = $('#age1').children('option[value="'+ _age +'"]');
+        $option.attr('selected', true);
     });
 });
 </script>

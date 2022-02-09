@@ -112,7 +112,7 @@ class Registration:
                     'ugPhysicalAddress': params.ugPhysicalAddress,
                     'durationOfStay': params.durationOfStay,
                     'purposeOfTrip': params.purposeOfTrip,
-                    'phoneNumber': params.phoneNumber,
+                    'phoneNumber': params.phoneNumber.replace(' ', ''),
                     'nextOfKin': params.nextOfKin,
                     'freeFromSymptoms': params.freeFromSymptoms,
                     'beenCovidVaccinated': params.beenCovidVaccinated,

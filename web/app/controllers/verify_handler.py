@@ -5,6 +5,8 @@
 
 import web
 import re
+import psycopg2.extras
+import simplejson
 from . import render
 from . import csrf_protected, db, get_session, put_session
 from app.tools.utils import auth_user, audit_log
@@ -53,10 +55,19 @@ class Verify:
                     print("+++++++", resp.json())
                     print(">>>>>>>>", reference)
                     if method == "POST":
-                        db.query("UPDATE entries set tei = $tei WHERE id =$id", {'tei': reference, 'id': verification_code})
+                        db.query(
+                            "UPDATE entries set tei = $tei, payload = $payload  "
+                            "WHERE id =$id", {
+                                'tei': reference, 'id': verification_code,
+                                'payload': psycopg2.extras.Json(payload)})
                     if not reference:
                         reference = url_suffix.replace("/", "")
                 except Exception as e:
+                    db.query(
+                        "UPDATE entries set payload = $payload  "
+                        "WHERE id =$id", {
+                            'id': verification_code,
+                            'payload': psycopg2.extras.Json(payload)})
                     print("Trouble Submitting to DHIS 2: [URL:{0}][ERROR: {1}]".format(url, str(e)))
         l = locals()
         del l['self']
