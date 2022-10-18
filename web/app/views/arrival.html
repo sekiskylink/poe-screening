@@ -269,21 +269,186 @@
                 </div>
 
                 <br/>
-                <h4>COVID-19</h4>
+                <h4>Health</h4>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Have you had any of the following signs and symptoms within the past 2 days?") }}</label>
+                            <input name="freeFromSymptoms"  value="No" type="hidden" id="arrival_freeFromSymptoms"/>            
+                        </div>
+                    </div>
+                </div>
+                {% include 'signs_and_symptoms.html' %}
+                <!--
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <label>{{ _("Have you had any of the following symptoms (Fever, Cough, Sore Throat & Breathing Difficulty)?") }}</label>
-                            <select name="freeFromSymptoms" class="form-control" placeholder="Has Symptoms?...">
-                                <option value="">Has had Symptoms?</option>
-                                <option value="No">Yes</option>
-                                <option value="Yes">No</option>
-                            </select>
+                            <label>{{ _("Have you had any of the following signs and symptoms within the past 2 days?") }}</label>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>{{ _("Fever") }}  </label>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="fever" name="hasFever" value="Yes"/>
+                                <label for="fever">{{ _("Yes") }}</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="fever1" name="hasFever" value="No"/>
+                                <label for="fever1">{{ _("No") }}</label>
+                            </div>
                         </div>
                     </div>
 
-                </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>{{ _("Headache") }}  </label>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="headache" name="hasHeadache" value="Yes"/>
+                                <label for="headache">{{ _("Yes") }}</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="headache1" name="hasHeadache" value="No"/>
+                                <label for="headache1">{{ _("No") }}</label>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label>{{ _("Couch") }}  </label>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="cough" name="hasCough" value="Yes"/>
+                                <label for="cough">{{ _("Yes") }}</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="cough1" name="hasCough" value="No"/>
+                                <label for="cough1">{{ _("No") }}</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>{{ _("Bleeding from body parts (nose, mouth, red eyes)") }}  </label>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="bleeds" name="bleeds" value="Yes"/>
+                                <label for="bleeds">{{ _("Yes") }}</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="bleeds1" name="bleeds" value="No"/>
+                                <label for="bleeds1">{{ _("No") }}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>{{ _("Sore throat") }}  </label>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="soar" name="hasSoreThroat" value="Yes"/>
+                                <label for="soar">{{ _("Yes") }}</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="soar1" name="hasSoreThroat" value="No"/>
+                                <label for="soar1">{{ _("No") }}</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>{{ _("Difficulty in breathing/shortness of breath") }}  </label>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="breath" name="hasShortnessOfBreath" value="Yes"/>
+                                <label for="breath">{{ _("Yes") }}</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="breath1" name="hasShortnessOfBreath" value="No"/>
+                                <label for="breath1">{{ _("No") }}</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label>{{ _("Diarrhoea") }}  </label>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="diarrhoea" name="hasDiarrhoea" value="Yes"/>
+                                <label for="diarrhoea">{{ _("Yes") }}</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="diarrhoea1" name="hasDiarrhoea" value="No"/>
+                                <label for="diarrhoea1">{{ _("No") }}</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>{{ _("Vomiting") }}  </label>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="vomits" name="vomits" value="Yes"/>
+                                <label for="vomits">{{ _("Yes") }}</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="vomits1" name="vomits" value="No"/>
+                                <label for="vomits1">{{ _("No") }}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>{{ _("Abdominal pain") }}  </label>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="abdominalPain" name="hasAbdominalPain" value="Yes"/>
+                                <label for="abdominalPain">{{ _("Yes") }}</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="abdominalPain1" name="hasAbdominalPain" value="No"/>
+                                <label for="abdominalPain1">{{ _("No") }}</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>{{ _("Skin rash") }}  </label>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="skinrash" name="hasSkinRash" value="Yes"/>
+                                <label for="skinrash">{{ _("Yes") }}</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="skinrash1" name="hasSkinRash" value="No"/>
+                                <label for="skinrash1">{{ _("No") }}</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>{{ _("Blood in cough or stool or vomitus") }}  </label>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="blood" name="hasBlood" value="Yes"/>
+                                <label for="blood">{{ _("Yes") }}</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="blood1" name="hasBlood" value="No"/>
+                                <label for="blood1">{{ _("No") }}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                -->
+                <br/>
+                <h4>COVID-19</h4>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
@@ -312,6 +477,8 @@
                     </div>
 
                 </div>
+                <!--
+
                 <div class="row" id="covidCertDiv">
                     <div class="col-sm-12">
                         <div class="form-group">
@@ -368,6 +535,7 @@
                         </div>
                     </div>
                 </div>
+                -->
                 <br/>
                 <h4>Yellow Fever</h4>
 

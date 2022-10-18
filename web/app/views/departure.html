@@ -273,22 +273,21 @@
 
 
                 <br/>
-                <h4>COVID-19</h4>
-
+                <h4>Health</h4>
+                <br/>
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-6">
                         <div class="form-group">
-                            <label>{{ _("Have you had any of the following symptoms (Fever, Cough, Sore Throat & Breathing Difficulty)?") }}</label>
-                            <select name="freeFromSymptoms" class="form-control" placeholder="Has Symptoms?...">
-                                <option value="">Has had Symptoms?</option>
-                                <option value="No">Yes</option>
-                                <option value="Yes">No</option>
-                            </select>
+                            <label>{{ _("Have you had any of the following signs and symptoms within the past 2 days?") }}</label>
+                            <input name="freeFromSymptoms"  value="No" type="hidden" id="departure_freeFromSymptoms"/>            
                         </div>
                     </div>
 
                 </div>
+                {% include 'signs_and_symptoms_departure.html' %}
+                <br/>
 
+                <h4>COVID-19</h4>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
@@ -317,6 +316,7 @@
                     </div>
 
                 </div>
+                <!--
                 <div class="row" id="covidCertDiv1">
                     <div class="col-sm-12">
                         <div class="form-group">
@@ -375,7 +375,13 @@
                         </div>
                     </div>
                 </div>
+                -->
                 <br/>
+
+                <h4>Ebola</h4>
+                {% include 'ebola.html' %}
+
+                <h4>Yellow Fever</h4>
 
                 <div class="row">
                     <div class="col-sm-6">

@@ -68,7 +68,17 @@ DHIS2_TRACKER_PROGRAM_CONF = {
             'durationOfStay': 'VpsljpwkXcD',
             'dateOfYellowFeverVaccination': 'ng1OlE99F97',
             # 'hasNegativePCRTest': '',
-            'pcrTestedDate': 'HLVG1JirIs7'
+            # 'pcrTestedDate': 'HLVG1JirIs7',
+            # Ebola confs
+            'districtsVisited': 'uUR5sBugomP',
+            'wasExposedToBlood': 'Q9Rp1wOxKdi',
+            'providedCare': 'fcXv4W3KuPO',
+            'hasWorkedInLab': 'T0jWVeinply',
+            'hasHandledTheDead': 'mOa8YktfAUy',
+            'hasLivedInSameHousehold': 'EKdMr26u8zI',
+            'hasSpentTimeInSameRoom': 'wNuKkW1AhlP',
+            'beenStuck': 'ZRcwHtiVVmZ',
+            'wasInterviewdAsContact': 'NZrsTlMLTdm',
         },
         'stages': {
             'travelLocator': {

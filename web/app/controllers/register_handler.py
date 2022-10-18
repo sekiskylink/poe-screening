@@ -18,6 +18,7 @@ class Registration:
         params = web.input(ed="",d_id="")
         lang = params.get('lang', 'en_US')
         ses.lang = lang
+        districts_1 = db.query("SELECT id, name, dhis2_code FROM orgunits WHERE dhis2_level = 3")
         # if lang == 'fr':
         #     update_icon('flag-icon-fr')
         # elif lang == 'cn':
@@ -43,7 +44,12 @@ class Registration:
             disembarkmentAirport="", nextOfKin="", freeFromSymptoms="", pcrTestedDate="",
             beenCovidVaccinated="", dateOfLastCovidVaccination="", yellowFeverCardNumber="",
             hasNegativePCRTest="", dateOfYellowFeverVaccination="", ed="", d_id="",
-            covidVaccinationCert={}, pcrTestCopy={}
+            covidVaccinationCert={}, pcrTestCopy={},
+            hasFever="", hasHeadache="", hasCough="", hasSoreThroat="", hasFatigue="",
+            hasBreathingDifficulty="", hasDiarrhoea="", vomits="", hasBloodInCoughOrStool="",
+            hasAbdominalPain="", hasSkinRash="", bleedsFromBodyParts="",
+            districtsVisited="", wasExposedToBlood="", providedCare="", hasWorkedInLab="",
+            hasHandledTheDead="", hasSpentTimeInSameRoom="", beenstuck="", wasInterviewdAsContact=""
         )
 
         allow_edit = False
@@ -52,33 +58,39 @@ class Registration:
             allow_edit = True
         except:
             pass
+        freeFromSymptoms = "yes"
+        if "yes" in [
+            params.hasFever, params.hasCough, params.hasDiarrhoea,params.hasFatigue,
+            params.hasSkinRash, params.hasSoreThroat, params.bleedsFromBodyParts, params.vomits,
+                params.hasSoreThroat, params.hasBloodInCoughOrStool]:
+            freeFromSymptoms = "no"
         ALLOWED_CTYPES = ['application/pdf', 'image/png', 'image/jpg', 'image/jpeg']
-        covid_cert_file_name = ""
-        pcr_test_file_name =""
+        # covid_cert_file_name = ""
+        # pcr_test_file_name =""
 
-        covid_certificate_fp = params.covidVaccinationCert
-        covid_cert_ctype = getattr(covid_certificate_fp, 'type')
+        # covid_certificate_fp = params.covidVaccinationCert
+        # covid_cert_ctype = getattr(covid_certificate_fp, 'type')
 
-        if covid_cert_ctype in ALLOWED_CTYPES:
-            # proceed and save it
-            suffix = covid_cert_ctype.split("/")[-1:][0]
-            f = tempfile.NamedTemporaryFile(suffix=".{0}".format(suffix), delete=False)
-            f.write(covid_certificate_fp.file.read())
-            covid_cert_file_name = f.name
-            f.close()
+        # if covid_cert_ctype in ALLOWED_CTYPES:
+        #     # proceed and save it
+        #     suffix = covid_cert_ctype.split("/")[-1:][0]
+        #     f = tempfile.NamedTemporaryFile(suffix=".{0}".format(suffix), delete=False)
+        #     f.write(covid_certificate_fp.file.read())
+        #     covid_cert_file_name = f.name
+        #     f.close()
 
-        pcr_test_fp = params.pcrTestCopy
-        pcr_test_ctype = getattr(pcr_test_fp, 'type')
+        # pcr_test_fp = params.pcrTestCopy
+        # pcr_test_ctype = getattr(pcr_test_fp, 'type')
 
-        if pcr_test_ctype in ALLOWED_CTYPES:
-            # save it some where on disk
-            surffix = pcr_test_ctype.split("/")[-1:][0]
-            f = tempfile.NamedTemporaryFile(suffix=".{0}".format(suffix), delete=False)
-            f.write(pcr_test_fp.file.read())
-            pcr_test_file_name = f.name
-            f.close()
+        # if pcr_test_ctype in ALLOWED_CTYPES:
+        #     # save it some where on disk
+        #     surffix = pcr_test_ctype.split("/")[-1:][0]
+        #     f = tempfile.NamedTemporaryFile(suffix=".{0}".format(suffix), delete=False)
+        #     f.write(pcr_test_fp.file.read())
+        #     pcr_test_file_name = f.name
+        #     f.close()
 
-        print("CERT File: {0}, PCR Test File: {1}".format(covid_cert_file_name, pcr_test_file_name))
+        # print("CERT File: {0}, PCR Test File: {1}".format(covid_cert_file_name, pcr_test_file_name))
 
         with db.transaction():
             if params.ed and allow_edit:
@@ -97,6 +109,7 @@ class Registration:
                     'age': params.age,
                     'dateOfBirth': params.dateOfBirth,
                     'sex': params.sex,
+                    'gender': params.sex,
                     'email': params.email,
                     'passportNumber': params.passportNumber,
                     'passportExpiryDate': params.passportExpiryDate,
@@ -114,18 +127,40 @@ class Registration:
                     'purposeOfTrip': params.purposeOfTrip,
                     'phoneNumber': params.phoneNumber.replace(' ', ''),
                     'nextOfKin': params.nextOfKin,
-                    'freeFromSymptoms': params.freeFromSymptoms,
+                    'freeFromSymptoms': freeFromSymptoms,
                     'beenCovidVaccinated': params.beenCovidVaccinated,
                     'dateOfLastCovidVaccination': params.dateOfLastCovidVaccination,
                     'hasNegativePCRTest': params.hasNegativePCRTest,
                     'pcrTestedDate': params.pcrTestedDate,
                     'yellowFeverCardNumber': params.yellowFeverCardNumber,
-                    'dateOfYellowFeverVaccination': params.dateOfYellowFeverVaccination
+                    'dateOfYellowFeverVaccination': params.dateOfYellowFeverVaccination,
+                    'districtsVisited': params.districtsVisited,
+                    'wasExposedToBlood': params.wasExposedToBlood,
+                    'providedCare': params.providedCare,
+                    'hasWorkedInLab': params.hasWorkedInLab,
+                    'hasHandledTheDead': params.hasHandledTheDead,
+                    'hasLivedInSameHousehold': params.hasLivedInSameHousehold,
+                    'hasSpentTimeInSameRoom': params.hasSpentTimeInSameRoom,
+                    'beenStuck': params.beenStuck,
+                    'wasInterviewdAsContact': params.wasInterviewdAsContact,
+                    # symptoms
+                    'hasFever': params.hasFever,
+                    'hasCough': params.hasCough,
+                    'hasBreathingDifficulty': params.hasBreathingDifficulty,
+                    'hasFatigue': params.hasFatigue,
+                    'hasSoreThroat': params.hasSoreThroat,
+                    'hasHeadache': params.hasHeadache,
+                    'hasBloodInCoughOrStool': params.hasBloodInCoughOrStool,
+                    'hasSkinRash': params.hasSkinRash,
+                    'bleedsFromBodyParts': params.bleedsFromBodyParts,
+                    'vomits': params.vomits,
+                    'hasAbdominalPain': params.hasAbdominalPain,
+                    'hasDiarrhoea': params.hasDiarrhoea,
                 }
-                if covid_cert_file_name:
-                    fields['covidVaccinationCertFile'] = covid_cert_file_name
-                if pcr_test_file_name:
-                    fields['pcrTestFile'] = pcr_test_file_name
+                # if covid_cert_file_name:
+                #     fields['covidVaccinationCertFile'] = covid_cert_file_name
+                # if pcr_test_file_name:
+                #     fields['pcrTestFile'] = pcr_test_file_name
 
                 res = db.query(
                     "INSERT INTO entries (fields) VALUES ($fields) RETURNING id",

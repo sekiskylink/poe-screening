@@ -1,0 +1,143 @@
+<div row>
+                <div class="col-sm-6">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>{{ _("List the last four Districts you have visited while in Uganda?") }}</td>
+                                <td colspan="2">
+                                    <div class="select2-purple">
+                                        <select name="districtsVisited" class="select2" multiple="multiple" data-dropdown-css-class="select2-purple"
+                                        data-placeholder="Select Districts" style="width: 100%;" data-msg="Please state the last four districts visited while in Uganda"
+                                        required>
+                                        {% for n in districts_1 %}
+                                        <option>{{n.name}}</option>
+                                        {% endfor %}
+                                        </select>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>{{ _("Were you ever exposed to blood or other body fluids of a person with signs of Ebola?") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="exposedToBlood" name="wasExposedToBlood" value="yes">
+                                        <label for="exposedToBlood">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="exposedToBlood1" name="wasExposedToBlood" value="no">
+                                        <label for="exposedToBlood1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Did you provide direct care to anyone with signs of Ebola while the person was sick?") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="providedCare" name="providedCare" value="yes">
+                                        <label for="providedCare">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="providedCare1" name="providedCare" value="no">
+                                        <label for="providedCare1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Have you worked in a laboratory that processes body fluids of Ebola patients?") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="workedinlab" name="hasWorkedInLab" value="yes">
+                                        <label for="workedinlab">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="workedinlab1" name="hasWorkedInLab" value="no">
+                                        <label for="workedinlab1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Did you directly handle dead bodies? (This might include participating in funeral or burial rites or any other activities that involved handling dead bodies)") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="handledthedead" name="hasHandledTheDead" value="yes">
+                                        <label for="handledthedead">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="handledthedead1" name="hasHandledTheDead" value="no">
+                                        <label for="handledthedead1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Do you live in the same household as a person with signs of Ebola while that person was sick?") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="livedinsamehousehold" name="hasLivedInSameHousehold" value="yes">
+                                        <label for="livedinsamehousehold">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="livedinsamehousehold1" name="hasLivedInSameHousehold" value="no">
+                                        <label for="livedinsamehousehold1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Have you spent time in the same room within 1 meter of any person with signs of Ebola, spent significant time with an Ebola patient, or any physical contact with an Ebola patient?") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="spentTime" name="hasSpentTimeInSameRoom" value="yes">
+                                        <label for="spentTime">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="spentTime1" name="hasSpentTimeInSameRoom" value="no">
+                                        <label for="spentTime1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Have you ever been stuck with a needle or other sharp object, or splashed in the eye, nose or mouth with bodily fluids of someone with signs of Ebola?") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="beenstuck" name="beenStuck" value="yes">
+                                        <label for="beenstuck">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="beenstuck1" name="beenStuck" value="no">
+                                        <label for="beenstuck1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ _("Have you been interviewed as part of a contact investigation for someone with signs of Ebola?") }}</td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="interviewsascontact" name="wasInterviewdAsContact" value="yes">
+                                        <label for="interviewsascontact">{{ _("Yes") }}</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="interviewsascontact1" name="wasInterviewdAsContact" value="no">
+                                        <label for="interviewsascontact1">{{ _("No") }}</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
