@@ -16,7 +16,8 @@
 
 {% block content %}
     <br/>
-    <input type="hidden" id="text" value={{ "http://poe-screening.hispuganda.org/verify/" + saved_record }}/>
+    <input type="hidden" id="text" value={{ "http://poe-screening.health.go.ug/verify/" + saved_record }}/>
+    <input type="hidden" id="qrcolor" value="{{ qrcode_color }}">
     
     <div class="container-fluid">
         <div class="row">
@@ -44,9 +45,12 @@
     <script type="text/javascript" src="/static/plugins/davidshimjs-qrcodejs/qrcode.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
+            var qrCodeColor = $("#qrcolor").val();
+            console.log("QR Color is =>", qrCodeColor)
             var qrcode = new QRCode(document.getElementById("qrcode"), {
                 width : 150,
-                height : 150
+                height : 150,
+                colorDark : qrCodeColor
             });
 
             function makeCode () {

@@ -1,0 +1,12 @@
+1. Present Form to users
+    - read a few static fields from DB, port of entry, air ports
+2. Do front-end validation on most of the fields
+
+3. Save the fields in a database and created a QR code with a URL referencing the id of the saved record
+    - we never see the data through the QR code generated
+4. Once the QR Code is read, we push the records for the id in the verification URL to DHIS2
+    to create a TEI if they were entered within 24 hours back.
+    - The pushing is done using Celery Tasks
+5. As for the files (Vaccination Certificate and PCR Test Copy), we save them locally on the 
+    File System and keep a path to respective file in the DB entry.
+6. Using the TEI created, we can push images for the Cert and PCR test.

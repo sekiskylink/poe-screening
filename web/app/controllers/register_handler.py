@@ -49,7 +49,7 @@ class Registration:
             hasBreathingDifficulty="", hasDiarrhoea="", vomits="", hasBloodInCoughOrStool="",
             hasAbdominalPain="", hasSkinRash="", bleedsFromBodyParts="",
             districtsVisited="", wasExposedToBlood="", providedCare="", hasWorkedInLab="",
-            hasHandledTheDead="", hasSpentTimeInSameRoom="", beenstuck="", wasInterviewdAsContact=""
+            hasHandledTheDead="", hasSpentTimeInSameRoom="", beenStuck="", wasInterviewdAsContact=""
         )
 
         allow_edit = False
@@ -59,11 +59,15 @@ class Registration:
         except:
             pass
         freeFromSymptoms = "yes"
+        qrcode_color = '#00ff66'
         if "yes" in [
             params.hasFever, params.hasCough, params.hasDiarrhoea,params.hasFatigue,
             params.hasSkinRash, params.hasSoreThroat, params.bleedsFromBodyParts, params.vomits,
-                params.hasSoreThroat, params.hasBloodInCoughOrStool]:
+            params.hasSoreThroat, params.hasBloodInCoughOrStool, params.hasHandledTheDead,
+            params.providedCare, params.hasWorkedInLab, params.wasInterviewdAsContact,
+            params.wasExposedToBlood, params.beenStuck, params.hasAbdominalPain]:
             freeFromSymptoms = "no"
+            qrcode_color = '#ff0000'
         ALLOWED_CTYPES = ['application/pdf', 'image/png', 'image/jpg', 'image/jpeg']
         # covid_cert_file_name = ""
         # pcr_test_file_name =""
@@ -170,7 +174,7 @@ class Registration:
                     r = res[0]
                     saved_record = "%s" % r.id
                     print("Record saved")
-                    return render.qrcode({'saved_record': saved_record})
+                    return render.qrcode({'saved_record': saved_record, 'qrcode_color': qrcode_color})
         l = locals()
         del l['self']
         return render.registration2(**l)
