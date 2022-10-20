@@ -60,7 +60,7 @@ class Registration:
             pass
         freeFromSymptoms = "Yes"
         qrcode_color = '#00ff66'
-        if "yes" in [
+        if "Yes" in [
             params.hasFever, params.hasCough, params.hasDiarrhoea,params.hasFatigue,
             params.hasSkinRash, params.hasSoreThroat, params.bleedsFromBodyParts, params.vomits,
             params.hasSoreThroat, params.hasBloodInCoughOrStool, params.hasHandledTheDead,
