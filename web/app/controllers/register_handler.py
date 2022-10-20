@@ -58,7 +58,7 @@ class Registration:
             allow_edit = True
         except:
             pass
-        freeFromSymptoms = "yes"
+        freeFromSymptoms = "Yes"
         qrcode_color = '#00ff66'
         if "yes" in [
             params.hasFever, params.hasCough, params.hasDiarrhoea,params.hasFatigue,
@@ -66,7 +66,7 @@ class Registration:
             params.hasSoreThroat, params.hasBloodInCoughOrStool, params.hasHandledTheDead,
             params.providedCare, params.hasWorkedInLab, params.wasInterviewdAsContact,
             params.wasExposedToBlood, params.beenStuck, params.hasAbdominalPain]:
-            freeFromSymptoms = "no"
+            freeFromSymptoms = "No"
             qrcode_color = '#ff0000'
         ALLOWED_CTYPES = ['application/pdf', 'image/png', 'image/jpg', 'image/jpeg']
         # covid_cert_file_name = ""
