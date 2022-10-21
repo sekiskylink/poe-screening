@@ -49,7 +49,8 @@ class Registration:
             hasBreathingDifficulty="", hasDiarrhoea="", vomits="", hasBloodInCoughOrStool="",
             hasAbdominalPain="", hasSkinRash="", bleedsFromBodyParts="",
             districtsVisited="", wasExposedToBlood="", providedCare="", hasWorkedInLab="",
-            hasHandledTheDead="", hasSpentTimeInSameRoom="", beenStuck="", wasInterviewdAsContact=""
+            hasHandledTheDead="", hasSpentTimeInSameRoom="", beenStuck="", wasInterviewdAsContact="",
+            hasLivedInSameHousehold=""
         )
 
         allow_edit = False
@@ -65,7 +66,8 @@ class Registration:
             params.hasSkinRash, params.hasSoreThroat, params.bleedsFromBodyParts, params.vomits,
             params.hasSoreThroat, params.hasBloodInCoughOrStool, params.hasHandledTheDead,
             params.providedCare, params.hasWorkedInLab, params.wasInterviewdAsContact,
-            params.wasExposedToBlood, params.beenStuck, params.hasAbdominalPain]:
+            params.wasExposedToBlood, params.beenStuck, params.hasAbdominalPain,
+            params.hasLivedInSameHousehold]:
             freeFromSymptoms = "No"
             qrcode_color = '#ff0000'
         ALLOWED_CTYPES = ['application/pdf', 'image/png', 'image/jpg', 'image/jpeg']
