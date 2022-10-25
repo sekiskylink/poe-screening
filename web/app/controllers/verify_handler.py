@@ -30,11 +30,13 @@ class Verify:
             "updated > now() - '24 hours'::interval) AS valid "
             "FROM entries WHERE id = $id ",
             {'id': verification_code})
+        valid_record = False
         fields = {}
         if res:
             r = res[0]
             fields = r.fields
             if r.valid:
+                valid_record = True
                 print("This is a valid verification %s" % r.fields)
                 payload = compose_tracked_entity_instance_payload(r.fields, r.fields["portOfEntry"])
                 print("PAYLOAD =>", payload)

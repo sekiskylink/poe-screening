@@ -3,7 +3,7 @@
                 <table class="table">
                     <tbody>
                         <tr>
-                            <td>{{ _("List the last four Districts you have visited while in Uganda?") }}</td>
+                            <td>{{ _("List all the districts you have visited while in Uganda?") }}</td>
                             <td colspan="2">
                                 <div class="select2-purple">
                                     <select name="districtsVisited" class="select2" multiple="multiple" data-dropdown-css-class="select2-purple"
@@ -18,10 +18,10 @@
                             
                         </tr>
                         <tr>
-                            <td>{{ _("Were you ever exposed to blood or other body fluids of a person with signs of Ebola?") }}</td>
+                            <td>{{ _("Were you ever exposed to blood or other body fluids of a person who was sick?") }}</td>
                             <td>
                                 <div class="icheck-primary d-inline">
-                                    <input type="radio" id="exposedToBlood" name="wasExposedToBlood" value="Yes">
+                                    <input type="radio" id="exposedToBlood" name="wasExposedToBlood" value="Yes" required>
                                     <label for="exposedToBlood">{{ _("Yes") }}</label>
                                 </div>
                             </td>
@@ -33,7 +33,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>{{ _("Did you provide direct care to anyone with signs of Ebola while the person was sick?") }}</td>
+                            <td>{{ _("Did you provide direct care to anyone who was sick or died of unknown illness?") }}</td>
                             <td>
                                 <div class="icheck-primary d-inline">
                                     <input type="radio" id="providedCare" name="providedCare" value="Yes">
@@ -48,7 +48,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>{{ _("Have you worked in a laboratory that processes body fluids of Ebola patients?") }}</td>
+                            <td>{{ _("Have you worked in a human or animal laboratory?") }}</td>
                             <td>
                                 <div class="icheck-primary d-inline">
                                     <input type="radio" id="workedinlab" name="hasWorkedInLab" value="Yes">
@@ -63,7 +63,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>{{ _("Did you directly handle dead bodies? (This might include participating in funeral or burial rites or any other activities that involved handling dead bodies)") }}</td>
+                            <td>{{ _("Did you directly handle a dead body or participate in funeral or burial rites?") }}</td>
                             <td>
                                 <div class="icheck-primary d-inline">
                                     <input type="radio" id="handledthedead" name="hasHandledTheDead" value="Yes">
@@ -84,7 +84,7 @@
                         <table class="table">
                         <tbody>
                         <tr>
-                            <td>{{ _("Do you live in the same household as a person with signs of Ebola while that person was sick?") }}</td>
+                            <td>{{ _("Did you live in the same household as a person who was sick?") }}</td>
                             <td>
                                 <div class="icheck-primary d-inline">
                                     <input type="radio" id="livedinsamehousehold" name="hasLivedInSameHousehold" value="Yes">
@@ -99,7 +99,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>{{ _("Have you spent time in the same room within 1 meter of any person with signs of Ebola, spent significant time with an Ebola patient, or any physical contact with an Ebola patient?") }}</td>
+                            <td>{{ _("Did you spend time in the same room with a sick person?") }}</td>
                             <td>
                                 <div class="icheck-primary d-inline">
                                     <input type="radio" id="spentTime" name="hasSpentTimeInSameRoom" value="Yes">
@@ -114,7 +114,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>{{ _("Have you ever been stuck with a needle or other sharp object, or splashed in the eye, nose or mouth with bodily fluids of someone with signs of Ebola?") }}</td>
+                            <td>{{ _("Have you ever been stuck with a needle or other sharp object, or splashed in the eye, nose or mouth with bodily fluids of someone who was sick? ") }}</td>
                             <td>
                                 <div class="icheck-primary d-inline">
                                     <input type="radio" id="beenstuck" name="beenStuck" value="Yes">
@@ -129,7 +129,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>{{ _("Have you been interviewed as part of a contact investigation for someone with signs of Ebola?") }}</td>
+                            <td>{{ _("Have you been identified or interviewed as part of a contact investigation of an ill person?") }}</td>
                             <td>
                                 <div class="icheck-primary d-inline">
                                     <input type="radio" id="interviewsascontact" name="wasInterviewdAsContact" value="Yes">

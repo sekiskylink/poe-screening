@@ -285,37 +285,7 @@
 
                 </div>
                 {% include 'signs_and_symptoms_departure.html' %}
-                <br/>
-
-                <h4>COVID-19</h4>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>{{ _("Have you been fully vaccinated?") }}  </label>
-                            <div class="icheck-primary d-inline">
-                                <input type="radio" id="covidvv2" name="beenCovidVaccinated" value="Yes"/>
-                                <label for="covidvv2">{{ _("Yes") }}</label>
-                            </div>
-                            <div class="icheck-primary d-inline">
-                                <input type="radio" id="covidvv3" name="beenCovidVaccinated" value="No"/>
-                                <label for="covidvv3">{{ _("No") }}</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label> {{ _("Date of last Vaccination") }}</label>
-                            <div class="input-group date" id="dateOfLastCovidVaccination1" data-target-input="nearest">
-                                <input type="text" name="dateOfLastCovidVaccination" class="form-control datetimepicker-input"
-                                    data-target="#dateOfLastCovidVaccination1" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
-                                <div class="input-group-append" data-target="#dateOfLastCovidVaccination1" data-toggle="datetimepicker">
-                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                
                 <!--
                 <div class="row" id="covidCertDiv1">
                     <div class="col-sm-12">
@@ -377,8 +347,38 @@
                 </div>
                 -->
 
-                <h4>Ebola</h4>
+                <h4>In the Last 21 days</h4>
                 {% include 'ebola.html' %}
+                <br/>
+                <h4>COVID-19</h4>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>{{ _("Have you been fully vaccinated?") }}  </label>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="covidvv2" name="beenCovidVaccinated" value="Yes"/>
+                                <label for="covidvv2">{{ _("Yes") }}</label>
+                            </div>
+                            <div class="icheck-primary d-inline">
+                                <input type="radio" id="covidvv3" name="beenCovidVaccinated" value="No"/>
+                                <label for="covidvv3">{{ _("No") }}</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label> {{ _("Date of last Vaccination") }}</label>
+                            <div class="input-group date" id="dateOfLastCovidVaccination1" data-target-input="nearest">
+                                <input type="text" name="dateOfLastCovidVaccination" class="form-control datetimepicker-input"
+                                    data-target="#dateOfLastCovidVaccination1" data-toggle="datetimepicker" placeholder="YYYY-MM-DD"/>
+                                <div class="input-group-append" data-target="#dateOfLastCovidVaccination1" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
                 <h4>Yellow Fever</h4>
 
