@@ -60,7 +60,8 @@ class Registration:
         except:
             pass
         freeFromSymptoms = "Yes"
-        qrcode_color = '#00ff66'
+        # qrcode_color = '#00ff66'
+        qrcode_color = '#000000'
         if "Yes" in [
             params.hasFever, params.hasCough, params.hasDiarrhoea,params.hasFatigue,
             params.hasSkinRash, params.hasSoreThroat, params.bleedsFromBodyParts, params.vomits,
@@ -69,7 +70,7 @@ class Registration:
             params.wasExposedToBlood, params.beenStuck, params.hasAbdominalPain,
             params.hasLivedInSameHousehold]:
             freeFromSymptoms = "No"
-            qrcode_color = '#ff0000'
+            # qrcode_color = '#ff0000'
         ALLOWED_CTYPES = ['application/pdf', 'image/png', 'image/jpg', 'image/jpeg']
         # covid_cert_file_name = ""
         # pcr_test_file_name =""
