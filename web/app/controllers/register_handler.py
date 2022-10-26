@@ -62,7 +62,7 @@ class Registration:
         freeFromSymptoms = "Yes"
         # qrcode_color = '#00ff66'
         qrcode_color = '#000000'
-        color_code = "#00ff00"
+        color_code = "#3db489"
         if "Yes" in [
             params.hasFever, params.hasCough, params.hasDiarrhoea,params.hasFatigue,
             params.hasSkinRash, params.hasSoreThroat, params.bleedsFromBodyParts, params.vomits,
