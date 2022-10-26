@@ -54,7 +54,14 @@ class QRVerify:
         authenticated, _ = auth_entry(db, params.pin, params.qrcode_value)
         if authenticated:
             web.seeother("/verify/" + params.qrcode_value)
+
+        verification_code = verification_code
+        res = db.query("SELECT fields->>'colorCode' AS color_code FROM entries WHERE id = $id", {
+            'id': verification_code
+        })
+        color_code = '#000000'
+        if res:
+            color_code = res[0]['color_code']
         l = locals()
         del l['self']
-        web.seeother("/qr-verify/" + verification_code)
-        # return render.test(**l)
+        return render.qrcode_verify(**l)
