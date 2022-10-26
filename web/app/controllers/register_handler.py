@@ -62,14 +62,23 @@ class Registration:
         freeFromSymptoms = "Yes"
         # qrcode_color = '#00ff66'
         qrcode_color = '#000000'
+        color_code = "#00ff00"
         if "Yes" in [
             params.hasFever, params.hasCough, params.hasDiarrhoea,params.hasFatigue,
             params.hasSkinRash, params.hasSoreThroat, params.bleedsFromBodyParts, params.vomits,
-            params.hasSoreThroat, params.hasBloodInCoughOrStool, params.hasHandledTheDead,
+                params.hasSoreThroat]:
+            color_code = '#ffcc00'
+            freeFromSymptoms = "No"
+        if "Yes" in [
+            params.hasBloodInCoughOrStool, params.hasHandledTheDead,
             params.providedCare, params.hasWorkedInLab, params.wasInterviewdAsContact,
             params.wasExposedToBlood, params.beenStuck, params.hasAbdominalPain,
-            params.hasLivedInSameHousehold]:
+                params.hasLivedInSameHousehold]:
             freeFromSymptoms = "No"
+            if color_code == '#ffcc00':
+                color_code = '#ff0000'
+            else:
+                color_code = '#ffcc00'
             # qrcode_color = '#ff0000'
         ALLOWED_CTYPES = ['application/pdf', 'image/png', 'image/jpg', 'image/jpeg']
         # covid_cert_file_name = ""
@@ -163,6 +172,7 @@ class Registration:
                     'vomits': params.vomits,
                     'hasAbdominalPain': params.hasAbdominalPain,
                     'hasDiarrhoea': params.hasDiarrhoea,
+                    'colorCode': color_code
                 }
                 # if covid_cert_file_name:
                 #     fields['covidVaccinationCertFile'] = covid_cert_file_name

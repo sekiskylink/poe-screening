@@ -37,7 +37,12 @@ class QRVerify:
         ses.lang = lang
         put_session(ses)
         verification_code = verification_code
-
+        res = db.query("SELECT fields->>'colorCode' AS color_code FROM entries WHERE id = $id", {
+            'id': verification_code
+        })
+        color_code = '#000000'
+        if res:
+            color_code = res[0]['color_code']
 
         l = locals()
         del l['self']

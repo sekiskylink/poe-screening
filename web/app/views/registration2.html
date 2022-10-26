@@ -351,9 +351,10 @@ $(function() {
             arrivalDate: {
                 required: "Arrival Date is required"
             },
+            /*
             passportExpiryDate: {
                 required: "Passport Expiry Date is required"
-            },
+            },*/
             modeOfTransport: {
                 required: "Mode of Transport is required"
             }
@@ -388,10 +389,10 @@ $(function() {
             },
             passportNumber: {
                 required: true
-            },
+            },/*
             passportExpiryDate: {
                 required: true
-            },
+            },*/
             phoneNumber: {
                 required: true,
                 validPhoneNumber: true,
@@ -413,6 +414,9 @@ $(function() {
                 extension: "jpg|png|jpeg|gif"
             },
             wasExposedToBlood: {
+                required: true            
+            },
+            hasFever: {
                 required: true            
             }
 
@@ -439,9 +443,10 @@ $(function() {
             arrivalDate: {
                 required: "Arrival Date is required"
             },
+            /*
             passportExpiryDate: {
                 required: "Passport Expiry Date is required"
-            },
+            },*/
             modeOfTransport: {
                 required: "Mode of Transport is required"
             },
@@ -456,7 +461,10 @@ $(function() {
             },
             covidVaccinationCert: {
                 extension: "File extension not allowed! Try (jpg, png, or pdf)"
-            }
+            },
+            wasExposedToBlood:{
+                required: "*"
+            },
 
         },
         errorElement: 'span',
