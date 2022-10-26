@@ -13,9 +13,9 @@ class Test:
     def GET(self):
         l = locals()
         del l['self']
-        return render.test(**l)
+        return render.preview(**l)
 
     def POST(self):
         l = locals()
         del l['self']
-        return render.test(**l)
+        return render.preview(**l)

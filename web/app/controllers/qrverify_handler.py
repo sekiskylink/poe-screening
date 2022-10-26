@@ -53,7 +53,8 @@ class QRVerify:
         print("PIN:", params.pin, " RECORD ID:", params.qrcode_value)
         authenticated, _ = auth_entry(db, params.pin, params.qrcode_value)
         if authenticated:
-            web.seeother("/verify/"+ params.qrcode_value)
+            web.seeother("/verify/" + params.qrcode_value)
         l = locals()
         del l['self']
-        return render.test(**l)
+        web.seeother("/qr-verify/" + verification_code)
+        # return render.test(**l)

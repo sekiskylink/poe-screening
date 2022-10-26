@@ -73,9 +73,9 @@ class Verify:
                     print("Trouble Submitting to DHIS 2: [URL:{0}][ERROR: {1}]".format(url, str(e)))
         l = locals()
         del l['self']
-        return render.test(**l)
+        return render.preview(**l)
 
     def POST(self):
         l = locals()
         del l['self']
-        return render.test(**l)
+        return render.preview(**l)
