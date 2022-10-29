@@ -43,7 +43,7 @@ allTranslations = web.storage()
 SESSION = ''
 APP = None
 
-rs = db.query("SELECT id, name, alpha_2_code FROM countries")
+rs = db.query("SELECT id, name, alpha_2_code FROM countries ORDER BY priority, name")
 ourCountries = []
 countriesByCode = {}
 for c in rs:
@@ -58,7 +58,7 @@ for p in ports:
     ourPorts.append({'id': p['id'], 'name': p['name'], 'dhis2_code': p['dhis2_code']})
     portsById[p['dhis2_code']] = p['name']
 
-airports = db.query("SELECT id, name, country_code, iata_code FROM airports")
+airports = db.query("SELECT id, name, country_code, iata_code FROM airports ORDER BY priority, name")
 ourAirPorts = []
 for a in airports:
     ourAirPorts.append({
