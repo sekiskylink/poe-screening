@@ -315,7 +315,7 @@ $(function() {
             },
             portOfEntry: {
                 required: true
-            }
+            },
             /*
             covidVaccinationCert: {
                 fileType: {
@@ -326,6 +326,19 @@ $(function() {
                 required: true
             }
             */
+            hasFever: {
+                required: true            
+            },
+            hasCough:{required: true},
+            hasHeadache:{required: true},
+            hasSoreThroat: {required: true},
+            hasFatigue: {required: true},
+            hasBreathingDifficulty: {required: true},
+            hasDiarrhoea: {required: true},
+            vomits: {required: true},
+            hasBreathingDifficulty: {required: true},
+            hasAbdominalPain: {required: true},
+            hasSkinRash:{required: true}
         },
         messages: {
             name: {
@@ -358,7 +371,7 @@ $(function() {
             },*/
             modeOfTransport: {
                 required: "Mode of Transport is required"
-            }
+            }   
         },
         errorElement: 'span',
         errorPlacement: function (error, element) {
