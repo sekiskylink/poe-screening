@@ -162,7 +162,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label>{{ _("Mode of Transport") }}</label>
                             <Select name="modeOfTransport" id="modeOfTransport" 
@@ -173,25 +173,6 @@
                                 <option value="Water">{{ _("By Water")}}</option>
                                 <option value="Rail">{{ _("By Rail")}}</option>
                             </Select>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <div class="form-group">
-                            <label>{{ _("Purpose of your Trip") }}</label>
-                            <select name="purposeOfTrip" class="form-control" placeholder="Purpose of Trip...">
-                                <option value="">{{ _("Select Purpose of Trip")}}</option>
-                                <option value="Holiday">{{ _("Holiday")}}</option>
-                                <option value="Business">{{ _("Business")}}</option>
-                                <option value="Official or Diplomatic">{{ _("Offical or Diplomatic")}}</option>
-                                <option value="Visiting friends and Relatives">{{ _("Visiting Friends or Relatives")}}</option>
-                                <option value="Transit">{{ _("Transit")}}</option>
-                                <option value="Conference">{{ _("Conference")}}</option>
-                                <option value="Employment">{{ _("Employment")}}</option>
-                                <option value="Student">{{ _("Student")}}</option>
-                                <option value="Medical">{{ _("Medical")}}</option>
-                                <option value="Crew">{{ _("Crew")}}</option>
-                            </select>
                         </div>
                     </div>
 
@@ -221,11 +202,29 @@
                     </div>
 
                     <div class="col-sm-6">
+                         <div class="form-group">
+                            <label>{{ _("Purpose of your Trip") }}</label>
+                            <select name="purposeOfTrip" class="form-control" placeholder="Purpose of Trip...">
+                                <option value="">{{ _("Select Purpose of Trip")}}</option>
+                                <option value="Holiday">{{ _("Holiday")}}</option>
+                                <option value="Business">{{ _("Business")}}</option>
+                                <option value="Official or Diplomatic">{{ _("Offical or Diplomatic")}}</option>
+                                <option value="Visiting friends and Relatives">{{ _("Visiting Friends or Relatives")}}</option>
+                                <option value="Transit">{{ _("Transit")}}</option>
+                                <option value="Conference">{{ _("Conference")}}</option>
+                                <option value="Employment">{{ _("Employment")}}</option>
+                                <option value="Student">{{ _("Student")}}</option>
+                                <option value="Medical">{{ _("Medical")}}</option>
+                                <option value="Crew">{{ _("Crew")}}</option>
+                            </select>
+                        </div>
+                        <!--
                         <div class="form-group">
                             <label>{{ _("Seat Number") }}</label>
                             <input type="text" class="form-control" id="seatNumber" 
                                 placeholder="Seat Number..." name="seatNumber">
                         </div>
+                        -->
                     </div>
                 </div>
 
