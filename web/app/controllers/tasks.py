@@ -285,7 +285,7 @@ def generate_and_email_pdf(entry_id, ports=portsById):
             DEFAULT_FROM_EMAIL,
             fields['email'],
             'Travel Health Details -MoH UG: {0}'.format(fields['name']),
-            "Dear {0},\nPlease the attchment with your health travel document."
+            "Dear {0},\nPlease see the attchment with your health travel document."
             "\n\nRegards,\n\nMinistry Of Health.".format(fields['name']),
             attachments=[file_name]
         )
