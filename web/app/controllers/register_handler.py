@@ -8,8 +8,9 @@ import simplejson
 import tempfile
 import psycopg2.extras
 from . import render
-from . import csrf_protected, db, get_session, put_session
+from . import csrf_protected, db, get_session, put_session, portsById
 from app.tools.utils import auth_user, audit_log
+from .tasks import generate_and_email_pdf
 
 
 class Registration:
@@ -108,7 +109,7 @@ class Registration:
 
         # print("CERT File: {0}, PCR Test File: {1}".format(covid_cert_file_name, pcr_test_file_name))
 
-        with db.transaction():
+        with db.transaction() as t:
             if params.ed and allow_edit:
                 pass
             else:
@@ -186,7 +187,9 @@ class Registration:
                 if res:
                     r = res[0]
                     saved_record = "%s" % r.id
+                    t.commit()
                     print("Record saved")
+                    generate_and_email_pdf.delay(saved_record, portsById)
                     return render.qrcode({'saved_record': saved_record, 'qrcode_color': qrcode_color})
         l = locals()
         del l['self']
