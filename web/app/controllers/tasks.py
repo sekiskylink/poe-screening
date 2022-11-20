@@ -46,9 +46,9 @@ web.config.smtp_starttls = SMTP_STARTTLS
 
 # celery -A app.controllers.tasks worker --loglevel=info
 app = Celery("poe", broker=BROKER_URL)
-db = web.database(
-    dbn='postgres', db=config['db_name'], user=config['db_user'], pw=config['db_passwd'],
-    host=config['db_host'], port=config['db_port'])
+# db = web.database(
+#     dbn='postgres', db=config['db_name'], user=config['db_user'], pw=config['db_passwd'],
+#     host=config['db_host'], port=config['db_port'])
 
 
 def format_msisdn(msisdn=None):
@@ -197,7 +197,7 @@ def _P(text, size=8, spacer=0):
 
 
 @app.task(name="generate_and_email_pdf")
-def generate_and_email_pdf(entry_id, ports=portsById, db=db):
+def generate_and_email_pdf(entry_id, ports=portsById, db=None):
     print("Gona generate add email pdf for id:[{0}]".format(entry_id))
     db = web.database(
         dbn='postgres', db=config['db_name'], user=config['db_user'], pw=config['db_passwd'],
