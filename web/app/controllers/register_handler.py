@@ -189,7 +189,7 @@ class Registration:
                     saved_record = "%s" % r.id
                     t.commit()
                     print("Record saved")
-                    generate_and_email_pdf.delay(saved_record, portsById, db=db)
+                    # generate_and_email_pdf.delay(saved_record, portsById, db=db)
                     return render.qrcode({'saved_record': saved_record, 'qrcode_color': qrcode_color})
         l = locals()
         del l['self']

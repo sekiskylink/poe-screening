@@ -46,6 +46,7 @@ web.config.smtp_starttls = SMTP_STARTTLS
 
 # celery -A app.controllers.tasks worker --loglevel=info
 app = Celery("poe", broker=BROKER_URL)
+
 # db = web.database(
 #     dbn='postgres', db=config['db_name'], user=config['db_user'], pw=config['db_passwd'],
 #     host=config['db_host'], port=config['db_port'])
