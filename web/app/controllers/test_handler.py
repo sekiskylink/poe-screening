@@ -13,7 +13,8 @@ class Test:
     def GET(self):
         l = locals()
         del l['self']
-        return render.preview(**l)
+        return web.seeother("/static/dist/img/moh.png")
+        # return render.preview(**l)
 
     def POST(self):
         l = locals()

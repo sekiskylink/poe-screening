@@ -10,7 +10,7 @@ import psycopg2.extras
 from . import render
 from . import csrf_protected, db, get_session, put_session, portsById
 from app.tools.utils import auth_user, audit_log
-from .tasks import generate_and_email_pdf
+# from .tasks import generate_and_email_pdf
 
 
 class Registration:

@@ -10,6 +10,7 @@ from app.controllers.poe_handler import Poe
 from app.controllers.register_handler import Registration
 from app.controllers.verify_handler import Verify
 from app.controllers.qrverify_handler import QRVerify
+from app.controllers.download_handler import Download
 
 URLS = (
     r'^/', Registration,
@@ -19,4 +20,5 @@ URLS = (
     r'/register', Registration,
     r'/qr-verify/(\d+)/?', QRVerify,
     r'/verify/(\d+)/?', Verify,
+    r'/download/(\d+)/?', Download,
 )

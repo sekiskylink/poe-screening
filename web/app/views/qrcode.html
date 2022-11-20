@@ -31,8 +31,14 @@
                         <div class="row">
                             <div id="qrcode">
                             </div>
-                            <div><p>{{_("Please take a screenshot of your QR Code to present to Port health")}}</p></div>
-                            <div><p style="color: red;">{{_("Also check your email for a PDF of all your travel health details.")}}</p></div>
+                            <div><p>{{_("Please take a screenshot of your QR Code to present to Port health. ")}}</p></div>
+                            <!--<div><p style="color: red;">{{_("Also check your email for a PDF of all your travel health details.")}}</p></div>-->
+                            <div>
+                                <a href={{"https://poe-screening.health.go.ug/download/"+ saved_record }}>
+                                    <i class="fas fa-download"></i>
+                                    {{_("You can also click here to download your travel document")}}
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
