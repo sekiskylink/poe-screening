@@ -11,6 +11,7 @@ from app.controllers.register_handler import Registration
 from app.controllers.verify_handler import Verify
 from app.controllers.qrverify_handler import QRVerify
 from app.controllers.download_handler import Download
+from app.controllers.api import Entries
 
 URLS = (
     r'^/', Registration,
@@ -21,4 +22,5 @@ URLS = (
     r'/qr-verify/(\d+)/?', QRVerify,
     r'/verify/(\d+)/?', Verify,
     r'/download/(\d+)/?', Download,
+    r'/api/v1/entries', Entries,
 )
